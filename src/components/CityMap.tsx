@@ -22,7 +22,7 @@ import React, {
   type KeyboardEvent as ReactKeyboardEvent,
 } from "react";
 import { Button } from "@heroui/react";
-import { Zap, Plus, Minus, RotateCcw, Route, ArrowBigUp, ArrowBigLeft, ArrowBigRight, ArrowBigDown, Dot } from "lucide-react";
+import { Zap, Plus, Minus, RotateCcw, Route, ArrowBigUp, ArrowBigLeft, ArrowBigRight, ArrowBigDown, Dot, MapPin } from "lucide-react";
 import { mapDataRaw } from '../constant/map_content';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -736,13 +736,13 @@ export default function CityMap() {
 
               {distInput && (
                 <div
-                  className="self-start px-3 py-1.5 rounded-lg"
+                  className="self-start flex justify-center items-center gap-x-1 px-3 py-1.5 rounded-lg"
                   style={{
                     background: "#fffbeb", border: "1px solid #fde68a",
                     color: "#92400e", fontWeight: 700, fontSize: 13,
                   }}
                 >
-                  📍 {distInput} km
+                  <MapPin size={18}/><span>{distInput}</span><span>km</span>
                 </div>
               )}
 
@@ -783,7 +783,7 @@ export default function CityMap() {
                           border: `1px solid ${isFirst ? "#fca5a5" : isLast ? "#86efac" : "#93c5fd"}`,
                         }}
                       >
-                        {isFirst ? "⚡ " : ""}{nodeLabel(id)}{isLast ? " 📍" : ""}
+                        {nodeLabel(id)}
                       </span>
                       {!isLast && (
                         <span style={{ color: "#cbd5e1", fontSize: 10 }}>›</span>
