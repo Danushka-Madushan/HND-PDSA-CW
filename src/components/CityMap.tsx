@@ -22,7 +22,7 @@ import React, {
   type KeyboardEvent as ReactKeyboardEvent,
 } from "react";
 import { Button } from "@heroui/react";
-import { Zap, Plus, Minus, RotateCcw, Route, ArrowBigUp, ArrowBigLeft, ArrowBigRight, ArrowBigDown, GitCommitVertical } from "lucide-react";
+import { Zap, Plus, Minus, RotateCcw, Route, ArrowBigUp, ArrowBigLeft, ArrowBigRight, ArrowBigDown, Dot } from "lucide-react";
 import { mapDataRaw } from '../constant/map_content';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -249,12 +249,12 @@ export default function CityMap() {
     >
       {/* District label */}
       <div className="absolute top-5 left-5 pointer-events-none bg-white z-50 px-2 py-1 rounded-md">
-        <div style={{ color: "#6b7280", fontSize: 11, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase" }}>
+        <div style={{ color: "#6b7280", fontSize: 14, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase" }}>
           {mapData.metadata.district}
         </div>
-        <div className='flex gap-x-2 items-center justify-start ' style={{ color: "#9ca3af", fontSize: 10, marginTop: 2 }}>
+        <div className='flex gap-x-1 items-center justify-start ' style={{ color: "#9ca3af", fontSize: 12, marginTop: 2 }}>
           <span> {mapData.metadata.node_count} Cities </span>
-          <GitCommitVertical size={15} strokeWidth={1.5}/>
+          <Dot size={20} strokeWidth={4} />
           <span>{mapData.metadata.edge_count} Roads</span>
         </div>
       </div>
@@ -704,21 +704,20 @@ export default function CityMap() {
           <div className="flex gap-2">
             <Button
               onPress={handleHighlight}
-              className="flex-1 text-xs font-bold rounded-lg py-2.5"
+              className="flex-1 font-light uppercase rounded-lg py-2.5"
               style={{
                 background: "#1d4ed8", color: "#ffffff",
                 border: "none",
               }}
             >
-              Highlight Path
+              Get Route
             </Button>
             <Button
               onPress={handleClear}
-              variant="secondary"
-              className="px-4 py-2.5 text-xs rounded-lg"
-              style={{ background: "#f3f4f6", color: "#6b7280" }}
+              variant="danger"
+              className="font-light uppercase rounded-lg"
             >
-              Clear
+              Reset
             </Button>
           </div>
 
