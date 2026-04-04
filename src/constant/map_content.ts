@@ -1,6 +1,6 @@
 export const mapDataRaw = {
   "metadata": {
-    "district": "Nebula Heights",
+    "district": "Colombo District",
     "node_count": 87,
     "edge_count": 196
   },
@@ -14,357 +14,357 @@ export const mapDataRaw = {
     },
     {
       "id": "node_14",
-      "name": "",
+      "name": "Akarawita",
       "type": "PLACE",
       "x": 31.03460976972781,
       "y": 51.13784369260793
     },
     {
       "id": "node_15",
-      "name": "",
+      "name": "Angoda",
       "type": "PLACE",
       "x": 408.03460976972855,
       "y": 10.837843692607805
     },
     {
       "id": "node_16",
-      "name": "",
+      "name": "Athurugiriya",
       "type": "PLACE",
       "x": 249.43460976972824,
       "y": 183.73784369260824
     },
     {
       "id": "node_17",
-      "name": "",
+      "name": "Avissawella",
       "type": "PLACE",
       "x": 294.93460976972835,
       "y": -115.26215630739233
     },
     {
       "id": "node_18",
-      "name": "",
+      "name": "Battaramulla",
       "type": "PLACE",
       "x": 586.1346097697289,
       "y": -26.862156307392212
     },
     {
       "id": "node_19",
-      "name": "",
+      "name": "Batugampola",
       "type": "PLACE",
       "x": 658.9346097697289,
       "y": -134.76215630739242
     },
     {
       "id": "node_20",
-      "name": "",
+      "name": "Bope",
       "type": "PLACE",
       "x": 587.4346097697289,
       "y": 58.93784369260794
     },
     {
       "id": "node_21",
-      "name": "",
+      "name": "Boralesgamuwa",
       "type": "PLACE",
       "x": 844.8346097697292,
       "y": 95.33784369260798
     },
     {
       "id": "node_22",
-      "name": "",
+      "name": "Dedigamuwa",
       "type": "PLACE",
       "x": 925.4346097697295,
       "y": 25.137843692607873
     },
     {
       "id": "node_23",
-      "name": "",
+      "name": "Dehiwala",
       "type": "PLACE",
       "x": 532.8346097697287,
       "y": 315.03784369260836
     },
     {
       "id": "node_24",
-      "name": "",
+      "name": "Deltara",
       "type": "PLACE",
       "x": 874.7346097697293,
       "y": 374.8378436926085
     },
     {
       "id": "node_25",
-      "name": "",
+      "name": "Gangodavila",
       "type": "PLACE",
       "x": 645.9346097697289,
       "y": 148.6378436926081
     },
     {
       "id": "node_26",
-      "name": "",
+      "name": "Godagama",
       "type": "PLACE",
       "x": 912.4346097697294,
       "y": -145.16215630739245
     },
     {
       "id": "node_27",
-      "name": "",
+      "name": "Habarakada",
       "type": "PLACE",
       "x": 420.0699999999997,
       "y": -239.28300000000002
     },
     {
       "id": "node_28",
-      "name": "",
+      "name": "Hanwella",
       "type": "PLACE",
       "x": 409.33460976972856,
       "y": -129.56215630739234
     },
     {
       "id": "node_29",
-      "name": "",
+      "name": "Hiripitya",
       "type": "PLACE",
       "x": 943.6346097697294,
       "y": -48.96215630739229
     },
     {
       "id": "node_30",
-      "name": "",
+      "name": "Hokandara",
       "type": "PLACE",
       "x": -130.1653902302725,
       "y": 316.33784369260843
     },
     {
       "id": "node_31",
-      "name": "",
+      "name": "Homagama",
       "type": "PLACE",
       "x": 348.23460976972837,
       "y": 399.53784369260853
     },
     {
       "id": "node_32",
-      "name": "",
+      "name": "Horagala",
       "type": "PLACE",
       "x": 142.83460976972805,
       "y": 264.3378436926084
     },
     {
       "id": "node_33",
-      "name": "",
+      "name": "Kaduwela",
       "type": "PLACE",
       "x": 120.73460976972802,
       "y": 398.2378436926086
     },
     {
       "id": "node_34",
-      "name": "",
+      "name": "Kesbewa",
       "type": "PLACE",
       "x": -13.165390230272266,
       "y": 177.23784369260812
     },
     {
       "id": "node_35",
-      "name": "",
+      "name": "Kohuwala",
       "type": "PLACE",
       "x": 545.8346097697288,
       "y": 203.23784369260818
     },
     {
       "id": "node_36",
-      "name": "",
+      "name": "Kolonnawa",
       "type": "PLACE",
       "x": 621.2346097697289,
       "y": 458.03784369260865
     },
     {
       "id": "node_37",
-      "name": "",
+      "name": "Kosgama",
       "type": "PLACE",
       "x": 1016.4346097697295,
       "y": 194.13784369260816
     },
     {
       "id": "node_38",
-      "name": "",
+      "name": "Kottawa",
       "type": "PLACE",
       "x": 735.6346097697291,
       "y": 242.2378436926083
     },
     {
       "id": "node_39",
-      "name": "",
+      "name": "Maharagama",
       "type": "PLACE",
       "x": 930.6346097697295,
       "y": 120.03784369260802
     },
     {
       "id": "node_40",
-      "name": "",
+      "name": "Malabe",
       "type": "PLACE",
       "x": 471.7346097697286,
       "y": 131.73784369260807
     },
     {
       "id": "node_41",
-      "name": "",
+      "name": "Meegoda",
       "type": "PLACE",
       "x": 192.23460976972814,
       "y": 65.437843692608
     },
     {
       "id": "node_42",
-      "name": "",
+      "name": "Moratuwa",
       "type": "PLACE",
       "x": 811.0346097697293,
       "y": 9.53784369260785
     },
     {
       "id": "node_43",
-      "name": "",
+      "name": "Mulleriyawa",
       "type": "PLACE",
       "x": 1336.23460976973,
       "y": 286.43784369260834
     },
     {
       "id": "node_44",
-      "name": "",
+      "name": "Mount Lavinia",
       "type": "PLACE",
       "x": 1168.5346097697297,
       "y": 29.03784369260785
     },
     {
       "id": "node_45",
-      "name": "",
+      "name": "Nawala",
       "type": "PLACE",
       "x": 904.6346097697294,
       "y": 263.0378436926083
     },
     {
       "id": "node_46",
-      "name": "",
+      "name": "Nugegoda",
       "type": "PLACE",
       "x": 1024.2346097697296,
       "y": 74.53784369260796
     },
     {
       "id": "node_47",
-      "name": "",
+      "name": "Padukka",
       "type": "PLACE",
       "x": 681.0346097697291,
       "y": -26.86215630739224
     },
     {
       "id": "node_48",
-      "name": "",
+      "name": "Pannipitiya",
       "type": "PLACE",
       "x": 778.5346097697292,
       "y": -82.76215630739233
     },
     {
       "id": "node_49",
-      "name": "",
+      "name": "Piliyandala",
       "type": "PLACE",
       "x": 489.93460976972864,
       "y": 10.837843692607805
     },
     {
       "id": "node_50",
-      "name": "",
+      "name": "Polgasowita",
       "type": "PLACE",
       "x": 289.7346097697283,
       "y": 23.83784369260792
     },
     {
       "id": "node_51",
-      "name": "",
+      "name": "Puwakpitiya",
       "type": "PLACE",
       "x": 88.56999999999965,
       "y": -32.583
     },
     {
       "id": "node_52",
-      "name": "",
+      "name": "Ratmalana",
       "type": "PLACE",
       "x": -62.23000000000036,
       "y": -98.88300000000001
     },
     {
       "id": "node_53",
-      "name": "",
+      "name": "Talawatugoda",
       "type": "PLACE",
       "x": 1086.6346097697296,
       "y": -133.46215630739243
     },
     {
       "id": "node_54",
-      "name": "",
+      "name": "Wellampitiya",
       "type": "PLACE",
       "x": 1221.83460976973,
       "y": 143.4378436926081
     },
     {
       "id": "node_55",
-      "name": "",
+      "name": "Wennawatta",
       "type": "PLACE",
       "x": 1401.2346097697305,
       "y": 103.13784369260799
     },
     {
       "id": "node_56",
-      "name": "",
+      "name": "Ahangama",
       "type": "PLACE",
       "x": 1082.7346097697298,
       "y": -33.36215630739224
     },
     {
       "id": "node_57",
-      "name": "",
+      "name": "Baddegama",
       "type": "PLACE",
       "x": 1366.13460976973,
       "y": -120.4621563073924
     },
     {
       "id": "node_58",
-      "name": "",
+      "name": "Batapola",
       "type": "PLACE",
       "x": 1340.13460976973,
       "y": 183.73784369260818
     },
     {
       "id": "node_59",
-      "name": "",
+      "name": "Bentota",
       "type": "PLACE",
       "x": 1121.7346097697298,
       "y": 425.53784369260853
     },
     {
       "id": "node_60",
-      "name": "",
+      "name": "Dikkumbura",
       "type": "PLACE",
       "x": 1117.83460976973,
       "y": 231.83784369260826
     },
     {
       "id": "node_61",
-      "name": "",
+      "name": "Elpitiya",
       "type": "PLACE",
       "x": 1390.8346097697304,
       "y": 402.1378436926086
     },
     {
       "id": "node_62",
-      "name": "",
+      "name": "Habaraduwa",
       "type": "PLACE",
       "x": 980.0346097697295,
       "y": 421.63784369260856
     },
     {
       "id": "node_63",
-      "name": "",
+      "name": "Hikkaduwa",
       "type": "PLACE",
       "x": 1110.0346097697297,
       "y": 322.8378436926084
     },
     {
       "id": "node_64",
-      "name": "",
+      "name": "Karandeniya",
       "type": "PLACE",
       "x": 768.1346097697292,
       "y": 325.4378436926084
@@ -378,238 +378,238 @@ export const mapDataRaw = {
     },
     {
       "id": "node_66",
-      "name": "",
+      "name": "Kosgoda",
       "type": "PLACE",
       "x": 469.4699999999997,
       "y": 434.117
     },
     {
       "id": "node_67",
-      "name": "",
+      "name": "Miriswatta",
       "type": "PLACE",
       "x": 229.93460976972818,
       "y": 355.3378436926085
     },
     {
       "id": "node_68",
-      "name": "",
+      "name": "Nakiyadeniya",
       "type": "PLACE",
       "x": -58.66539023027235,
       "y": 406.0378436926086
     },
     {
       "id": "node_69",
-      "name": "",
+      "name": "Ratgama",
       "type": "PLACE",
       "x": 28.434609769727814,
       "y": 309.8378436926084
     },
     {
       "id": "node_70",
-      "name": "",
+      "name": "Talpe",
       "type": "PLACE",
       "x": -158.76539023027254,
       "y": 211.0378436926082
     },
     {
       "id": "node_71",
-      "name": "",
+      "name": "Watugedara",
       "type": "PLACE",
       "x": -108.06539023027244,
       "y": 126.53784369260802
     },
     {
       "id": "node_72",
-      "name": "",
+      "name": "Batuwatta",
       "type": "PLACE",
       "x": -141.53000000000037,
       "y": 33.716999999999985
     },
     {
       "id": "node_73",
-      "name": "",
+      "name": "Dompe",
       "type": "PLACE",
       "x": -62.56539023027236,
       "y": 12.137843692607817
     },
     {
       "id": "node_74",
-      "name": "",
+      "name": "Gampaha",
       "type": "PLACE",
       "x": -163.6300000000004,
       "y": -189.88300000000004
     },
     {
       "id": "node_75",
-      "name": "",
+      "name": "Hunumulla",
       "type": "PLACE",
       "x": 120.73460976972797,
       "y": -201.06215630739254
     },
     {
       "id": "node_76",
-      "name": "",
+      "name": "Katana",
       "type": "PLACE",
       "x": 206.53460976972815,
       "y": -50.26215630739222
     },
     {
       "id": "node_77",
-      "name": "",
+      "name": "Kimbulapitiya",
       "type": "PLACE",
       "x": 288.76999999999964,
       "y": -193.78300000000002
     },
     {
       "id": "node_78",
-      "name": "",
+      "name": "Kiribathgoda",
       "type": "PLACE",
       "x": 573.1346097697287,
       "y": -206.26215630739256
     },
     {
       "id": "node_79",
-      "name": "",
+      "name": "Kochchikade",
       "type": "PLACE",
       "x": 551.0346097697287,
       "y": -117.86215630739238
     },
     {
       "id": "node_80",
-      "name": "",
+      "name": "Malwana",
       "type": "PLACE",
       "x": 798.3699999999997,
       "y": -201.58300000000003
     },
     {
       "id": "node_81",
-      "name": "",
+      "name": "Minuwangoda",
       "type": "PLACE",
       "x": 720.0346097697291,
       "y": 55.03784369260791
     },
     {
       "id": "node_82",
-      "name": "",
+      "name": "Nedungamuwa",
       "type": "PLACE",
       "x": 856.5346097697293,
       "y": 186.33784369260815
     },
     {
       "id": "node_83",
-      "name": "",
+      "name": "Negombo",
       "type": "PLACE",
       "x": 327.4346097697284,
       "y": 279.9378436926083
     },
     {
       "id": "node_84",
-      "name": "",
+      "name": "Pasyala",
       "type": "PLACE",
       "x": 333.9346097697284,
       "y": 105.73784369260801
     },
     {
       "id": "node_85",
-      "name": "",
+      "name": "Peliyagoda",
       "type": "PLACE",
       "x": 120.73460976972802,
       "y": 144.73784369260812
     },
     {
       "id": "node_86",
-      "name": "",
+      "name": "Ragama",
       "type": "PLACE",
       "x": 441.8346097697286,
       "y": 289.0378436926083
     },
     {
       "id": "node_87",
-      "name": "",
+      "name": "Talahena",
       "type": "PLACE",
       "x": 410.63460976972846,
       "y": 174.6378436926081
     },
     {
       "id": "node_88",
-      "name": "",
+      "name": "Angunakolapelessa",
       "type": "PLACE",
       "x": 751.2346097697291,
       "y": 142.13784369260804
     },
     {
       "id": "node_89",
-      "name": "",
+      "name": "Beliatta",
       "type": "PLACE",
       "x": 639.4346097697289,
       "y": 257.8378436926083
     },
     {
       "id": "node_90",
-      "name": "",
+      "name": "Hakuruwela",
       "type": "PLACE",
       "x": 1255.63460976973,
       "y": -73.66215630739231
     },
     {
       "id": "node_91",
-      "name": "",
+      "name": "Hungama",
       "type": "PLACE",
       "x": 1263.4346097697298,
       "y": -194.5621563073925
     },
     {
       "id": "node_92",
-      "name": "",
+      "name": "Julampitiya",
       "type": "PLACE",
       "x": 1051.5346097697295,
       "y": -227.0621563073926
     },
     {
       "id": "node_93",
-      "name": "",
+      "name": "Lunama",
       "type": "PLACE",
       "x": 1380.4346097697303,
       "y": -12.562156307392172
     },
     {
       "id": "node_94",
-      "name": "",
+      "name": "Lunugamwehera",
       "type": "PLACE",
       "x": 1268.63460976973,
       "y": 47.237843692607896
     },
     {
       "id": "node_95",
-      "name": "",
+      "name": "Mamadala",
       "type": "PLACE",
       "x": 1119.1346097697296,
       "y": 129.13784369260804
     },
     {
       "id": "node_96",
-      "name": "",
+      "name": "Medamulana",
       "type": "PLACE",
       "x": 1232.23460976973,
       "y": 264.3378436926083
     },
     {
       "id": "node_97",
-      "name": "",
+      "name": "Mulkirigala",
       "type": "PLACE",
       "x": 1250.4346097697298,
       "y": 385.2378436926085
     },
     {
       "id": "node_98",
-      "name": "",
+      "name": "Netolpitiya",
       "type": "PLACE",
       "x": 991.7346097697294,
       "y": 298.1378436926084
     },
     {
       "id": "node_99",
-      "name": "Rajagiriya",
+      "name": "Weeraketiya",
       "type": "PLACE",
       "x": 744.7346097697291,
       "y": 417.7378436926086
