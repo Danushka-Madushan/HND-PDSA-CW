@@ -9,8 +9,8 @@
  *
  * map_data.json must be in the same directory (or adjust the import path).
  * Place your Dijkstra result into the "Shortest Path" input field as
- * comma-separated node numbers, e.g.:  66, 23, 45, 89
- * Node 66 = eb_66 (Regional Electricity Board — always the source).
+ * comma-separated node numbers, e.g.:  65, 23, 45, 89
+ * Node 65 = eb_65 (Regional Electricity Board — always the source).
  */
 
 import React, {
@@ -51,7 +51,7 @@ interface MapData {
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const mapData = mapDataRaw as MapData;
-const SOURCE_NODE_ID = "eb_66";
+const SOURCE_NODE_ID = "eb_65";
 const PADDING  = 90;
 const R_BASE   = 6;
 const R_SOURCE = 12;
@@ -64,11 +64,11 @@ const ZOOM_STEP = 1.15;
 // ─── Pure helpers ─────────────────────────────────────────────────────────────
 
 function toNodeId(n: number): string {
-  return n === 66 ? "eb_66" : `node_${n}`;
+  return n === 65 ? "eb_65" : `node_${n}`;
 }
 
 function nodeLabel(id: string): string {
-  return id === "eb_66" ? "66" : id.replace("node_", "");
+  return id === "eb_65" ? "65" : id.replace("node_", "");
 }
 
 function edgeKey(a: string, b: string): string {
@@ -533,7 +533,7 @@ export default function CityMap() {
                 Source (Fixed)
               </div>
               <div style={{ color: "#7c2d12", fontWeight: 700, fontSize: 12, marginTop: 2 }}>
-                Node 66
+                Node 65
               </div>
               <div style={{ color: "#c2410c", fontSize: 10, marginTop: 1 }}>
                 Regional Electricity Board
@@ -574,7 +574,7 @@ export default function CityMap() {
               onKeyDown={(e: ReactKeyboardEvent<HTMLInputElement>) => {
                 if (e.key === "Enter") handleHighlight();
               }}
-              placeholder="e.g.  66, 23, 45, 89"
+              placeholder="e.g.  65, 23, 45, 89"
               style={{
                 width: "100%", padding: "10px 14px", borderRadius: 8,
                 border: "1px solid #d1d5db", background: "#f9fafb",

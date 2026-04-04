@@ -370,16 +370,16 @@ export const mapDataRaw = {
       "y": 325.4378436926084
     },
     {
-      "id": "node_65",
-      "name": "",
-      "type": "PLACE",
+      "id": "eb_65",
+      "name": "Regional Electricity Board",
+      "type": "ELECTRICITY_BOARD",
       "x": 627.7346097697289,
       "y": 363.13784369260844
     },
     {
-      "id": "eb_66",
-      "name": "Regional Electricity Board",
-      "type": "ELECTRICITY_BOARD",
+      "id": "node_66",
+      "name": "",
+      "type": "PLACE",
       "x": 469.4699999999997,
       "y": 434.117
     },
@@ -788,7 +788,7 @@ export const mapDataRaw = {
     },
     {
       "source": "node_31",
-      "target": "eb_66",
+      "target": "node_66",
       "weight": 14.0
     },
     {
@@ -798,7 +798,7 @@ export const mapDataRaw = {
     },
     {
       "source": "node_86",
-      "target": "eb_66",
+      "target": "node_66",
       "weight": 12.0
     },
     {
@@ -932,7 +932,7 @@ export const mapDataRaw = {
       "weight": 15.0
     },
     {
-      "source": "eb_66",
+      "source": "node_66",
       "target": "node_23",
       "weight": 19.0
     },
@@ -943,16 +943,16 @@ export const mapDataRaw = {
     },
     {
       "source": "node_23",
-      "target": "node_65",
+      "target": "eb_65",
       "weight": 11.0
     },
     {
       "source": "node_36",
-      "target": "node_65",
+      "target": "eb_65",
       "weight": 6.0
     },
     {
-      "source": "eb_66",
+      "source": "node_66",
       "target": "node_36",
       "weight": 12.0
     },
@@ -987,12 +987,12 @@ export const mapDataRaw = {
       "weight": 9.0
     },
     {
-      "source": "node_65",
+      "source": "eb_65",
       "target": "node_64",
       "weight": 15.0
     },
     {
-      "source": "node_65",
+      "source": "eb_65",
       "target": "node_89",
       "weight": 6.0
     },
