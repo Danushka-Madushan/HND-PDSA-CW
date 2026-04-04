@@ -351,6 +351,7 @@ export default function CityMap() {
                     fontFamily="monospace"
                     stroke="#f2ede6"
                     strokeWidth={3}
+                    className='tracking-widest'
                     paintOrder="stroke"
                     opacity={isAct ? 1 : 0.9}
                   >
