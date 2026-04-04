@@ -239,7 +239,7 @@ export default function CityMap() {
   return (
     <div
       className="flex h-screen overflow-hidden select-none"
-      style={{ background: "#f2ede6", fontFamily: "'JetBrains Mono', 'Fira Code', 'Courier New', monospace" }}
+      style={{ background: "#f2ede6", fontFamily: "'JetBrains Mono', monospace" }}
     >
 
       {/* ══════════════════════════ MAP CANVAS ══════════════════════════ */}
@@ -644,7 +644,7 @@ export default function CityMap() {
               className="flex-1 text-xs font-bold rounded-lg py-2.5"
               style={{
                 background: "#1d4ed8", color: "#ffffff",
-                border: "none", letterSpacing: "0.04em",
+                border: "none",
               }}
             >
               Highlight Path
@@ -694,13 +694,13 @@ export default function CityMap() {
                 )}
                 {activePath.slice(1, -1).map((id, i) => (
                   <span key={id}>
-                    <span style={{ color: "#1d4ed8" }}>node {nodeLabel(id)}</span>
+                    <span style={{ color: "#1d4ed8" }}>Node {nodeLabel(id)} ({nodeMap.get(id)?.name})</span>
                     {i < activePath.length - 3 && <span style={{ color: "#7dd3fc" }}> → </span>}
                   </span>
                 ))}
                 {activePath.length > 2 && <span style={{ color: "#7dd3fc" }}> → </span>}
                 <span style={{ color: "#15803d", fontWeight: 700 }}>
-                  node {nodeLabel(activePath.at(-1)!)}
+                  Node {nodeLabel(activePath.at(-1)!)} ({nodeMap.get(activePath.at(-1)!)?.name})
                 </span>
                 <span style={{ color: "#94a3b8" }}> from Electricity Dept.</span>
               </div>
