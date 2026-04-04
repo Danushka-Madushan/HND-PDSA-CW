@@ -52,13 +52,13 @@ interface MapData {
 
 const mapData = mapDataRaw as MapData;
 const SOURCE_NODE_ID = "eb_65";
-const PADDING  = 90;
-const R_BASE   = 6;
+const PADDING = 90;
+const R_BASE = 6;
 const R_SOURCE = 12;
-const R_DEST   = 10;
-const R_PATH   = 8;
-const ZOOM_MIN  = 0.2;
-const ZOOM_MAX  = 8;
+const R_DEST = 10;
+const R_PATH = 8;
+const ZOOM_MIN = 0.2;
+const ZOOM_MAX = 8;
 const ZOOM_STEP = 1.15;
 
 // ─── Pure helpers ─────────────────────────────────────────────────────────────
@@ -114,17 +114,17 @@ export default function CityMap() {
 
   // ── Pan / Zoom ──
   const [scale, setScale] = useState(1);
-  const [pan,   setPan  ] = useState({ x: 0, y: 0 });
-  const dragging    = useRef(false);
-  const lastMouse   = useRef({ x: 0, y: 0 });
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const dragging = useRef(false);
+  const lastMouse = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
   // ── UI ──
-  const [pathInput,   setPathInput  ] = useState("");
-  const [distInput,   setDistInput  ] = useState("");
-  const [destInput,   setDestInput  ] = useState("");
-  const [activePath,  setActivePath ] = useState<string[]>([]);
-  const [hoveredId,   setHoveredId  ] = useState<string | null>(null);
+  const [pathInput, setPathInput] = useState("");
+  const [distInput, setDistInput] = useState("");
+  const [destInput, setDestInput] = useState("");
+  const [activePath, setActivePath] = useState<string[]>([]);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   // ─── FIX: window-level listeners prevent drag from dropping when the cursor
   //         passes over SVG child elements (which would fire onMouseLeave on
@@ -141,10 +141,10 @@ export default function CityMap() {
     const onUp = () => { dragging.current = false; };
 
     window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseup",   onUp);
+    window.addEventListener("mouseup", onUp);
     return () => {
       window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseup",   onUp);
+      window.removeEventListener("mouseup", onUp);
     };
   }, []);
 
@@ -186,23 +186,33 @@ export default function CityMap() {
   }, []);
 
   // ── Derived active sets from path ──
-  const { activeEdgeKeys, activeNodeSet, destId } = useMemo(() => {
+  const { activeEdgeKeys, activeNodeSet, destId, directedActiveEdges } = useMemo(() => {
     const activeEdgeKeys = new Set<string>();
-    const activeNodeSet  = new Set<string>(activePath);
+    const activeNodeSet = new Set<string>(activePath);
+    // Maps normalised edgeKey → { fromId, toId } in path-traversal order so the
+    // animated dash always flows source → destination regardless of how the edge
+    // is stored in the data file.
+    const directedActiveEdges = new Map<string, { fromId: string; toId: string }>();
     for (let i = 0; i < activePath.length - 1; i++) {
-      activeEdgeKeys.add(edgeKey(activePath[i], activePath[i + 1]));
+      const key = edgeKey(activePath[i], activePath[i + 1]);
+      activeEdgeKeys.add(key);
+      directedActiveEdges.set(key, { fromId: activePath[i], toId: activePath[i + 1] });
     }
     return {
       activeEdgeKeys,
       activeNodeSet,
       destId: activePath.length > 1 ? activePath.at(-1)! : null,
+      directedActiveEdges,
     };
   }, [activePath]);
 
   // ── Handlers ──
   const onMouseDown = useCallback((e: ReactMouseEvent<HTMLDivElement>) => {
     if ((e.target as Element).closest("[data-node]")) return;
-    dragging.current  = true;
+    // Prevent the browser's native HTML5 drag gesture, which would swallow
+    // subsequent mousemove events and break the custom pan handler.
+    e.preventDefault();
+    dragging.current = true;
     lastMouse.current = { x: e.clientX, y: e.clientY };
   }, []);
 
@@ -218,8 +228,8 @@ export default function CityMap() {
     setDestInput("");
   }, []);
 
-  const zoomIn   = () => setScale((s) => Math.min(ZOOM_MAX, s * ZOOM_STEP));
-  const zoomOut  = () => setScale((s) => Math.max(ZOOM_MIN, s / ZOOM_STEP));
+  const zoomIn = () => setScale((s) => Math.min(ZOOM_MAX, s * ZOOM_STEP));
+  const zoomOut = () => setScale((s) => Math.max(ZOOM_MIN, s / ZOOM_STEP));
   const resetView = () => { setScale(1); setPan({ x: 0, y: 0 }); };
 
   const showWeightLabels = scale > 0.65;
@@ -291,24 +301,40 @@ export default function CityMap() {
             const t = nodeMap.get(edge.target);
             if (!s || !t) return null;
 
-            const key   = edgeKey(edge.source, edge.target);
+            const key = edgeKey(edge.source, edge.target);
             const isAct = activeEdgeKeys.has(key);
-            const mx    = (s.x + t.x) / 2;
-            const my    = (s.y + t.y) / 2;
+
+            // For active edges, resolve coordinates in path-traversal order so
+            // the animated dash always flows from source → destination.
+            let x1 = s.x, y1 = s.y, x2 = t.x, y2 = t.y;
+            if (isAct) {
+              const dir = directedActiveEdges.get(key);
+              if (dir) {
+                const fromNode = nodeMap.get(dir.fromId);
+                const toNode = nodeMap.get(dir.toId);
+                if (fromNode && toNode) {
+                  x1 = fromNode.x; y1 = fromNode.y;
+                  x2 = toNode.x; y2 = toNode.y;
+                }
+              }
+            }
+
+            const mx = (s.x + t.x) / 2;
+            const my = (s.y + t.y) / 2;
 
             return (
               <g key={i}>
                 {/* Glow halo on active edges */}
                 {isAct && (
                   <line
-                    x1={s.x} y1={s.y} x2={t.x} y2={t.y}
+                    x1={x1} y1={y1} x2={x2} y2={y2}
                     stroke="#93c5fd" strokeWidth={10} strokeOpacity={0.2}
                     strokeLinecap="round"
                   />
                 )}
 
                 <line
-                  x1={s.x} y1={s.y} x2={t.x} y2={t.y}
+                  x1={x1} y1={y1} x2={x2} y2={y2}
                   stroke={isAct ? "#1d4ed8" : "#c8bfb4"}
                   strokeWidth={isAct ? 2.5 : 1.4}
                   strokeOpacity={isAct ? 1 : 0.7}
@@ -337,15 +363,15 @@ export default function CityMap() {
 
           {/* ── Nodes ── */}
           {mapData.nodes.map((node) => {
-            const isSource  = node.id === SOURCE_NODE_ID;
-            const isDest    = node.id === destId;
-            const isActive  = activeNodeSet.has(node.id);
+            const isSource = node.id === SOURCE_NODE_ID;
+            const isDest = node.id === destId;
+            const isActive = activeNodeSet.has(node.id);
             const isHovered = hoveredId === node.id;
 
-            let r      = R_BASE;
-            let fill   = "#e8e2db";
+            let r = R_BASE;
+            let fill = "#e8e2db";
             let stroke = "#b5ada6";
-            let sw     = 1.2;
+            let sw = 1.2;
             let filt: string | undefined;
 
             if (isSource) {
@@ -411,11 +437,11 @@ export default function CityMap() {
                   textAnchor="middle"
                   fontSize={7}
                   fill={
-                    isSource  ? "#dc2626" :
-                    isDest    ? "#16a34a" :
-                    isActive  ? "#1d4ed8" :
-                    isHovered ? "#3b82f6" :
-                    "#b0a49a"
+                    isSource ? "#dc2626" :
+                      isDest ? "#16a34a" :
+                        isActive ? "#1d4ed8" :
+                          isHovered ? "#3b82f6" :
+                            "#b0a49a"
                   }
                   fontFamily="monospace"
                   stroke="#f2ede6"
@@ -433,8 +459,8 @@ export default function CityMap() {
         <div className="absolute bottom-6 left-5 flex flex-col gap-1.5">
           {(
             [
-              { icon: <Plus className="w-3.5 h-3.5" />,      action: zoomIn    },
-              { icon: <Minus className="w-3.5 h-3.5" />,     action: zoomOut   },
+              { icon: <Plus className="w-3.5 h-3.5" />, action: zoomIn },
+              { icon: <Minus className="w-3.5 h-3.5" />, action: zoomOut },
               { icon: <RotateCcw className="w-3.5 h-3.5" />, action: resetView },
             ] as const
           ).map(({ icon, action }, i) => (
@@ -450,15 +476,15 @@ export default function CityMap() {
               }}
               onMouseEnter={(e) => {
                 const b = e.currentTarget;
-                b.style.background   = "#eff6ff";
-                b.style.borderColor  = "#93c5fd";
-                b.style.color        = "#2563eb";
+                b.style.background = "#eff6ff";
+                b.style.borderColor = "#93c5fd";
+                b.style.color = "#2563eb";
               }}
               onMouseLeave={(e) => {
                 const b = e.currentTarget;
-                b.style.background   = "#ffffff";
-                b.style.borderColor  = "#d1d5db";
-                b.style.color        = "#6b7280";
+                b.style.background = "#ffffff";
+                b.style.borderColor = "#d1d5db";
+                b.style.color = "#6b7280";
               }}
             >
               {icon}
@@ -482,9 +508,9 @@ export default function CityMap() {
               style={{
                 background:
                   hoveredId === SOURCE_NODE_ID ? "#dc2626" :
-                  hoveredId === destId         ? "#16a34a" :
-                  activeNodeSet.has(hoveredId) ? "#2563eb" :
-                  "#9ca3af",
+                    hoveredId === destId ? "#16a34a" :
+                      activeNodeSet.has(hoveredId) ? "#2563eb" :
+                        "#9ca3af",
               }}
             />
             Node {nodeLabel(hoveredId)}
@@ -558,7 +584,7 @@ export default function CityMap() {
                 fontFamily: "inherit", boxSizing: "border-box",
               }}
               onFocus={(e) => (e.currentTarget.style.borderColor = "#2563eb")}
-              onBlur={(e)  => (e.currentTarget.style.borderColor = "#d1d5db")}
+              onBlur={(e) => (e.currentTarget.style.borderColor = "#d1d5db")}
             />
           </div>
 
@@ -582,7 +608,7 @@ export default function CityMap() {
                 fontFamily: "inherit", boxSizing: "border-box",
               }}
               onFocus={(e) => (e.currentTarget.style.borderColor = "#f59e0b")}
-              onBlur={(e)  => (e.currentTarget.style.borderColor = "#d1d5db")}
+              onBlur={(e) => (e.currentTarget.style.borderColor = "#d1d5db")}
             />
             <div style={{ fontSize: 9, color: "#9ca3af", marginTop: 5 }}>
               Comma or space separated · Enter to apply
@@ -606,7 +632,7 @@ export default function CityMap() {
                 fontFamily: "inherit", boxSizing: "border-box",
               }}
               onFocus={(e) => (e.currentTarget.style.borderColor = "#2563eb")}
-              onBlur={(e)  => (e.currentTarget.style.borderColor = "#d1d5db")}
+              onBlur={(e) => (e.currentTarget.style.borderColor = "#d1d5db")}
             />
           </div>
 
@@ -682,7 +708,7 @@ export default function CityMap() {
               <div className="flex flex-wrap items-center gap-1">
                 {activePath.map((id, i) => {
                   const isFirst = i === 0;
-                  const isLast  = i === activePath.length - 1;
+                  const isLast = i === activePath.length - 1;
                   return (
                     <React.Fragment key={id}>
                       <span
@@ -690,7 +716,7 @@ export default function CityMap() {
                         style={{
                           fontSize: 10, fontWeight: 700,
                           background: isFirst ? "#fee2e2" : isLast ? "#dcfce7" : "#dbeafe",
-                          color:      isFirst ? "#dc2626" : isLast ? "#15803d" : "#1d4ed8",
+                          color: isFirst ? "#dc2626" : isLast ? "#15803d" : "#1d4ed8",
                           border: `1px solid ${isFirst ? "#fca5a5" : isLast ? "#86efac" : "#93c5fd"}`,
                         }}
                       >
@@ -722,9 +748,9 @@ export default function CityMap() {
 
           {[
             { color: "#dc2626", label: "Electricity Board (source)" },
-            { color: "#16a34a", label: "Destination node"           },
-            { color: "#2563eb", label: "Path nodes"                 },
-            { color: "#b5ada6", label: "Inactive nodes"             },
+            { color: "#16a34a", label: "Destination node" },
+            { color: "#2563eb", label: "Path nodes" },
+            { color: "#b5ada6", label: "Inactive nodes" },
           ].map(({ color, label }) => (
             <div key={label} className="flex items-center gap-2.5">
               <div
