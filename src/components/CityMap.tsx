@@ -19,11 +19,10 @@ import React, {
   useCallback,
   useMemo,
   useEffect,
-  type MouseEvent as ReactMouseEvent,
   type KeyboardEvent as ReactKeyboardEvent,
 } from "react";
 import { Button } from "@heroui/react";
-import { Zap, Plus, Minus, RotateCcw, Route } from "lucide-react";
+import { Zap, Plus, Minus, RotateCcw, Route, ArrowBigUp, ArrowBigLeft, ArrowBigRight, ArrowBigDown, GitCommitVertical } from "lucide-react";
 import { mapDataRaw } from '../constant/map_content';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -60,6 +59,7 @@ const R_PATH = 8;
 const ZOOM_MIN = 0.2;
 const ZOOM_MAX = 8;
 const ZOOM_STEP = 1.15;
+const PAN_STEP = 60; // px per arrow key / button press
 
 // ─── Pure helpers ─────────────────────────────────────────────────────────────
 
@@ -115,9 +115,9 @@ export default function CityMap() {
   // ── Pan / Zoom ──
   const [scale, setScale] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
-  const dragging = useRef(false);
-  const lastMouse = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
+  const panHoldTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const panHoldInterval = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // ── UI ──
   const [pathInput, setPathInput] = useState("");
@@ -126,26 +126,24 @@ export default function CityMap() {
   const [activePath, setActivePath] = useState<string[]>([]);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
-  // ─── FIX: window-level listeners prevent drag from dropping when the cursor
-  //         passes over SVG child elements (which would fire onMouseLeave on
-  //         a container-level handler and cancel the gesture prematurely). ──────
+  // ── Arrow-key panning ──
   useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (!dragging.current) return;
-      setPan((p) => ({
-        x: p.x + e.clientX - lastMouse.current.x,
-        y: p.y + e.clientY - lastMouse.current.y,
-      }));
-      lastMouse.current = { x: e.clientX, y: e.clientY };
+    const onKeyDown = (e: KeyboardEvent) => {
+      // Don't hijack keys while the user is typing in an input / textarea
+      if ((e.target as Element).closest("input, textarea")) return;
+      const dirs: Record<string, { dx: number; dy: number }> = {
+        ArrowUp: { dx: 0, dy: PAN_STEP },
+        ArrowDown: { dx: 0, dy: -PAN_STEP },
+        ArrowLeft: { dx: PAN_STEP, dy: 0 },
+        ArrowRight: { dx: -PAN_STEP, dy: 0 },
+      };
+      const d = dirs[e.key];
+      if (!d) return;
+      e.preventDefault(); // stop the page from scrolling
+      setPan((p) => ({ x: p.x + d.dx, y: p.y + d.dy }));
     };
-    const onUp = () => { dragging.current = false; };
-
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseup", onUp);
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseup", onUp);
-    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
   // ─── FIX: wheel must be non-passive so preventDefault() is allowed ────────
@@ -207,15 +205,6 @@ export default function CityMap() {
   }, [activePath]);
 
   // ── Handlers ──
-  const onMouseDown = useCallback((e: ReactMouseEvent<HTMLDivElement>) => {
-    if ((e.target as Element).closest("[data-node]")) return;
-    // Prevent the browser's native HTML5 drag gesture, which would swallow
-    // subsequent mousemove events and break the custom pan handler.
-    e.preventDefault();
-    dragging.current = true;
-    lastMouse.current = { x: e.clientX, y: e.clientY };
-  }, []);
-
   const handleHighlight = useCallback(() => {
     const parsed = parsePath(pathInput);
     if (parsed.length >= 2) setActivePath(parsed);
@@ -232,21 +221,48 @@ export default function CityMap() {
   const zoomOut = () => setScale((s) => Math.max(ZOOM_MIN, s / ZOOM_STEP));
   const resetView = () => { setScale(1); setPan({ x: 0, y: 0 }); };
 
+  // ── Hold-to-pan helpers for the D-pad buttons ──
+  // Fire once immediately on press, then after a 350 ms delay start repeating
+  // at 40 ms intervals so the map scrolls smoothly while the button is held.
+  const stopContinuousPan = useCallback(() => {
+    if (panHoldTimer.current) { clearTimeout(panHoldTimer.current); panHoldTimer.current = null; }
+    if (panHoldInterval.current) { clearInterval(panHoldInterval.current); panHoldInterval.current = null; }
+  }, []);
+
+  const startContinuousPan = useCallback((dx: number, dy: number) => {
+    stopContinuousPan();
+    const step = () => setPan((p) => ({ x: p.x + dx, y: p.y + dy }));
+    step(); // immediate first move
+    panHoldTimer.current = setTimeout(() => {
+      panHoldInterval.current = setInterval(step, 40);
+    }, 350);
+  }, [stopContinuousPan]);
+
   const showWeightLabels = scale > 0.65;
 
   // ─── Render ───────────────────────────────────────────────────────────────
 
   return (
     <div
-      className="flex h-screen overflow-hidden select-none"
+      className="relative flex h-screen overflow-hidden select-none"
       style={{ background: "#f2ede6", fontFamily: "'JetBrains Mono', monospace" }}
     >
+      {/* District label */}
+      <div className="absolute top-5 left-5 pointer-events-none bg-white z-50 px-2 py-1 rounded-md">
+        <div style={{ color: "#6b7280", fontSize: 11, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase" }}>
+          {mapData.metadata.district}
+        </div>
+        <div className='flex gap-x-2 items-center justify-start ' style={{ color: "#9ca3af", fontSize: 10, marginTop: 2 }}>
+          <span> {mapData.metadata.node_count} Cities </span>
+          <GitCommitVertical size={15} strokeWidth={1.5}/>
+          <span>{mapData.metadata.edge_count} Roads</span>
+        </div>
+      </div>
 
       {/* ══════════════════════════ MAP CANVAS ══════════════════════════ */}
       <div
         ref={containerRef}
         className="flex-1 relative overflow-hidden"
-        onMouseDown={onMouseDown}
       >
         {/* Blueprint grid — offset tracks pan so it feels anchored */}
         <div
@@ -259,16 +275,6 @@ export default function CityMap() {
             backgroundPosition: `${pan.x % 48}px ${pan.y % 48}px`,
           }}
         />
-
-        {/* District label */}
-        <div className="absolute top-5 left-5 pointer-events-none">
-          <div style={{ color: "#6b7280", fontSize: 11, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase" }}>
-            {mapData.metadata.district}
-          </div>
-          <div style={{ color: "#9ca3af", fontSize: 10, marginTop: 2 }}>
-            {mapData.metadata.node_count} nodes · {mapData.metadata.edge_count} edges
-          </div>
-        </div>
 
         {/* ── SVG Map ── */}
         <svg
@@ -456,7 +462,7 @@ export default function CityMap() {
           })}
         </svg>
 
-        {/* ── Zoom controls ── */}
+        {/* ── Zoom controls (bottom-left) ── */}
         <div className="absolute bottom-6 left-5 flex flex-col gap-1.5">
           {(
             [
@@ -491,6 +497,63 @@ export default function CityMap() {
               {icon}
             </button>
           ))}
+        </div>
+
+        {/* ── D-pad pan controls (bottom-right) ── */}
+        <div
+          className="absolute bottom-6 right-5"
+          style={{ display: "grid", gridTemplateColumns: "repeat(3, 36px)", gridTemplateRows: "repeat(3, 36px)", gap: 3 }}
+        >
+          {(
+            [
+              // row 0
+              null,
+              { LabelIcon: ArrowBigUp, dx: 0, dy: PAN_STEP, title: "Pan up" },
+              null,
+              // row 1
+              { LabelIcon: ArrowBigLeft, dx: PAN_STEP, dy: 0, title: "Pan left" },
+              null,
+              { LabelIcon: ArrowBigRight, dx: -PAN_STEP, dy: 0, title: "Pan right" },
+              // row 2
+              null,
+              { LabelIcon: ArrowBigDown, dx: 0, dy: -PAN_STEP, title: "Pan down" },
+              null,
+            ] as const
+          ).map((btn, i) => {
+            if (!btn) return <div key={i} />;
+            const { LabelIcon, dx, dy, title } = btn;
+            return (
+              <button
+                key={i}
+                title={title}
+                onMouseDown={() => startContinuousPan(dx, dy)}
+                onMouseUp={stopContinuousPan}
+                onMouseLeave={(e) => {
+                  stopContinuousPan();
+                  const b = e.currentTarget;
+                  b.style.background = "#ffffff";
+                  b.style.borderColor = "#d1d5db";
+                  b.style.color = "#6b7280";
+                }}
+                className="flex items-center justify-center rounded-lg transition-all"
+                style={{
+                  background: "#ffffff",
+                  border: "1px solid #d1d5db",
+                  color: "#6b7280",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+                  lineHeight: 1,
+                }}
+                onMouseEnter={(e) => {
+                  const b = e.currentTarget;
+                  b.style.background = "#eff6ff";
+                  b.style.borderColor = "#93c5fd";
+                  b.style.color = "#2563eb";
+                }}
+              >
+                {<LabelIcon size={18} strokeWidth={1.5} />}
+              </button>
+            );
+          })}
         </div>
 
         {/* Hover tooltip */}
@@ -775,7 +838,7 @@ export default function CityMap() {
           </div>
 
           <div style={{ marginTop: 8, fontSize: 9, color: "#d1d5db" }}>
-            Scroll to zoom · Drag to pan · Edge labels = km
+            Scroll to zoom · Arrow keys / D-pad to pan · Edge labels = km
           </div>
         </div>
       </div>
