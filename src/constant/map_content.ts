@@ -7,7 +7,7 @@ export const mapDataRaw = {
   "nodes": [
     {
       "id": "node_13",
-      "name": "",
+      "name": "Kurunagala",
       "type": "PLACE",
       "x": 135.03460976972804,
       "y": -116.56215630739234
@@ -609,7 +609,7 @@ export const mapDataRaw = {
     },
     {
       "id": "node_99",
-      "name": "",
+      "name": "Rajagiriya",
       "type": "PLACE",
       "x": 744.7346097697291,
       "y": 417.7378436926086
