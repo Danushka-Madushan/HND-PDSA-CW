@@ -153,6 +153,9 @@ const CityMap = () => {
   /* Pan / Zoom */
   const [scale, setScale] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
+  /* Refs mirror state so wheel handler always reads current values without stale closure */
+  const scaleRef = useRef(1);
+  const panRef = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
   const panHoldTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const panHoldInterval = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -223,6 +226,10 @@ const CityMap = () => {
 
   }, [pendingUser, priorityLevel]);
 
+  /* Keep refs in sync so the non-reactive wheel handler always reads fresh values */
+  useEffect(() => { scaleRef.current = scale; }, [scale]);
+  useEffect(() => { panRef.current = pan; }, [pan]);
+
   /* Keyboard: arrow-key panning + +/- zoom */
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -256,16 +263,35 @@ const CityMap = () => {
     return () => { window.removeEventListener("keydown", onKeyDown); };
   }, []);
 
-  /* Wheel zoom (non-passive) */
+  /* Wheel zoom (non-passive) — zooms toward the cursor position */
   useEffect(() => {
     const el = containerRef.current;
     if (!el) { return };
 
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
-      setScale((s) =>
-        Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, s * (e.deltaY < 0 ? ZOOM_STEP : 1 / ZOOM_STEP)))
-      );
+      const s = scaleRef.current;
+      const p = panRef.current;
+      const rect = el.getBoundingClientRect();
+      const mx = e.clientX - rect.left;
+      const my = e.clientY - rect.top;
+      const W = el.clientWidth;
+      const H = el.clientHeight;
+
+      const factor = e.deltaY < 0 ? ZOOM_STEP : 1 / ZOOM_STEP;
+      const newS = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, s * factor));
+
+      /* Compute the "base" screen point under the cursor (at scale=1, pan=0):
+         sx = (bx - W/2) * s + W/2 + p.x  =>  bx = (sx - p.x - W/2) / s + W/2
+         Then keep that same bx fixed at mx after applying newS:
+         newPx = mx - (bx - W/2) * newS - W/2                                  */
+      const bx = (mx - p.x - W / 2) / s + W / 2;
+      const by = (my - p.y - H / 2) / s + H / 2;
+      const newPx = mx - (bx - W / 2) * newS - W / 2;
+      const newPy = my - (by - H / 2) * newS - H / 2;
+
+      setScale(newS);
+      setPan({ x: newPx, y: newPy });
     };
 
     el.addEventListener("wheel", onWheel, { passive: false });
@@ -389,6 +415,12 @@ const CityMap = () => {
     setActivePath([]);
     setActiveDistance("");
   }, []);
+
+  /* Pre-parse route paths once so route-card comparisons don't re-run parsePath every render */
+  const parsedRoutePaths = useMemo(
+    () => new Map(DUMMY_OUTAGE_ROUTES.map((r) => [r.id, parsePath(r.nodePath)])),
+    []
+  );
 
   /* Arrow functions for zoom / reset */
   const zoomIn = () => setScale((s) => Math.min(ZOOM_MAX, s * ZOOM_STEP));
@@ -845,7 +877,7 @@ const CityMap = () => {
           </button>
         </div>
 
-        {/* Node hover tooltip — anchored to node screen position, uses containerSize state (safe in render) */}
+        {/* Node hover tooltip — anchored to node screen position, scales with zoom */}
         {(() => {
           if (!hoveredId || containerSize.w === 0) return null;
           const node = nodeMap.get(hoveredId);
@@ -862,53 +894,124 @@ const CityMap = () => {
           const screenX = (baseX - W / 2) * scale + W / 2 + pan.x;
           const screenY = (baseY - H / 2) * scale + H / 2 + pan.y;
 
-          const accentColor =
-            hoveredId === SOURCE_NODE_ID ? "#dc2626" :
-              hoveredId === destId ? "#16a34a" :
-                activeNodeSet.has(hoveredId) ? "#1d4ed8" : "#475569";
+          const isSource = hoveredId === SOURCE_NODE_ID;
+          const isDest = hoveredId === destId;
+          const isOnPath = activeNodeSet.has(hoveredId);
 
-          const TW = 180;
+          const accentColor =
+            isSource ? "#dc2626" :
+              isDest ? "#16a34a" :
+                isOnPath ? "#1d4ed8" : "#475569";
+
+          const nodeRole =
+            isSource ? "Source · CEB" :
+              isDest ? "Destination" :
+                isOnPath ? "On Active Route" : null;
+
+          /* Scale tooltip gently with zoom — capped at 1.5× so it never dominates the map */
+          const tScale = Math.max(1, Math.min(scale, 1.5));
+
+          /* Content-aware width: estimate from label + name character lengths rather than fixed value */
+          const labelChars = nodeLabel(hoveredId).length;
+          const nameChars = (node.name ?? "—").length;
+          /* badge ≈ chars*8+20px, gap 8px, name ≈ chars*7px, outer padding 24px */
+          const baseEstimate = labelChars * 8 + 20 + 8 + nameChars * 7 + 24;
+          const TW = Math.round(Math.min(Math.max(baseEstimate, 110), 230) * tScale);
+
+          /* Tooltip card height: main row + optional role row + padding */
+          const cardH = Math.round((nodeRole ? 58 : 38) * tScale);
+          const caretH = Math.round(6 * tScale);
+          const gap = 4;
+
+          /* Clamp horizontally and vertically so tooltip never leaves the canvas */
           const tipLeft = Math.max(6, Math.min(screenX - TW / 2, W - TW - 6));
-          const tipTop = screenY - 52;
+          const tipTop = Math.max(6, screenY - cardH - caretH - gap);
+
+          /* Caret offset — stays inside the card */
+          const caretOffset = Math.min(
+            Math.max(screenX - tipLeft - caretH, Math.round(8 * tScale)),
+            TW - Math.round(16 * tScale)
+          );
+
+          const sp = (base: number) => Math.round(base * tScale);
+          const fs = (base: number) => Math.round(base * tScale);
 
           return (
             <div
               className="absolute pointer-events-none fade-in"
               style={{ left: tipLeft, top: tipTop, width: TW, zIndex: 50 }}
             >
+              {/* Card */}
               <div style={{
                 background: "#ffffff",
-                border: `1.5px solid ${accentColor}40`,
-                borderRadius: 8,
-                boxShadow: "0 3px 12px rgba(15,23,42,0.12)",
-                padding: "5px 10px",
+                border: `1.5px solid ${accentColor}28`,
+                borderRadius: sp(8),
+                boxShadow: `0 ${sp(3)}px ${sp(12)}px rgba(15,23,42,0.11)`,
+                padding: `${sp(6)}px ${sp(10)}px`,
                 display: "flex",
-                alignItems: "center",
-                gap: 7,
+                flexDirection: "column",
+                gap: sp(4),
+                overflow: "hidden",
+                position: "relative",
               }}>
-                <span style={{
-                  background: accentColor, color: "#fff",
-                  fontSize: 10, fontWeight: 800, borderRadius: 4,
-                  padding: "1px 6px", fontFamily: "monospace",
-                  flexShrink: 0, letterSpacing: "0.04em",
-                }}>
-                  {nodeLabel(hoveredId)}
-                </span>
-                <span style={{
-                  fontSize: 11, fontWeight: 600, color: "#0f172a",
-                  whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
-                }}>
-                  {node.name ?? "—"}
-                </span>
+                {/* Top accent bar */}
+                <div style={{
+                  position: "absolute",
+                  top: 0, left: 0, right: 0,
+                  height: sp(2),
+                  background: accentColor,
+                  opacity: 0.7,
+                }} />
+
+                {/* Main row: badge + name */}
+                <div style={{ display: "flex", alignItems: "center", gap: sp(7), marginTop: sp(2) }}>
+                  <span style={{
+                    background: accentColor,
+                    color: "#fff",
+                    fontSize: fs(10),
+                    fontWeight: 800,
+                    borderRadius: sp(4),
+                    padding: `${sp(2)}px ${sp(6)}px`,
+                    fontFamily: "monospace",
+                    flexShrink: 0,
+                    letterSpacing: "0.04em",
+                  }}>
+                    {nodeLabel(hoveredId)}
+                  </span>
+                  <span style={{
+                    fontSize: fs(11),
+                    fontWeight: 600,
+                    color: "#0f172a",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                  }}>
+                    {node.name ?? "—"}
+                  </span>
+                </div>
+
+                {/* Role row — only when relevant */}
+                {nodeRole && (
+                  <div style={{
+                    paddingTop: sp(3),
+                    borderTop: `1px solid ${accentColor}15`,
+                    fontSize: fs(9),
+                    fontWeight: 600,
+                    color: accentColor,
+                    letterSpacing: "0.04em",
+                  }}>
+                    {nodeRole}
+                  </div>
+                )}
               </div>
 
               {/* Caret pointing down toward the node */}
               <div style={{
                 width: 0, height: 0,
-                borderLeft: "5px solid transparent",
-                borderRight: "5px solid transparent",
-                borderTop: `5px solid ${accentColor}40`,
-                marginLeft: Math.min(Math.max(screenX - tipLeft - 5, 8), TW - 18),
+                borderLeft: `${caretH}px solid transparent`,
+                borderRight: `${caretH}px solid transparent`,
+                borderTop: `${caretH}px solid ${accentColor}28`,
+                marginLeft: caretOffset,
               }} />
             </div>
           );
@@ -947,7 +1050,7 @@ const CityMap = () => {
           {/* Route cards */}
           <div className="flex flex-col gap-2" style={{ marginTop: -6 }}>
             {DUMMY_OUTAGE_ROUTES.map((route) => {
-              const isActive = activePath.length > 1 && parsePath(route.nodePath).join() === activePath.join();
+              const isActive = activePath.length > 1 && (parsedRoutePaths.get(route.id)?.join() ?? "") === activePath.join();
               return (
                 <div
                   key={route.id}
