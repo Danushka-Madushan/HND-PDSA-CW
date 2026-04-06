@@ -14,6 +14,7 @@ import RightPanel from './RightPanel';
 import MapCanvas from './MapCanvas';
 import { cityDataRaw } from '../constant/location_data';
 import { PhoneTrie } from '../dsa/trie_ds';
+import { OutageMaxHeap } from '../dsa/heap_ds';
 
 /* Palette - Confirmed single palette used everywhere across the component */
 /* Map bg       #f2ede6 */
@@ -206,9 +207,19 @@ const CityMap = () => {
     };
 
     setOutages((prev) => {
-      const filtered = prev.filter((o) => o.id !== newOutage.id);
-      const merged = [newOutage, ...filtered].sort((a, b) => b.priority - a.priority);
-      return merged;
+      /* Remove existing entry with the same ID (uniqueness check) */
+      const filtered: OutageRecord[] = [];
+      for (let i = 0; i < prev.length; i++) {
+        if (prev[i].id !== newOutage.id) {
+          filtered.push(prev[i]);
+        }
+      }
+
+      /* Add the new record */
+      const merged = [newOutage, ...filtered];
+
+      /* Use Heap Sort to get the priority-ordered results */
+      return OutageMaxHeap.sort(merged);
     });
 
     setPriorityModalOpen(false);
