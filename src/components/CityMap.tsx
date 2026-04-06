@@ -7,7 +7,7 @@ import {
 } from "react";
 import { Dot } from "lucide-react";
 import { mapDataRaw } from '../constant/map_content';
-import type { CityRecord, MapData, NodeData, OutageRecord, OutageRoute } from 'outage-tracker';
+import type { CityRecord, NodeData, OutageRecord, OutageRoute } from 'outage-tracker';
 import PriorityModal from './PriorityModal';
 import OutageModal from './OutageModal';
 import RightPanel from './RightPanel';
@@ -15,6 +15,7 @@ import MapCanvas from './MapCanvas';
 import { cityDataRaw } from '../constant/location_data';
 import { PhoneTrie } from '../dsa/trie_ds';
 import { OutageMaxHeap } from '../dsa/heap_ds';
+import { PowerGridGraph } from '../dsa/graph_ds';
 
 /* Palette - Confirmed single palette used everywhere across the component */
 /* Map bg       #f2ede6 */
@@ -29,7 +30,7 @@ import { OutageMaxHeap } from '../dsa/heap_ds';
 /* Orange       #ea580c  (high priority) */
 
 /* Graph Configurations */
-const mapData = mapDataRaw as MapData;
+const mapData = mapDataRaw;
 const SOURCE_NODE_ID = "eb_65";
 const PADDING = 90;
 const R_BASE = 6;
@@ -45,6 +46,9 @@ const PAN_STEP = 60;
 const LocationPrefixTree: PhoneTrie = new PhoneTrie();
 cityDataRaw.forEach(record => LocationPrefixTree.insert(record));
 
+/* Initialize Gird Graph to find Shortest Paths */
+const outageGridGraph: PowerGridGraph = new PowerGridGraph();
+
 /**
  * Search users by phone number.
  */
@@ -55,12 +59,6 @@ const searchUsers = (input: string): CityRecord[] => {
   /* Performance: O(m) where m is prefix length */
   return LocationPrefixTree.search(q);
 };
-
-const DUMMY_OUTAGE_ROUTES: OutageRoute[] = [
-  { id: "r1", label: "Node 82 — Nedungamuwa", nodePath: "65, 89, 25, 88", distance: "14.2", sector: "Sector A" },
-  { id: "r2", label: "Node 74 — Gampaha", nodePath: "65, 23, 86, 83, 16, 85, 51, 52, 74", distance: "19.7", sector: "Sector B" },
-  { id: "r3", label: "Node 90 — Hakuruwela", nodePath: "65, 64, 45, 37, 46, 44, 90", distance: "19.7", sector: "Sector B" },
-];
 
 /* Helper Methods */
 
@@ -97,6 +95,8 @@ const priorityColor = (p: number): { bg: string; border: string; text: string; b
 /* Component */
 
 const CityMap = () => {
+  /* Outage Routes (Shortest Path Calculated) */
+  const [OUTAGE_ROUTES, setOutageRoutes] = useState<OutageRoute[]>([]);
 
   /* Inject animation keyframes once */
   useEffect(() => {
@@ -221,6 +221,12 @@ const CityMap = () => {
       /* Use Heap Sort to get the priority-ordered results */
       return OutageMaxHeap.sort(merged);
     });
+
+    /* Find the shortest path from CEB power station to destination using Dijkstra's Algorithm */
+    const shortestRoute = outageGridGraph.findShortestPath(newOutage.user.city, newOutage.user.name);
+    if (shortestRoute) {
+      setOutageRoutes(prev => [...prev, shortestRoute]);
+    }
 
     setPriorityModalOpen(false);
     setPendingUser(null);
@@ -426,10 +432,9 @@ const CityMap = () => {
     setActiveDistance("");
   }, []);
 
-  /* Pre-parse route paths once so route-card comparisons don't re-run parsePath every render */
   const parsedRoutePaths = useMemo(
-    () => new Map(DUMMY_OUTAGE_ROUTES.map((r) => [r.id, parsePath(r.nodePath)])),
-    []
+    () => new Map(OUTAGE_ROUTES.map((r) => [r.id, parsePath(r.nodePath)])),
+    [OUTAGE_ROUTES]
   );
 
   /* Arrow functions for zoom / reset */
@@ -519,7 +524,7 @@ const CityMap = () => {
         activePath={activePath}
         handleClearRoute={handleClearRoute}
         handleRouteFromOutage={handleRouteFromOutage}
-        outageRoutes={DUMMY_OUTAGE_ROUTES}
+        outageRoutes={OUTAGE_ROUTES}
         outages={outages}
         parsedRoutePaths={parsedRoutePaths}
       />

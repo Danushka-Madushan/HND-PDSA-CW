@@ -1,4 +1,6 @@
-export const mapDataRaw = {
+import type { MapData } from 'outage-tracker';
+
+export const mapDataRaw: MapData = {
   "metadata": {
     "district": "Colombo District",
     "node_count": 87,
