@@ -173,6 +173,11 @@ const CityMap = () => {
   const [pendingUser, setPendingUser] = useState<CityRecord | null>(null);
   const [priorityLevel, setPriorityLevel] = useState<number>(5);
 
+  const handleClearRoute = useCallback(() => {
+    setActivePath([]);
+    setActiveDistance("");
+  }, []);
+
   /* Prefix Mobile Number Search handler */
   const handlePhoneSearch = useCallback((val: string) => {
     if (val[0] === "0") {
@@ -194,6 +199,35 @@ const CityMap = () => {
     setPriorityLevel(5);
     setPriorityModalOpen(true);
   }, []);
+
+  /* Resolve/Delete an outage */
+  const handleResolveOutage = useCallback((outageId: string) => {
+    setOutages((prev) => {
+      const outageToRemove = prev.find(o => o.id === outageId);
+      if (!outageToRemove) return prev;
+
+      const newOutages = prev.filter(o => o.id !== outageId);
+
+      /* Check if any other outage is in the same city */
+      const otherOutageInSameCity = newOutages.some(o => o.user.city === outageToRemove.user.city);
+
+      if (!otherOutageInSameCity) {
+        /* Remove the route if no more outages in that city */
+        const cityNodeId = mapData.nodes.find(n => n.name === outageToRemove.user.city)?.id;
+        if (cityNodeId) {
+          const routeId = `r_${cityNodeId}`;
+          setOutageRoutes(routes => routes.filter(r => r.id !== routeId));
+
+          /* If the active path is for this city, clear it */
+          if (activePath.length > 0 && activePath[activePath.length - 1] === cityNodeId) {
+            handleClearRoute();
+          }
+        }
+      }
+
+      return newOutages;
+    });
+  }, [activePath, handleClearRoute]);
 
   /* Confirm outage with priority */
   const handleConfirmOutage = useCallback(() => {
@@ -426,11 +460,6 @@ const CityMap = () => {
     }
   }, [fitPathToView]);
 
-  const handleClearRoute = useCallback(() => {
-    setActivePath([]);
-    setActiveDistance("");
-  }, []);
-
   const parsedRoutePaths = useMemo(
     () => new Map(OUTAGE_ROUTES.map((r) => [r.id, parsePath(r.nodePath)])),
     [OUTAGE_ROUTES]
@@ -534,6 +563,7 @@ const CityMap = () => {
           activeTab={activeTab}
           handlePhoneSearch={handlePhoneSearch}
           handleReportOutageClick={handleReportOutageClick}
+          handleResolveOutage={handleResolveOutage}
           mapData={mapData}
           outages={outages}
           phoneSearch={phoneSearch}
