@@ -967,7 +967,7 @@ const CityMap = () => {
                     </div>
                     <div className="flex items-center gap-1.5 mt-1.5" style={{ fontSize: 11, color: "#64748b" }}>
                       <MapPin size={11} style={{ color: "#94a3b8" }} />
-                      <span>{route.distance} km</span>
+                      <span className='min-w-12'>{route.distance} km</span>
                       <span style={{ color: "#e2e8f0" }}>·</span>
                       <span style={{ fontFamily: "monospace", color: "#94a3b8", fontSize: 10 }}>{route.nodePath}</span>
                     </div>
