@@ -1,4 +1,6 @@
-export const cityDataRaw = [
+import type { CityRecord } from 'outage-tracker';
+
+export const cityDataRaw: CityRecord[] = [
   {
     "name": "Kurunagala General Hospital",
     "city": "Kurunagala",
