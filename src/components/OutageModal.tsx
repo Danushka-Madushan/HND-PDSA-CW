@@ -124,7 +124,7 @@ const OutageModal = ({
                     type="text"
                     value={phoneSearch}
                     onChange={(e) => handlePhoneSearch(e.target.value)}
-                    placeholder="Type phone number…  e.g. 0771234567"
+                    placeholder="Type phone number…  e.g. 771234567"
                     style={{
                       width: "100%", padding: "13px 16px 13px 44px", borderRadius: 12,
                       border: "1.5px solid #e2e8f0", background: "#f8fafc",
@@ -140,14 +140,14 @@ const OutageModal = ({
 
               {/* Results */}
               <div className="flex flex-col gap-3">
-                {phoneSearch.trim() === "" && (
+                {phoneSearch.trim().length < 3 && (
                   <div className="flex flex-col items-center justify-center py-12 gap-3">
                     <Phone size={32} strokeWidth={1} style={{ color: "#cbd5e1" }} />
                     <span style={{ fontSize: 12, color: "#94a3b8" }}>Enter a phone number to search</span>
                   </div>
                 )}
 
-                {phoneSearch.trim() !== "" && searchResults.length === 0 && (
+                {phoneSearch.trim().length >= 3 && searchResults.length === 0 && (
                   <div className="flex flex-col items-center justify-center py-12 gap-3">
                     <AlertCircle size={32} strokeWidth={1} style={{ color: "#cbd5e1" }} />
                     <span style={{ fontSize: 12, color: "#94a3b8" }}>No users found for this number</span>
