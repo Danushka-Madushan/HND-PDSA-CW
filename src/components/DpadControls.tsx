@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { ArrowBigDown, ArrowBigLeft, ArrowBigRight, ArrowBigUp } from 'lucide-react';
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   stopContinuousPan: () => void
 }
 
-const DpadControls = ({
+const DpadControls = memo(({
   PAN_STEP, startContinuousPan, stopContinuousPan
 }: Props) => {
   return (
@@ -53,6 +54,8 @@ const DpadControls = ({
       })}
     </div>
   )
-}
+});
 
-export default DpadControls
+DpadControls.displayName = 'DpadControls';
+
+export default DpadControls;
