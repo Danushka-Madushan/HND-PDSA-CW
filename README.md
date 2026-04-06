@@ -4,5 +4,3 @@ https://graphonline.top/en/
 # Graph Data Structure with Dijkstras Algorithm with min heap
 
 delete outage and intro screen
-
-side bar outage routes
