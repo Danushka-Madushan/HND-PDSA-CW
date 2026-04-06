@@ -208,12 +208,7 @@ const CityMap = () => {
 
     setOutages((prev) => {
       /* Remove existing entry with the same ID (uniqueness check) */
-      const filtered: OutageRecord[] = [];
-      for (let i = 0; i < prev.length; i++) {
-        if (prev[i].id !== newOutage.id) {
-          filtered.push(prev[i]);
-        }
-      }
+      const filtered = prev.filter(o => o.id !== newOutage.id);
 
       /* Add the new record */
       const merged = [newOutage, ...filtered];
@@ -225,7 +220,11 @@ const CityMap = () => {
     /* Find the shortest path from CEB power station to destination using Dijkstra's Algorithm */
     const shortestRoute = outageGridGraph.findShortestPath(newOutage.user.city, newOutage.user.name);
     if (shortestRoute) {
-      setOutageRoutes(prev => [...prev, shortestRoute]);
+      setOutageRoutes(prev => {
+        /* Prevent duplicate routes */
+        if (prev.some(r => r.id === shortestRoute.id)) return prev;
+        return [...prev, shortestRoute];
+      });
     }
 
     setPriorityModalOpen(false);
