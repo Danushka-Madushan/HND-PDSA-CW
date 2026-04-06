@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { AlertTriangle, MapPin } from 'lucide-react';
 import type { MapData, OutageRecord } from 'outage-tracker';
 import type { Dispatch, SetStateAction } from 'react';
@@ -9,7 +10,7 @@ interface Props {
   outages: OutageRecord[],
 }
 
-const ActionBar = ({
+const ActionBar = memo(({
   mapData, setOutageModalOpen, setActiveTab, outages
 }: Props) => {
   return (
@@ -97,6 +98,8 @@ const ActionBar = ({
       </button>
     </div>
   )
-}
+});
 
-export default ActionBar
+ActionBar.displayName = 'ActionBar';
+
+export default ActionBar;
