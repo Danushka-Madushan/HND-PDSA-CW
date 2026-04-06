@@ -14,9 +14,11 @@ export class OutageMaxHeap {
   /* sort method */
   public static sort(records: OutageRecord[]): OutageRecord[] {
     const h = new OutageMaxHeap();
-    /* Build the heap (O(n)) */
-    for (let i = 0; i < records.length; i++) {
-      h.insert(records[i]);
+    h.heap = [...records];
+    
+    /* Build the heap (O(n)) using heapify-down from the last non-leaf node */
+    for (let i = Math.floor(h.size() / 2) - 1; i >= 0; i--) {
+      h.bubbleDown(i);
     }
 
     /* Extract elements in descending order (O(n log n)) */
@@ -32,11 +34,6 @@ export class OutageMaxHeap {
     return this.heap.length;
   }
 
-  private insert(record: OutageRecord): void {
-    this.heap.push(record);
-    this.bubbleUp(this.heap.length - 1);
-  }
-
   private extractMax(): OutageRecord | null {
     if (this.size() === 0) return null;
     if (this.size() === 1) return this.heap.pop() || null;
@@ -45,16 +42,6 @@ export class OutageMaxHeap {
     this.heap[0] = this.heap.pop()!;
     this.bubbleDown(0);
     return max;
-  }
-
-  private bubbleUp(index: number): void {
-    while (index > 0) {
-      const parentIndex = Math.floor((index - 1) / 2);
-      if (this.heap[index].priority <= this.heap[parentIndex].priority) break;
-
-      this.swap(index, parentIndex);
-      index = parentIndex;
-    }
   }
 
   private bubbleDown(index: number): void {
