@@ -70,11 +70,13 @@ class MinHeap {
 export class PowerGridGraph {
   private adjacencyList: { [key: string]: { node: string; weight: number }[] };
   private cityNameMap: { [key: string]: string };
+  private nodeIds: string[] = [];
 
   constructor() {
     this.adjacencyList = {};
     this.cityNameMap = {};
     this.buildGraph();
+    this.nodeIds = Object.keys(this.adjacencyList);
   }
 
   private buildGraph(): void {
@@ -104,10 +106,11 @@ export class PowerGridGraph {
     const pq = new MinHeap();
 
     /* Initialize */
-    Object.keys(this.adjacencyList).forEach(nodeId => {
+    this.nodeIds.forEach(nodeId => {
       distances[nodeId] = Infinity;
       previous[nodeId] = null;
     });
+
     distances[startNode] = 0;
     pq.push(new HeapNode(startNode, 0));
 
@@ -141,9 +144,10 @@ export class PowerGridGraph {
 
     while (curr) {
       /* Strip "node_" or "eb_" prefix to match your sample "65, 89..." format */
-      path.unshift(curr.replace(/^(node_|eb_)/, ''));
+      path.push(curr.replace(/^(node_|eb_)/, ''));
       curr = prev[curr];
     }
+    path.reverse();
 
     return {
       id: `r_${targetId}`,
