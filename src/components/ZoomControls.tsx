@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Minus, Plus, RotateCcw } from 'lucide-react';
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
   resetView: () => void
 }
 
-const ZoomControls = ({
+const ZoomControls = memo(({
   resetView, zoomIn, zoomOut
 }: Props) => {
   return (
@@ -29,6 +30,8 @@ const ZoomControls = ({
       ))}
     </div>
   )
-}
+});
 
-export default ZoomControls
+ZoomControls.displayName = 'ZoomControls';
+
+export default ZoomControls;
