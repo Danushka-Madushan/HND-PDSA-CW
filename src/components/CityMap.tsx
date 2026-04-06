@@ -530,7 +530,7 @@ const CityMap = () => {
           <div
             className="absolute top-5 right-5 route-slide-in"
             style={{
-              width: 276,
+              width: 300,
               background: "#ffffff",
               border: "1px solid #e2e8f0",
               borderRadius: 14,
@@ -545,9 +545,9 @@ const CityMap = () => {
               style={{ background: "#f8fafc", borderBottom: "1px solid #e2e8f0" }}
             >
               <div className="flex items-center gap-2">
-                <Route size={12} style={{ color: "#1d4ed8" }} />
+                <Route size={15} style={{ color: "#1d4ed8" }} />
                 <span style={{
-                  fontSize: 9, fontWeight: 700, color: "#0f172a",
+                  fontSize: 11, fontWeight: 700, color: "#0f172a",
                   letterSpacing: "0.18em", textTransform: "uppercase",
                 }}>
                   Active Route
@@ -563,7 +563,7 @@ const CityMap = () => {
                 onMouseEnter={(e) => { e.currentTarget.style.color = "#dc2626"; e.currentTarget.style.background = "#fff1f2"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = "#94a3b8"; e.currentTarget.style.background = "none"; }}
               >
-                <X size={12} />
+                <X size={15} />
               </button>
             </div>
 
@@ -572,35 +572,35 @@ const CityMap = () => {
               <div className="px-4 pt-3">
                 <div
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg"
-                  style={{ background: "#f8fafc", border: "1px solid #e2e8f0" }}
+                  style={{ background: "#f8fafc", border: "1px solid #1d4ed8" }}
                 >
-                  <MapPin size={11} style={{ color: "#64748b" }} />
-                  <span style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>{activeDistance}</span>
-                  <span style={{ fontSize: 11, color: "#64748b" }}>km</span>
+                  <MapPin size={11} style={{ color: "#1d4ed8" }} />
+                  <span style={{ fontSize: 14, fontWeight: 700, color: "#1d4ed8" }}>{activeDistance}</span>
+                  <span style={{ fontSize: 11, color: "#1d4ed8" }}>km</span>
                 </div>
               </div>
             )}
 
             {/* Node chips */}
-            <div className="flex flex-wrap items-center gap-1 px-4 py-3">
+            <div className="flex flex-wrap items-center gap-1 gap-y-2 px-4 py-3">
               {activePath.map((id, i) => {
                 const isFirst = i === 0;
                 const isLast = i === activePath.length - 1;
                 return (
                   <React.Fragment key={id}>
                     <span
-                      className="inline-flex items-center px-2 py-0.5 rounded"
+                      className="inline-flex items-center px-2 py-1 rounded"
                       style={{
-                        fontSize: 10, fontWeight: 700, fontFamily: "monospace",
+                        fontSize: 12, fontWeight: 700, fontFamily: "monospace",
                         background: isFirst ? "#fff1f2" : isLast ? "#f0fdf4" : "#f1f5f9",
                         color: isFirst ? "#dc2626" : isLast ? "#16a34a" : "#475569",
                         border: `1px solid ${isFirst ? "#fecaca" : isLast ? "#bbf7d0" : "#e2e8f0"}`,
                       }}
                     >
-                      {nodeLabel(id)}
+                      &#91;{nodeLabel(id)}&#93; {nodeMap.get(id)?.name}
                     </span>
                     {!isLast && (
-                      <span style={{ color: "#cbd5e1", fontSize: 11, lineHeight: 1 }}>›</span>
+                      <span style={{ color: "#cbd5e1", fontSize: 13, lineHeight: 1 }}>›</span>
                     )}
                   </React.Fragment>
                 );
@@ -612,13 +612,13 @@ const CityMap = () => {
               className="px-4 py-2.5"
               style={{ borderTop: "1px solid #f1f5f9", background: "#f8fafc" }}
             >
-              <span style={{ fontSize: 10, fontWeight: 600, color: "#0f172a" }}>
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }}>
                 {activePath.length - 1} hop{activePath.length !== 2 ? "s" : ""}
               </span>
-              <span style={{ fontSize: 10, color: "#94a3b8" }}>
+              <span style={{ fontSize: 12, color: "#94a3b8" }}>
                 {" · "}{nodeMap.get(activePath.at(-1)!)?.name ?? nodeLabel(activePath.at(-1)!)}
               </span>
-              <span style={{ fontSize: 10, color: "#cbd5e1" }}> via Electricity Dept.</span>
+              <span style={{ fontSize: 12, color: "#cbd5e1" }}> via Electricity Dept.</span>
             </div>
           </div>
         )}
@@ -815,14 +815,14 @@ const CityMap = () => {
           </div>
           <div>
             <div style={{ color: "#0f172a", fontWeight: 700, fontSize: 14 }}>Power Outage Map</div>
-            <div style={{ color: "#94a3b8", fontSize: 10, marginTop: 1 }}>Dijkstra Pathfinder</div>
+            <div style={{ color: "#94a3b8", fontSize: 11, marginTop: 1 }}>Dijkstra Pathfinder</div>
           </div>
         </div>
 
         <div className="flex-1 flex flex-col gap-4 p-5">
 
           {/* Section label */}
-          <div style={{ fontSize: 9, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.18em" }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.18em" }}>
             Outage Routes
           </div>
 
@@ -841,17 +841,17 @@ const CityMap = () => {
                   }}
                 >
                   <div>
-                    <div style={{ fontSize: 9, color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.14em" }}>
+                    <div style={{ fontSize: 11, color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.14em" }}>
                       {route.sector}
                     </div>
-                    <div style={{ fontSize: 12, fontWeight: 700, color: "#0f172a", marginTop: 2 }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginTop: 2 }}>
                       {route.label}
                     </div>
-                    <div className="flex items-center gap-1.5 mt-1.5" style={{ fontSize: 9, color: "#64748b" }}>
-                      <MapPin size={9} style={{ color: "#94a3b8" }} />
+                    <div className="flex items-center gap-1.5 mt-1.5" style={{ fontSize: 11, color: "#64748b" }}>
+                      <MapPin size={11} style={{ color: "#94a3b8" }} />
                       <span>{route.distance} km</span>
                       <span style={{ color: "#e2e8f0" }}>·</span>
-                      <span style={{ fontFamily: "monospace", color: "#94a3b8", fontSize: 8 }}>{route.nodePath}</span>
+                      <span style={{ fontFamily: "monospace", color: "#94a3b8", fontSize: 10 }}>{route.nodePath}</span>
                     </div>
                   </div>
                   <div className="flex gap-2">
@@ -861,14 +861,14 @@ const CityMap = () => {
                       style={{
                         background: isActive ? "#1d4ed8" : "#0f172a",
                         color: "#fff", border: "none", cursor: "pointer",
-                        fontSize: 9, fontWeight: 700,
+                        fontSize: 11, fontWeight: 700,
                         letterSpacing: "0.1em", textTransform: "uppercase",
                         fontFamily: "inherit",
                       }}
                       onMouseEnter={(e) => { e.currentTarget.style.background = "#1e40af"; }}
                       onMouseLeave={(e) => { e.currentTarget.style.background = isActive ? "#1d4ed8" : "#0f172a"; }}
                     >
-                      <Route size={10} />
+                      <Route size={12} />
                       Get Route
                     </button>
                     {isActive && (
@@ -879,7 +879,7 @@ const CityMap = () => {
                         onMouseEnter={(e) => { e.currentTarget.style.background = "#fecaca"; }}
                         onMouseLeave={(e) => { e.currentTarget.style.background = "#fff1f2"; }}
                       >
-                        <X size={10} />
+                        <X size={12} />
                       </button>
                     )}
                   </div>
@@ -918,7 +918,7 @@ const CityMap = () => {
           className="px-5 py-4 flex flex-col gap-2"
           style={{ borderTop: "1px solid #e2e8f0", background: "#f8fafc" }}
         >
-          <div style={{ fontSize: 9, color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.18em", marginBottom: 4 }}>
+          <div style={{ fontSize: 11, color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.18em", marginBottom: 4 }}>
             Legend
           </div>
           {[
@@ -932,19 +932,19 @@ const CityMap = () => {
                 className="w-3 h-3 rounded-full shrink-0"
                 style={{ background: color + "22", border: `1.5px solid ${color}` }}
               />
-              <span style={{ fontSize: 10, color: "#64748b" }}>{label}</span>
+              <span style={{ fontSize: 11, color: "#64748b" }}>{label}</span>
             </div>
           ))}
           <div className="flex items-center gap-2.5 mt-1">
             <div className="w-8 h-0.5 rounded-full shrink-0"
               style={{ background: "linear-gradient(90deg, #1d4ed8, #60a5fa, #1d4ed8)" }} />
-            <span style={{ fontSize: 10, color: "#64748b" }}>Active route (animated)</span>
+            <span style={{ fontSize: 11, color: "#64748b" }}>Active route (animated)</span>
           </div>
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-0.5 rounded-full shrink-0" style={{ background: "#c8bfb4" }} />
-            <span style={{ fontSize: 10, color: "#64748b" }}>Road / edge</span>
+            <span style={{ fontSize: 11, color: "#64748b" }}>Road / edge</span>
           </div>
-          <div style={{ marginTop: 8, fontSize: 9, color: "#cbd5e1" }}>
+          <div style={{ marginTop: 8, fontSize: 10, color: "#cbd5e1" }}>
             Scroll / +− to zoom · Arrow keys / D-pad to pan · Edge labels = km
           </div>
         </div>
