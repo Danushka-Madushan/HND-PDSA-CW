@@ -1,6 +1,6 @@
 import type { MapData, NodeData, OutageRecord } from 'outage-tracker';
 import SVGMap from './SVGMap';
-import type { Dispatch, RefObject, SetStateAction } from 'react';
+import { useMemo, type Dispatch, type RefObject, type SetStateAction } from 'react';
 import ZoomControls from './ZoomControls';
 import DpadControls from './DpadControls';
 import ActionBar from './ActionBar';
@@ -69,17 +69,19 @@ const MapCanvas = ({
   outages, setOutageModalOpen, setActiveTab, containerSize
 }: Props) => {
   return (
-    <div ref={containerRef} className="flex-1 relative overflow-hidden">
+    <div ref={containerRef} className="flex-1 relative overflow-hidden bg-[#f2ede6]">
 
-      {/* Blueprint grid */}
+      {/* Blueprint grid — Optimized with transform to stay on GPU */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute pointer-events-none"
         style={{
+          inset: "-100px",
           backgroundImage:
-            "linear-gradient(rgba(160,148,132,0.22) 1px, transparent 1px)," +
-            "linear-gradient(90deg, rgba(160,148,132,0.22) 1px, transparent 1px)",
+            "linear-gradient(rgba(160,148,132,0.15) 1px, transparent 1px)," +
+            "linear-gradient(90deg, rgba(160,148,132,0.15) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
-          backgroundPosition: `${pan.x % 48}px ${pan.y % 48}px`,
+          transform: `translate(${pan.x % 48}px, ${pan.y % 48}px)`,
+          willChange: "transform",
         }}
       />
 
@@ -142,7 +144,7 @@ const MapCanvas = ({
       />
 
       {/* Node hover tooltip — anchored to node screen position, scales with zoom */}
-      {(() => {
+      {useMemo(() => {
         if (!hoveredId || containerSize.w === 0) return null;
         const node = nodeMap.get(hoveredId);
         if (!node) return null;
@@ -279,7 +281,7 @@ const MapCanvas = ({
             }} />
           </div>
         );
-      })()}
+      }, [hoveredId, containerSize, nodeMap, bounds, scale, pan, SOURCE_NODE_ID, destId, activeNodeSet, nodeLabel])}
     </div>
   )
 }
