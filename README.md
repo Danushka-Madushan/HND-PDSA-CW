@@ -12,9 +12,9 @@
 The Electricity Outage Tracker is a specialized management system designed to coordinate emergency responses to power failures across a simulated regional grid. While the application provides a functional interface for reporting and visualizing outages, its primary objective is to demonstrate the practical application of fundamental Data Structures and Algorithms (DSA) in a real-world infrastructure scenario.
 
 The system centers on three core pillars of computer science:
-1. **Efficient Information Retrieval** via a Prefix Tree (Trie).
-2. **Dynamic Priority Management** via a Max-Heap and HeapSort.
-3. **Geospatial Path Optimization** via Graph Theory and Dijkstra's Algorithm.
+1. **Efficient Information Retrieval** via a **Prefix Tree (Trie)**.
+2. **Dynamic Priority Management** via a **Max-Heap and HeapSort**.
+3. **Geospatial Path Optimization** via **Graph Theory** and **Dijkstra's Algorithm**.
 
 ---
 
