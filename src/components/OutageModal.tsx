@@ -12,6 +12,7 @@ interface Props {
   handlePhoneSearch: (val: string) => void,
   searchResults: CityRecord[],
   handleReportOutageClick: (user: CityRecord) => void,
+  handleResolveOutage: (id: string) => void,
   priorityColor: (p: number) => {
     bg: string;
     border: string;
@@ -22,7 +23,7 @@ interface Props {
 
 const OutageModal = ({
   setOutageModalOpen, mapData, activeTab, setActiveTab, outages, phoneSearch,
-  handlePhoneSearch, searchResults, handleReportOutageClick, priorityColor
+  handlePhoneSearch, searchResults, handleReportOutageClick, handleResolveOutage, priorityColor
 }: Props) => {
   return (
     <div
@@ -270,16 +271,37 @@ const OutageModal = ({
                       </div>
                     </div>
 
-                    {/* Severity chip */}
-                    <div
-                      className="shrink-0 px-3 py-1.5 rounded-lg"
-                      style={{
-                        background: c.badge, color: "#ffffff",
-                        fontSize: 10, fontWeight: 700,
-                        letterSpacing: "0.08em", textTransform: "uppercase",
-                      }}
-                    >
-                      {outage.priority >= 8 ? "Critical" : outage.priority >= 5 ? "High" : "Normal"}
+                    {/* Action & Severity Column */}
+                    <div className="flex flex-col items-end gap-2 shrink-0">
+                      {/* Severity chip */}
+                      <div
+                        className="px-3 py-1.5 rounded-lg"
+                        style={{
+                          background: c.badge, color: "#ffffff",
+                          fontSize: 10, fontWeight: 700,
+                          letterSpacing: "0.08em", textTransform: "uppercase",
+                        }}
+                      >
+                        {outage.priority >= 8 ? "Critical" : outage.priority >= 5 ? "High" : "Normal"}
+                      </div>
+
+                      {/* Resolve button */}
+                      <button
+                        onClick={() => handleResolveOutage(outage.id)}
+                        className="flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all"
+                        style={{
+                          background: "#ffffff", border: `1.5px solid ${c.border}`,
+                          color: c.text, cursor: "pointer",
+                          fontSize: 9, fontWeight: 800,
+                          letterSpacing: "0.06em", textTransform: "uppercase",
+                          fontFamily: "inherit",
+                        }}
+                        onMouseEnter={(e) => { e.currentTarget.style.background = c.bg; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.background = "#ffffff"; }}
+                      >
+                        <CheckCircle2 size={12} />
+                        Mark Resolved
+                      </button>
                     </div>
                   </div>
                 );
