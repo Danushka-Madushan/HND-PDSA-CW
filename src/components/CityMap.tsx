@@ -13,6 +13,7 @@ import OutageModal from './OutageModal';
 import RightPanel from './RightPanel';
 import MapCanvas from './MapCanvas';
 import { cityDataRaw } from '../constant/location_data';
+import { PhoneTrie } from '../dsa/trie_ds';
 
 /* Palette - Confirmed single palette used everywhere across the component */
 /* Map bg       #f2ede6 */
@@ -39,16 +40,19 @@ const ZOOM_MAX = 8;
 const ZOOM_STEP = 1.15;
 const PAN_STEP = 60;
 
+/* Initialize Phone Number Search Tree (Prefix Tree) */
+const LocationPrefixTree: PhoneTrie = new PhoneTrie();
+cityDataRaw.forEach(record => LocationPrefixTree.insert(record));
+
 /**
  * Search users by phone number.
- * AVL-tree-ready: replace the body of this function with your AVL search.
- * Receives the raw input string; returns a (possibly empty) CityRecord array.
  */
 const searchUsers = (input: string): CityRecord[] => {
   const q = input.trim();
   if (!q) return [];
-  /* swap this block with AVL tree lookup */
-  return cityDataRaw.filter((u) => u.phone.includes(q));
+
+  /* Performance: O(m) where m is prefix length */
+  return LocationPrefixTree.search(q);
 };
 
 const DUMMY_OUTAGE_ROUTES: OutageRoute[] = [
@@ -138,6 +142,7 @@ const CityMap = () => {
   /* Pan / Zoom */
   const [scale, setScale] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
+
   /* Refs mirror state so wheel handler always reads current values without stale closure */
   const scaleRef = useRef(1);
   const panRef = useRef({ x: 0, y: 0 });
@@ -167,10 +172,19 @@ const CityMap = () => {
   const [pendingUser, setPendingUser] = useState<CityRecord | null>(null);
   const [priorityLevel, setPriorityLevel] = useState<number>(5);
 
-  /* Search handler */
+  /* Prefix Mobile Number Search handler */
   const handlePhoneSearch = useCallback((val: string) => {
+    if (val[0] === "0") {
+      /* remove leading 0 */
+      val = val.slice(1);
+    }
+
     setPhoneSearch(val);
-    setSearchResults(searchUsers(val));
+    if (val.length >= 3) {
+      setSearchResults(searchUsers(val));
+    } else {
+      setSearchResults([]);
+    }
   }, []);
 
   /* Open priority modal for a user */
