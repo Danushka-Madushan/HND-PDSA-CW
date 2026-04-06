@@ -14,18 +14,17 @@ import {
 import { mapDataRaw } from '../constant/map_content';
 import type { CityRecord, MapData, NodeData, OutageRecord, OutageRoute } from 'outage-tracker';
 
-// ─── Palette ──────────────────────────────────────────────────────────────────
-// Confirmed single palette used everywhere across the component:
-//   Map bg       #f2ede6
-//   Surface      #ffffff / #f8fafc
-//   Border       #e2e8f0
-//   Text hi      #0f172a
-//   Text mid     #64748b
-//   Text lo      #94a3b8
-//   Accent red   #dc2626  (source / critical)
-//   Accent blue  #1d4ed8  (route / active)
-//   Accent green #16a34a  (dest / ok)
-//   Orange       #ea580c  (high priority)
+/* Palette - Confirmed single palette used everywhere across the component */
+/* Map bg       #f2ede6 */
+/* Surface      #ffffff / #f8fafc */
+/* Border       #e2e8f0 */
+/* Text hi      #0f172a */
+/* Text mid     #64748b */
+/* Text lo      #94a3b8 */
+/* Accent red   #dc2626  (source / critical) */
+/* Accent blue  #1d4ed8  (route / active) */
+/* Accent green #16a34a  (dest / ok) */
+/* Orange       #ea580c  (high priority) */
 
 /* Graph Configurations */
 const mapData = mapDataRaw as MapData;
@@ -63,14 +62,14 @@ const DUMMY_USERS: CityRecord[] = [
 const searchUsers = (input: string): CityRecord[] => {
   const q = input.trim();
   if (!q) return [];
-  // ── swap this block with AVL tree lookup ─────────────────────────────────
+  /* swap this block with AVL tree lookup */
   return DUMMY_USERS.filter((u) => u.phone.includes(q));
-  // ─────────────────────────────────────────────────────────────────────────
 };
 
 const DUMMY_OUTAGE_ROUTES: OutageRoute[] = [
   { id: "r1", label: "Node 82 — Nedungamuwa", nodePath: "65, 89, 25, 88", distance: "14.2", sector: "Sector A" },
-  { id: "r2", label: "Node 27 — Habarakada", nodePath: "65, 89, 35, 40, 49, 28, 27", distance: "19.7", sector: "Sector B" },
+  { id: "r2", label: "Node 74 — Gampaha", nodePath: "65, 23, 86, 83, 16, 85, 51, 52, 74", distance: "19.7", sector: "Sector B" },
+  { id: "r3", label: "Node 90 — Hakuruwela", nodePath: "65, 64, 45, 37, 46, 44, 90", distance: "19.7", sector: "Sector B" },
 ];
 
 /* Helper Methods */
@@ -162,6 +161,11 @@ const CityMap = () => {
   const [activePath, setActivePath] = useState<string[]>([]);
   const [activeDistance, setActiveDistance] = useState<string>("");
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+
+  /* containerSize is kept in state (updated by ResizeObserver) so it's safe to read during render */
+  const [containerSize, setContainerSize] = useState({ w: 800, h: 600 });
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   /* Outage modal state */
   const [outageModalOpen, setOutageModalOpen] = useState(false);
@@ -268,6 +272,17 @@ const CityMap = () => {
     return () => { el.removeEventListener("wheel", onWheel); };
   }, []);
 
+  /* Track container dimensions in state so tooltip can read them safely during render */
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const update = () => setContainerSize({ w: el.clientWidth, h: el.clientHeight });
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   /* Precomputed map bounds */
   const bounds = useMemo(() => {
     let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
@@ -311,14 +326,64 @@ const CityMap = () => {
     };
   }, [activePath]);
 
+  /* Fit viewport smoothly so start and end nodes of a path are both visible */
+  const fitPathToView = useCallback((pathIds: string[]) => {
+    if (!containerRef.current || pathIds.length < 2) return;
+
+    const W = containerRef.current.clientWidth;
+    const H = containerRef.current.clientHeight;
+
+    /* Reproduce the SVG's preserveAspectRatio="xMidYMid meet" base mapping */
+    const baseScale = Math.min(W / bounds.w, H / bounds.h);
+    const offsetX = (W - bounds.w * baseScale) / 2;
+    const offsetY = (H - bounds.h * baseScale) / 2;
+
+    /* Only use the first and last node — the user wants both endpoints in view */
+    const endpoints = [pathIds[0], pathIds[pathIds.length - 1]]
+      .map(id => nodeMap.get(id))
+      .filter((n): n is NodeData => !!n)
+      .map(n => ({
+        x: (n.x - bounds.minX) * baseScale + offsetX,
+        y: (n.y - bounds.minY) * baseScale + offsetY,
+      }));
+
+    if (!endpoints.length) return;
+
+    const minX = Math.min(...endpoints.map(p => p.x));
+    const maxX = Math.max(...endpoints.map(p => p.x));
+    const minY = Math.min(...endpoints.map(p => p.y));
+    const maxY = Math.max(...endpoints.map(p => p.y));
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+    /* Add a minimum span so single-node/coincident endpoints don't over-zoom */
+    const spanW = Math.max(maxX - minX, 80);
+    const spanH = Math.max(maxY - minY, 80);
+
+    /* Math.min picks the MORE constrained axis — the correct "fit" formula */
+    /* 65% fill keeps both endpoints comfortably inside with visible context around them */
+    const fitScale = Math.min((W * 0.65) / spanW, (H * 0.65) / spanH, ZOOM_MAX);
+    const newScale = Math.max(fitScale, ZOOM_MIN);
+
+    /* Translate so the endpoint centroid lands at the viewport centre */
+    const newPanX = -(cx - W / 2) * newScale;
+    const newPanY = -(cy - H / 2) * newScale;
+
+    if (transitionTimer.current) clearTimeout(transitionTimer.current);
+    setIsTransitioning(true);
+    setScale(newScale);
+    setPan({ x: newPanX, y: newPanY });
+    transitionTimer.current = setTimeout(() => setIsTransitioning(false), 750);
+  }, [bounds, nodeMap]);
+
   /* Route activation from side-panel button */
   const handleRouteFromOutage = useCallback((route: OutageRoute) => {
     const parsed = parsePath(route.nodePath);
     if (parsed.length >= 2) {
       setActivePath(parsed);
       setActiveDistance(route.distance);
+      fitPathToView(parsed);
     }
-  }, []);
+  }, [fitPathToView]);
 
   const handleClearRoute = useCallback(() => {
     setActivePath([]);
@@ -392,6 +457,7 @@ const CityMap = () => {
           style={{
             transform: `translate(${pan.x}px, ${pan.y}px) scale(${scale})`,
             transformOrigin: "50% 50%",
+            transition: isTransitioning ? "transform 0.72s cubic-bezier(0.22, 1, 0.36, 1)" : "none",
           }}
         >
           <defs>
@@ -779,27 +845,74 @@ const CityMap = () => {
           </button>
         </div>
 
-        {/* Hover tooltip */}
-        {hoveredId && (
-          <div
-            className="absolute bottom-24 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-lg text-xs pointer-events-none"
-            style={{ background: "#ffffff", border: "1px solid #e2e8f0", color: "#0f172a", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}
-          >
+        {/* Node hover tooltip — anchored to node screen position, uses containerSize state (safe in render) */}
+        {(() => {
+          if (!hoveredId || containerSize.w === 0) return null;
+          const node = nodeMap.get(hoveredId);
+          if (!node) return null;
+
+          /* Reproduce SVG preserveAspectRatio="xMidYMid meet" → CSS-transform pipeline */
+          const W = containerSize.w;
+          const H = containerSize.h;
+          const baseScale = Math.min(W / bounds.w, H / bounds.h);
+          const baseX = (node.x - bounds.minX) * baseScale + (W - bounds.w * baseScale) / 2;
+          const baseY = (node.y - bounds.minY) * baseScale + (H - bounds.h * baseScale) / 2;
+
+          /* Apply the CSS transform: translate(pan) scale(s) with origin at (W/2, H/2) */
+          const screenX = (baseX - W / 2) * scale + W / 2 + pan.x;
+          const screenY = (baseY - H / 2) * scale + H / 2 + pan.y;
+
+          const accentColor =
+            hoveredId === SOURCE_NODE_ID ? "#dc2626" :
+              hoveredId === destId ? "#16a34a" :
+                activeNodeSet.has(hoveredId) ? "#1d4ed8" : "#475569";
+
+          const TW = 180;
+          const tipLeft = Math.max(6, Math.min(screenX - TW / 2, W - TW - 6));
+          const tipTop = screenY - 52;
+
+          return (
             <div
-              className="w-2 h-2 rounded-full"
-              style={{
-                background:
-                  hoveredId === SOURCE_NODE_ID ? "#dc2626" :
-                    hoveredId === destId ? "#16a34a" :
-                      activeNodeSet.has(hoveredId) ? "#1d4ed8" : "#94a3b8",
-              }}
-            />
-            Node {nodeLabel(hoveredId)}
-            {nodeMap.get(hoveredId)?.name && (
-              <span style={{ color: "#94a3b8" }}>— {nodeMap.get(hoveredId)!.name}</span>
-            )}
-          </div>
-        )}
+              className="absolute pointer-events-none fade-in"
+              style={{ left: tipLeft, top: tipTop, width: TW, zIndex: 50 }}
+            >
+              <div style={{
+                background: "#ffffff",
+                border: `1.5px solid ${accentColor}40`,
+                borderRadius: 8,
+                boxShadow: "0 3px 12px rgba(15,23,42,0.12)",
+                padding: "5px 10px",
+                display: "flex",
+                alignItems: "center",
+                gap: 7,
+              }}>
+                <span style={{
+                  background: accentColor, color: "#fff",
+                  fontSize: 10, fontWeight: 800, borderRadius: 4,
+                  padding: "1px 6px", fontFamily: "monospace",
+                  flexShrink: 0, letterSpacing: "0.04em",
+                }}>
+                  {nodeLabel(hoveredId)}
+                </span>
+                <span style={{
+                  fontSize: 11, fontWeight: 600, color: "#0f172a",
+                  whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
+                }}>
+                  {node.name ?? "—"}
+                </span>
+              </div>
+
+              {/* Caret pointing down toward the node */}
+              <div style={{
+                width: 0, height: 0,
+                borderLeft: "5px solid transparent",
+                borderRight: "5px solid transparent",
+                borderTop: `5px solid ${accentColor}40`,
+                marginLeft: Math.min(Math.max(screenX - tipLeft - 5, 8), TW - 18),
+              }} />
+            </div>
+          );
+        })()}
       </div>
 
       {/* ══════════════════════════ RIGHT PANEL ══════════════════════════ */}
