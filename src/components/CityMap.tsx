@@ -69,7 +69,7 @@ const searchUsers = (input: string): CityRecord[] => {
 };
 
 const DUMMY_OUTAGE_ROUTES: OutageRoute[] = [
-  { id: "r1", label: "Node 82 — Nedungamuwa", nodePath: "65, 89, 38, 82", distance: "14.2", sector: "Sector A" },
+  { id: "r1", label: "Node 82 — Nedungamuwa", nodePath: "65, 89, 25, 88", distance: "14.2", sector: "Sector A" },
   { id: "r2", label: "Node 27 — Habarakada", nodePath: "65, 89, 35, 40, 49, 28, 27", distance: "19.7", sector: "Sector B" },
 ];
 
@@ -613,12 +613,17 @@ const CityMap = () => {
               style={{ borderTop: "1px solid #f1f5f9", background: "#f8fafc" }}
             >
               <span style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }}>
-                {activePath.length - 1} hop{activePath.length !== 2 ? "s" : ""}
+                {activePath.length - 1} HOP{activePath.length !== 2 ? "S" : ""}
               </span>
               <span style={{ fontSize: 12, color: "#94a3b8" }}>
-                {" · "}{nodeMap.get(activePath.at(-1)!)?.name ?? nodeLabel(activePath.at(-1)!)}
+                {" TO "}
               </span>
-              <span style={{ fontSize: 12, color: "#cbd5e1" }}> via Electricity Dept.</span>
+              <span style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }}>
+                {" "}{nodeMap.get(activePath.at(-1)!)?.name ?? nodeLabel(activePath.at(-1)!)}
+              </span>
+              <span style={{ fontSize: 12, color: "#94a3b8" }}> FROM
+                {" "}<span style={{ fontSize: 12, fontWeight: 600, color: "#0f172a" }}>CEB</span>
+              </span>
             </div>
           </div>
         )}
@@ -922,10 +927,10 @@ const CityMap = () => {
             Legend
           </div>
           {[
-            { color: "#dc2626", label: "Electricity Board (source)" },
-            { color: "#16a34a", label: "Destination node" },
-            { color: "#1d4ed8", label: "Path nodes" },
-            { color: "#b5ada6", label: "Inactive nodes" },
+            { color: "#dc2626", label: "Electricity Board (Source)" },
+            { color: "#16a34a", label: "Destination Node" },
+            { color: "#1d4ed8", label: "Path Nodes" },
+            { color: "#b5ada6", label: "Inactive Nodes" },
           ].map(({ color, label }) => (
             <div key={label} className="flex items-center gap-2.5">
               <div
@@ -938,11 +943,11 @@ const CityMap = () => {
           <div className="flex items-center gap-2.5 mt-1">
             <div className="w-8 h-0.5 rounded-full shrink-0"
               style={{ background: "linear-gradient(90deg, #1d4ed8, #60a5fa, #1d4ed8)" }} />
-            <span style={{ fontSize: 11, color: "#64748b" }}>Active route (animated)</span>
+            <span style={{ fontSize: 11, color: "#64748b" }}>Active Route (Animated)</span>
           </div>
           <div className="flex items-center gap-2.5">
             <div className="w-8 h-0.5 rounded-full shrink-0" style={{ background: "#c8bfb4" }} />
-            <span style={{ fontSize: 11, color: "#64748b" }}>Road / edge</span>
+            <span style={{ fontSize: 11, color: "#64748b" }}>Road / Edge</span>
           </div>
           <div style={{ marginTop: 8, fontSize: 10, color: "#cbd5e1" }}>
             Scroll / +− to zoom · Arrow keys / D-pad to pan · Edge labels = km
