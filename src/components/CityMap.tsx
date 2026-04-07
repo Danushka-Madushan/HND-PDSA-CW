@@ -223,11 +223,17 @@ const CityMap = () => {
             handleClearRoute();
           }
         } else {
-          /* Update the route priority with the maximum remaining priority in that city */
+          /* Update the route priority and timestamp with the max priority and earliest timestamp in that city */
           const maxPriority = Math.max(...outagesInSameCity.map(o => o.priority));
+          /* Find earliest timestamp among those that have the max priority */
+          const earliestTimestamp = Math.min(...outagesInSameCity
+            .filter(o => o.priority === maxPriority)
+            .map(o => o.timestamp)
+          );
+
           setOutageRoutes(routes => {
-            const updatedRoutes = routes.map(r => 
-              r.id === routeId ? { ...r, priority: maxPriority } : r
+            const updatedRoutes = routes.map(r =>
+              r.id === routeId ? { ...r, priority: maxPriority, timestamp: earliestTimestamp } : r
             );
             return OutageMaxHeap.sort(updatedRoutes);
           });
@@ -256,12 +262,12 @@ const CityMap = () => {
       /* Add the new record */
       const merged = [newOutage, ...filtered];
 
-      /* Use Heap Sort to get the priority-ordered results */
+      /* Use Heap Sort to get the priority-ordered results (with timestamp tie-breaker) */
       return OutageMaxHeap.sort(merged);
     });
 
     /* Find the shortest path from CEB power station to destination using Dijkstra's Algorithm */
-    const shortestRoute = outageGridGraph.findShortestPath(newOutage.user.city, newOutage.user.name, newOutage.priority);
+    const shortestRoute = outageGridGraph.findShortestPath(newOutage.user.city, newOutage.user.name, newOutage.priority, newOutage.timestamp);
     if (shortestRoute) {
       setOutageRoutes(prev => {
         /* Prevent duplicate routes and keep sorted by priority */
@@ -269,8 +275,10 @@ const CityMap = () => {
         let newRoutes;
         if (existingRouteIndex !== -1) {
           newRoutes = [...prev];
-          /* Update priority and sector if new outage has higher or equal priority */
-          if (newOutage.priority >= newRoutes[existingRouteIndex].priority) {
+          /* Update if new outage has higher priority OR same priority but earlier timestamp */
+          const existing = newRoutes[existingRouteIndex];
+          if (newOutage.priority > existing.priority ||
+            (newOutage.priority === existing.priority && newOutage.timestamp < existing.timestamp)) {
             newRoutes[existingRouteIndex] = shortestRoute;
           }
         } else {
