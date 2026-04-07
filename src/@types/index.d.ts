@@ -43,5 +43,7 @@ declare module 'outage-tracker' {
     nodePath: string;
     distance: string;
     sector: string;
+    priority: number;
+    timestamp: number;
   }
 }

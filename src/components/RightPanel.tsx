@@ -48,6 +48,8 @@ const RightPanel = ({
         <div className="flex flex-col gap-2" style={{ marginTop: -6 }}>
           {outageRoutes.map((route) => {
             const isActive = activePath.length > 1 && (parsedRoutePaths.get(route.id)?.join() ?? "") === activePath.join();
+            const pColor = route.priority >= 8 ? "#dc2626" : route.priority >= 5 ? "#ea580c" : "#16a34a";
+            
             return (
               <div
                 key={route.id}
@@ -58,20 +60,31 @@ const RightPanel = ({
                   transition: "all 0.2s",
                 }}
               >
-                <div>
-                  <div style={{ fontSize: 11, color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.14em" }}>
-                    {route.sector}
+                <div className="flex justify-between items-start">
+                  <div className="flex-1 min-w-0">
+                    <div style={{ fontSize: 11, color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.14em" }}>
+                      {route.sector}
+                    </div>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginTop: 2 }}>
+                      {route.label}
+                    </div>
                   </div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: "#0f172a", marginTop: 2 }}>
-                    {route.label}
-                  </div>
-                  <div className="flex items-center gap-1.5 mt-1.5" style={{ fontSize: 11, color: "#64748b" }}>
-                    <MapPin size={11} style={{ color: "#94a3b8" }} />
-                    <span className='min-w-12'>{route.distance} km</span>
-                    <span style={{ color: "#e2e8f0" }}>·</span>
-                    <span style={{ fontFamily: "monospace", color: "#94a3b8", fontSize: 10 }}>{route.nodePath}</span>
+                  <div 
+                    className="flex flex-col items-center justify-center rounded-lg px-2 py-1 shrink-0"
+                    style={{ background: pColor + "15", border: `1px solid ${pColor}33` }}
+                  >
+                    <span style={{ fontSize: 12, fontWeight: 800, color: pColor, lineHeight: 1 }}>{route.priority}</span>
+                    <span style={{ fontSize: 7, fontWeight: 700, color: pColor, opacity: 0.8, textTransform: "uppercase", marginTop: 1 }}>P</span>
                   </div>
                 </div>
+                
+                <div className="flex items-center gap-1.5" style={{ fontSize: 11, color: "#64748b" }}>
+                  <MapPin size={11} style={{ color: "#94a3b8" }} />
+                  <span className='min-w-12'>{route.distance} km</span>
+                  <span style={{ color: "#e2e8f0" }}>·</span>
+                  <span style={{ fontFamily: "monospace", color: "#94a3b8", fontSize: 10 }}>{route.nodePath}</span>
+                </div>
+
                 <div className="flex gap-2">
                   <button
                     onClick={() => handleRouteFromOutage(route)}

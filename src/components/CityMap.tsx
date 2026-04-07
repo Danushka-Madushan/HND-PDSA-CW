@@ -209,19 +209,34 @@ const CityMap = () => {
       const newOutages = prev.filter(o => o.id !== outageId);
 
       /* Check if any other outage is in the same city */
-      const otherOutageInSameCity = newOutages.some(o => o.user.city === outageToRemove.user.city);
+      const outagesInSameCity = newOutages.filter(o => o.user.city === outageToRemove.user.city);
 
-      if (!otherOutageInSameCity) {
-        /* Remove the route if no more outages in that city */
-        const cityNodeId = mapData.nodes.find(n => n.name === outageToRemove.user.city)?.id;
-        if (cityNodeId) {
-          const routeId = `r_${cityNodeId}`;
+      const cityNodeId = mapData.nodes.find(n => n.name === outageToRemove.user.city)?.id;
+      if (cityNodeId) {
+        const routeId = `r_${cityNodeId}`;
+        if (outagesInSameCity.length === 0) {
+          /* Remove the route if no more outages in that city */
           setOutageRoutes(routes => routes.filter(r => r.id !== routeId));
 
           /* If the active path is for this city, clear it */
           if (activePath.length > 0 && activePath[activePath.length - 1] === cityNodeId) {
             handleClearRoute();
           }
+        } else {
+          /* Update the route priority and timestamp with the max priority and earliest timestamp in that city */
+          const maxPriority = Math.max(...outagesInSameCity.map(o => o.priority));
+          /* Find earliest timestamp among those that have the max priority */
+          const earliestTimestamp = Math.min(...outagesInSameCity
+            .filter(o => o.priority === maxPriority)
+            .map(o => o.timestamp)
+          );
+
+          setOutageRoutes(routes => {
+            const updatedRoutes = routes.map(r =>
+              r.id === routeId ? { ...r, priority: maxPriority, timestamp: earliestTimestamp } : r
+            );
+            return OutageMaxHeap.sort(updatedRoutes);
+          });
         }
       }
 
@@ -247,17 +262,29 @@ const CityMap = () => {
       /* Add the new record */
       const merged = [newOutage, ...filtered];
 
-      /* Use Heap Sort to get the priority-ordered results */
+      /* Use Heap Sort to get the priority-ordered results (with timestamp tie-breaker) */
       return OutageMaxHeap.sort(merged);
     });
 
     /* Find the shortest path from CEB power station to destination using Dijkstra's Algorithm */
-    const shortestRoute = outageGridGraph.findShortestPath(newOutage.user.city, newOutage.user.name);
+    const shortestRoute = outageGridGraph.findShortestPath(newOutage.user.city, newOutage.user.name, newOutage.priority, newOutage.timestamp);
     if (shortestRoute) {
       setOutageRoutes(prev => {
-        /* Prevent duplicate routes */
-        if (prev.some(r => r.id === shortestRoute.id)) return prev;
-        return [...prev, shortestRoute];
+        /* Prevent duplicate routes and keep sorted by priority */
+        const existingRouteIndex = prev.findIndex(r => r.id === shortestRoute.id);
+        let newRoutes;
+        if (existingRouteIndex !== -1) {
+          newRoutes = [...prev];
+          /* Update if new outage has higher priority OR same priority but earlier timestamp */
+          const existing = newRoutes[existingRouteIndex];
+          if (newOutage.priority > existing.priority ||
+            (newOutage.priority === existing.priority && newOutage.timestamp < existing.timestamp)) {
+            newRoutes[existingRouteIndex] = shortestRoute;
+          }
+        } else {
+          newRoutes = [...prev, shortestRoute];
+        }
+        return OutageMaxHeap.sort(newRoutes);
       });
     }
 
