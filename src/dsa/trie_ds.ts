@@ -2,7 +2,6 @@ import type { CityRecord } from 'outage-tracker';
 
 /**
  * A simple linked list node to store records.
- * Updated to avoid parameter properties for 'erasableSyntaxOnly' compatibility.
  */
 class RecordLink {
   public record: CityRecord;
