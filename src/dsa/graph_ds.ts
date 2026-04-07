@@ -94,7 +94,7 @@ export class PowerGridGraph {
     });
   }
 
-  public findShortestPath(destinationCity: string, sectorName: string): OutageRoute | null {
+  public findShortestPath(destinationCity: string, sectorName: string, priority: number): OutageRoute | null {
     /* starting point */
     const startNode = "eb_65";
     const targetNode = this.cityNameMap[destinationCity];
@@ -129,7 +129,7 @@ export class PowerGridGraph {
       });
     }
 
-    return this.formatResult(targetNode, previous, distances[targetNode], destinationCity, sectorName);
+    return this.formatResult(targetNode, previous, distances[targetNode], destinationCity, sectorName, priority);
   }
 
   private formatResult(
@@ -137,7 +137,8 @@ export class PowerGridGraph {
     prev: Record<string, string | null>,
     dist: number,
     city: string,
-    sectorName: string
+    sectorName: string,
+    priority: number
   ): OutageRoute {
     const path: string[] = [];
     let curr: string | null = targetId;
@@ -154,7 +155,8 @@ export class PowerGridGraph {
       label: `Node ${targetId.replace(/^(node_|eb_)/, '')} — ${city}`,
       nodePath: path.join(', '),
       distance: dist.toFixed(1),
-      sector: sectorName
+      sector: sectorName,
+      priority: priority
     };
   }
 }

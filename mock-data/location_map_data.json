@@ -1,0 +1,4930 @@
+[
+    {
+        "name": "Kurunagala General Hospital",
+        "city": "Kurunagala",
+        "address": "No 301, Main Street, Kurunagala",
+        "phone": "119213626",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kurunagala National School",
+        "city": "Kurunagala",
+        "address": "No 121, Flower Road, Kurunagala",
+        "phone": "113884709",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kurunagala District Secretariat",
+        "city": "Kurunagala",
+        "address": "No 157, Flower Road, Kurunagala",
+        "phone": "117889759",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kurunagala Base Hospital",
+        "city": "Kurunagala",
+        "address": "No 130, Flower Road, Kurunagala",
+        "phone": "117474048",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kurunagala District Secretariat",
+        "city": "Kurunagala",
+        "address": "No 325, Temple Road, Kurunagala",
+        "phone": "114504555",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kurunagala Railway Station",
+        "city": "Kurunagala",
+        "address": "No 135, Station Road, Kurunagala",
+        "phone": "118037300",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kurunagala Bus Stand",
+        "city": "Kurunagala",
+        "address": "No 122, Kandy Road, Kurunagala",
+        "phone": "119566273",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M. Nilakshi Wickramasinghe",
+        "city": "Kurunagala",
+        "address": "No 194, Station Road, Kurunagala",
+        "phone": "767349027",
+        "category": "Person"
+    },
+    {
+        "name": "G.T. Kusal",
+        "city": "Akarawita",
+        "address": "No 399, Temple Road, Akarawita",
+        "phone": "733096871",
+        "category": "Person"
+    },
+    {
+        "name": "Akarawita Bus Stand",
+        "city": "Akarawita",
+        "address": "No 444, Kandy Road, Akarawita",
+        "phone": "112203826",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Akarawita Municipal Council",
+        "city": "Akarawita",
+        "address": "No 156, Flower Road, Akarawita",
+        "phone": "115589967",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "X. Nilakshi Rajapaksa",
+        "city": "Akarawita",
+        "address": "No 403, Galle Road, Akarawita",
+        "phone": "793007280",
+        "category": "Person"
+    },
+    {
+        "name": "Akarawita Railway Station",
+        "city": "Akarawita",
+        "address": "No 10, Main Street, Akarawita",
+        "phone": "116999155",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Akarawita Post Office",
+        "city": "Akarawita",
+        "address": "No 263, Temple Road, Akarawita",
+        "phone": "113103701",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M. Chamari Rajapaksa",
+        "city": "Akarawita",
+        "address": "No 306, Flower Road, Akarawita",
+        "phone": "779741313",
+        "category": "Person"
+    },
+    {
+        "name": "J. Pathum Amarasinghe",
+        "city": "Akarawita",
+        "address": "No 24, Station Road, Akarawita",
+        "phone": "741564284",
+        "category": "Person"
+    },
+    {
+        "name": "Akarawita Zonal Education Office",
+        "city": "Akarawita",
+        "address": "No 352, Temple Road, Akarawita",
+        "phone": "112012993",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Angoda Zonal Education Office",
+        "city": "Angoda",
+        "address": "No 168, Galle Road, Angoda",
+        "phone": "114050824",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "C.U. Ishara Wickramasinghe",
+        "city": "Angoda",
+        "address": "No 280, Flower Road, Angoda",
+        "phone": "762253388",
+        "category": "Person"
+    },
+    {
+        "name": "Angoda Public Library",
+        "city": "Angoda",
+        "address": "No 115, Temple Road, Angoda",
+        "phone": "113823680",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Angoda District Secretariat",
+        "city": "Angoda",
+        "address": "No 183, Main Street, Angoda",
+        "phone": "117570349",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Angoda Post Office",
+        "city": "Angoda",
+        "address": "No 266, Flower Road, Angoda",
+        "phone": "113785195",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B.N. Kusal",
+        "city": "Angoda",
+        "address": "No 458, Kandy Road, Angoda",
+        "phone": "740400392",
+        "category": "Person"
+    },
+    {
+        "name": "Q. Dilshan",
+        "city": "Angoda",
+        "address": "No 108, Galle Road, Angoda",
+        "phone": "726465385",
+        "category": "Person"
+    },
+    {
+        "name": "Angoda Municipal Council",
+        "city": "Angoda",
+        "address": "No 256, Main Street, Angoda",
+        "phone": "117270401",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.C. Pathum Perera",
+        "city": "Athurugiriya",
+        "address": "No 336, Temple Road, Athurugiriya",
+        "phone": "748653973",
+        "category": "Person"
+    },
+    {
+        "name": "G. Sujith",
+        "city": "Athurugiriya",
+        "address": "No 111, Kandy Road, Athurugiriya",
+        "phone": "747137763",
+        "category": "Person"
+    },
+    {
+        "name": "Athurugiriya Zonal Education Office",
+        "city": "Athurugiriya",
+        "address": "No 62, Flower Road, Athurugiriya",
+        "phone": "115587012",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Athurugiriya Zonal Education Office",
+        "city": "Athurugiriya",
+        "address": "No 15, Kandy Road, Athurugiriya",
+        "phone": "112803118",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Athurugiriya District Secretariat",
+        "city": "Athurugiriya",
+        "address": "No 57, Temple Road, Athurugiriya",
+        "phone": "118940024",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A. Nilakshi",
+        "city": "Athurugiriya",
+        "address": "No 244, Station Road, Athurugiriya",
+        "phone": "759650677",
+        "category": "Person"
+    },
+    {
+        "name": "Avissawella General Hospital",
+        "city": "Avissawella",
+        "address": "No 440, Temple Road, Avissawella",
+        "phone": "113926880",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Avissawella Municipal Council",
+        "city": "Avissawella",
+        "address": "No 125, Galle Road, Avissawella",
+        "phone": "111478578",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D.V. Kusal",
+        "city": "Avissawella",
+        "address": "No 185, Galle Road, Avissawella",
+        "phone": "731502269",
+        "category": "Person"
+    },
+    {
+        "name": "G. Tharindu",
+        "city": "Avissawella",
+        "address": "No 428, Temple Road, Avissawella",
+        "phone": "797592651",
+        "category": "Person"
+    },
+    {
+        "name": "Avissawella Public Library",
+        "city": "Avissawella",
+        "address": "No 70, Kandy Road, Avissawella",
+        "phone": "118561788",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "O.X. Chamari Gunawardena",
+        "city": "Avissawella",
+        "address": "No 128, Kandy Road, Avissawella",
+        "phone": "796559144",
+        "category": "Person"
+    },
+    {
+        "name": "Avissawella National School",
+        "city": "Avissawella",
+        "address": "No 490, Station Road, Avissawella",
+        "phone": "116555450",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Battaramulla Municipal Council",
+        "city": "Battaramulla",
+        "address": "No 162, Kandy Road, Battaramulla",
+        "phone": "113359530",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Battaramulla Public Library",
+        "city": "Battaramulla",
+        "address": "No 345, Galle Road, Battaramulla",
+        "phone": "115380380",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Dilshan Karunaratne",
+        "city": "Battaramulla",
+        "address": "No 459, Kandy Road, Battaramulla",
+        "phone": "752075428",
+        "category": "Person"
+    },
+    {
+        "name": "Battaramulla General Hospital",
+        "city": "Battaramulla",
+        "address": "No 495, Kandy Road, Battaramulla",
+        "phone": "116617568",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Battaramulla Bus Stand",
+        "city": "Battaramulla",
+        "address": "No 99, Temple Road, Battaramulla",
+        "phone": "113100319",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "C. Anura",
+        "city": "Battaramulla",
+        "address": "No 279, Flower Road, Battaramulla",
+        "phone": "739480956",
+        "category": "Person"
+    },
+    {
+        "name": "Battaramulla Public Library",
+        "city": "Battaramulla",
+        "address": "No 187, Station Road, Battaramulla",
+        "phone": "118702090",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A.M. Chamari",
+        "city": "Batugampola",
+        "address": "No 382, Galle Road, Batugampola",
+        "phone": "760760218",
+        "category": "Person"
+    },
+    {
+        "name": "Batugampola Municipal Council",
+        "city": "Batugampola",
+        "address": "No 387, Kandy Road, Batugampola",
+        "phone": "119910926",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Tharindu",
+        "city": "Batugampola",
+        "address": "No 145, Main Street, Batugampola",
+        "phone": "748856730",
+        "category": "Person"
+    },
+    {
+        "name": "Batugampola Railway Station",
+        "city": "Batugampola",
+        "address": "No 190, Station Road, Batugampola",
+        "phone": "117411322",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batugampola Bus Stand",
+        "city": "Batugampola",
+        "address": "No 130, Kandy Road, Batugampola",
+        "phone": "113588280",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T.K. Kusal",
+        "city": "Batugampola",
+        "address": "No 171, Kandy Road, Batugampola",
+        "phone": "735389632",
+        "category": "Person"
+    },
+    {
+        "name": "Batugampola District Secretariat",
+        "city": "Batugampola",
+        "address": "No 280, Main Street, Batugampola",
+        "phone": "112242517",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batugampola National School",
+        "city": "Batugampola",
+        "address": "No 474, Flower Road, Batugampola",
+        "phone": "119291565",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Bope Base Hospital",
+        "city": "Bope",
+        "address": "No 465, Flower Road, Bope",
+        "phone": "112184116",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M. Anura Gunawardena",
+        "city": "Bope",
+        "address": "No 331, Galle Road, Bope",
+        "phone": "723103886",
+        "category": "Person"
+    },
+    {
+        "name": "R.N. Kusal Gunawardena",
+        "city": "Bope",
+        "address": "No 262, Flower Road, Bope",
+        "phone": "757056295",
+        "category": "Person"
+    },
+    {
+        "name": "R.W. Nilakshi",
+        "city": "Bope",
+        "address": "No 222, Flower Road, Bope",
+        "phone": "711350150",
+        "category": "Person"
+    },
+    {
+        "name": "Bope Zonal Education Office",
+        "city": "Bope",
+        "address": "No 486, Flower Road, Bope",
+        "phone": "117532086",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Bope Bus Stand",
+        "city": "Bope",
+        "address": "No 376, Station Road, Bope",
+        "phone": "113980762",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Bope National School",
+        "city": "Bope",
+        "address": "No 415, Kandy Road, Bope",
+        "phone": "119061148",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.M. Madushan Fernando",
+        "city": "Bope",
+        "address": "No 420, Flower Road, Bope",
+        "phone": "714754701",
+        "category": "Person"
+    },
+    {
+        "name": "Bope Base Hospital",
+        "city": "Bope",
+        "address": "No 248, Kandy Road, Bope",
+        "phone": "117735126",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Bope Police Station",
+        "city": "Bope",
+        "address": "No 146, Temple Road, Bope",
+        "phone": "118291018",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Boralesgamuwa Municipal Council",
+        "city": "Boralesgamuwa",
+        "address": "No 258, Temple Road, Boralesgamuwa",
+        "phone": "112849772",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J.R. Madushan",
+        "city": "Boralesgamuwa",
+        "address": "No 62, Main Street, Boralesgamuwa",
+        "phone": "791619768",
+        "category": "Person"
+    },
+    {
+        "name": "Boralesgamuwa Zonal Education Office",
+        "city": "Boralesgamuwa",
+        "address": "No 49, Flower Road, Boralesgamuwa",
+        "phone": "114758391",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.V. Tharindu Gunawardena",
+        "city": "Boralesgamuwa",
+        "address": "No 344, Galle Road, Boralesgamuwa",
+        "phone": "793853376",
+        "category": "Person"
+    },
+    {
+        "name": "Boralesgamuwa Municipal Council",
+        "city": "Boralesgamuwa",
+        "address": "No 372, Kandy Road, Boralesgamuwa",
+        "phone": "119143244",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A.E. Madushan Karunaratne",
+        "city": "Boralesgamuwa",
+        "address": "No 255, Temple Road, Boralesgamuwa",
+        "phone": "746468626",
+        "category": "Person"
+    },
+    {
+        "name": "G.J. Kusal",
+        "city": "Boralesgamuwa",
+        "address": "No 158, Main Street, Boralesgamuwa",
+        "phone": "727427852",
+        "category": "Person"
+    },
+    {
+        "name": "Boralesgamuwa District Secretariat",
+        "city": "Boralesgamuwa",
+        "address": "No 424, Galle Road, Boralesgamuwa",
+        "phone": "116463491",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "U.A. Anura",
+        "city": "Dedigamuwa",
+        "address": "No 287, Temple Road, Dedigamuwa",
+        "phone": "715938824",
+        "category": "Person"
+    },
+    {
+        "name": "Dedigamuwa Base Hospital",
+        "city": "Dedigamuwa",
+        "address": "No 402, Temple Road, Dedigamuwa",
+        "phone": "116435378",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dedigamuwa Public Library",
+        "city": "Dedigamuwa",
+        "address": "No 214, Main Street, Dedigamuwa",
+        "phone": "115612395",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dedigamuwa Municipal Council",
+        "city": "Dedigamuwa",
+        "address": "No 108, Temple Road, Dedigamuwa",
+        "phone": "118860503",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "K.Z. Sujith Perera",
+        "city": "Dedigamuwa",
+        "address": "No 221, Flower Road, Dedigamuwa",
+        "phone": "710976087",
+        "category": "Person"
+    },
+    {
+        "name": "Dedigamuwa Municipal Council",
+        "city": "Dedigamuwa",
+        "address": "No 445, Flower Road, Dedigamuwa",
+        "phone": "118110386",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B.O. Dilshan Perera",
+        "city": "Dedigamuwa",
+        "address": "No 171, Main Street, Dedigamuwa",
+        "phone": "716639423",
+        "category": "Person"
+    },
+    {
+        "name": "P.A. Kusal Rajapaksa",
+        "city": "Dedigamuwa",
+        "address": "No 498, Temple Road, Dedigamuwa",
+        "phone": "787046681",
+        "category": "Person"
+    },
+    {
+        "name": "Dedigamuwa General Hospital",
+        "city": "Dedigamuwa",
+        "address": "No 44, Galle Road, Dedigamuwa",
+        "phone": "112460608",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dedigamuwa General Hospital",
+        "city": "Dedigamuwa",
+        "address": "No 392, Main Street, Dedigamuwa",
+        "phone": "111689189",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "X.V. Ishara Rajapaksa",
+        "city": "Dehiwala",
+        "address": "No 250, Station Road, Dehiwala",
+        "phone": "787052121",
+        "category": "Person"
+    },
+    {
+        "name": "L.V. Pathum Wickramasinghe",
+        "city": "Dehiwala",
+        "address": "No 491, Main Street, Dehiwala",
+        "phone": "750062146",
+        "category": "Person"
+    },
+    {
+        "name": "S. Nilakshi Rajapaksa",
+        "city": "Dehiwala",
+        "address": "No 295, Flower Road, Dehiwala",
+        "phone": "732891002",
+        "category": "Person"
+    },
+    {
+        "name": "B. Kusal",
+        "city": "Dehiwala",
+        "address": "No 166, Temple Road, Dehiwala",
+        "phone": "721290884",
+        "category": "Person"
+    },
+    {
+        "name": "L. Nilakshi Wickramasinghe",
+        "city": "Dehiwala",
+        "address": "No 300, Station Road, Dehiwala",
+        "phone": "737335298",
+        "category": "Person"
+    },
+    {
+        "name": "C.A. Anura Gunawardena",
+        "city": "Dehiwala",
+        "address": "No 408, Galle Road, Dehiwala",
+        "phone": "729428367",
+        "category": "Person"
+    },
+    {
+        "name": "P. Madushan",
+        "city": "Dehiwala",
+        "address": "No 493, Main Street, Dehiwala",
+        "phone": "743146246",
+        "category": "Person"
+    },
+    {
+        "name": "D.R. Sujith Fernando",
+        "city": "Deltara",
+        "address": "No 429, Station Road, Deltara",
+        "phone": "786484000",
+        "category": "Person"
+    },
+    {
+        "name": "Deltara Municipal Council",
+        "city": "Deltara",
+        "address": "No 422, Main Street, Deltara",
+        "phone": "117433929",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Deltara District Secretariat",
+        "city": "Deltara",
+        "address": "No 39, Kandy Road, Deltara",
+        "phone": "111532389",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Deltara Zonal Education Office",
+        "city": "Deltara",
+        "address": "No 459, Temple Road, Deltara",
+        "phone": "111430982",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.A. Dilshan Gunawardena",
+        "city": "Deltara",
+        "address": "No 80, Temple Road, Deltara",
+        "phone": "787545279",
+        "category": "Person"
+    },
+    {
+        "name": "R. Chamari",
+        "city": "Deltara",
+        "address": "No 433, Flower Road, Deltara",
+        "phone": "778608037",
+        "category": "Person"
+    },
+    {
+        "name": "V.J. Tharindu Silva",
+        "city": "Deltara",
+        "address": "No 382, Galle Road, Deltara",
+        "phone": "710811834",
+        "category": "Person"
+    },
+    {
+        "name": "D. Madushan",
+        "city": "Deltara",
+        "address": "No 6, Main Street, Deltara",
+        "phone": "734147341",
+        "category": "Person"
+    },
+    {
+        "name": "V. Tharindu",
+        "city": "Deltara",
+        "address": "No 76, Galle Road, Deltara",
+        "phone": "769682485",
+        "category": "Person"
+    },
+    {
+        "name": "O.E. Ishara Gunawardena",
+        "city": "Deltara",
+        "address": "No 109, Station Road, Deltara",
+        "phone": "755631324",
+        "category": "Person"
+    },
+    {
+        "name": "Gangodavila Zonal Education Office",
+        "city": "Gangodavila",
+        "address": "No 189, Galle Road, Gangodavila",
+        "phone": "112297898",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.I. Tharindu",
+        "city": "Gangodavila",
+        "address": "No 297, Temple Road, Gangodavila",
+        "phone": "791341089",
+        "category": "Person"
+    },
+    {
+        "name": "Gangodavila Municipal Council",
+        "city": "Gangodavila",
+        "address": "No 326, Galle Road, Gangodavila",
+        "phone": "115365735",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G.T. Tharindu Gunawardena",
+        "city": "Gangodavila",
+        "address": "No 451, Temple Road, Gangodavila",
+        "phone": "717008583",
+        "category": "Person"
+    },
+    {
+        "name": "Gangodavila Public Library",
+        "city": "Gangodavila",
+        "address": "No 16, Main Street, Gangodavila",
+        "phone": "116303573",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.Q. Dilshan Perera",
+        "city": "Gangodavila",
+        "address": "No 386, Temple Road, Gangodavila",
+        "phone": "713803267",
+        "category": "Person"
+    },
+    {
+        "name": "A. Madushan",
+        "city": "Gangodavila",
+        "address": "No 21, Main Street, Gangodavila",
+        "phone": "726035133",
+        "category": "Person"
+    },
+    {
+        "name": "Gangodavila Post Office",
+        "city": "Gangodavila",
+        "address": "No 203, Main Street, Gangodavila",
+        "phone": "117900658",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N.J. Sujith",
+        "city": "Godagama",
+        "address": "No 470, Galle Road, Godagama",
+        "phone": "785623544",
+        "category": "Person"
+    },
+    {
+        "name": "Godagama Railway Station",
+        "city": "Godagama",
+        "address": "No 402, Station Road, Godagama",
+        "phone": "119564918",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Godagama General Hospital",
+        "city": "Godagama",
+        "address": "No 36, Main Street, Godagama",
+        "phone": "112538435",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G. Nilakshi",
+        "city": "Godagama",
+        "address": "No 28, Temple Road, Godagama",
+        "phone": "720123662",
+        "category": "Person"
+    },
+    {
+        "name": "S. Ishara",
+        "city": "Godagama",
+        "address": "No 273, Main Street, Godagama",
+        "phone": "752093533",
+        "category": "Person"
+    },
+    {
+        "name": "Godagama Municipal Council",
+        "city": "Godagama",
+        "address": "No 337, Galle Road, Godagama",
+        "phone": "115498735",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Godagama Police Station",
+        "city": "Godagama",
+        "address": "No 366, Station Road, Godagama",
+        "phone": "117996426",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Godagama Zonal Education Office",
+        "city": "Godagama",
+        "address": "No 82, Temple Road, Godagama",
+        "phone": "119263467",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Godagama Bus Stand",
+        "city": "Godagama",
+        "address": "No 400, Main Street, Godagama",
+        "phone": "115807148",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Godagama District Secretariat",
+        "city": "Godagama",
+        "address": "No 186, Station Road, Godagama",
+        "phone": "111181538",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Habarakada Police Station",
+        "city": "Habarakada",
+        "address": "No 36, Station Road, Habarakada",
+        "phone": "117084985",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Habarakada Bus Stand",
+        "city": "Habarakada",
+        "address": "No 443, Kandy Road, Habarakada",
+        "phone": "111165866",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Habarakada Police Station",
+        "city": "Habarakada",
+        "address": "No 387, Temple Road, Habarakada",
+        "phone": "114907335",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "R.C. Nilakshi",
+        "city": "Habarakada",
+        "address": "No 279, Main Street, Habarakada",
+        "phone": "720935312",
+        "category": "Person"
+    },
+    {
+        "name": "V.W. Tharindu",
+        "city": "Habarakada",
+        "address": "No 439, Galle Road, Habarakada",
+        "phone": "763961583",
+        "category": "Person"
+    },
+    {
+        "name": "Habarakada National School",
+        "city": "Habarakada",
+        "address": "No 243, Temple Road, Habarakada",
+        "phone": "116383913",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Habarakada Police Station",
+        "city": "Habarakada",
+        "address": "No 11, Galle Road, Habarakada",
+        "phone": "115067081",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Z. Sujith Fernando",
+        "city": "Habarakada",
+        "address": "No 47, Kandy Road, Habarakada",
+        "phone": "737264676",
+        "category": "Person"
+    },
+    {
+        "name": "Habarakada National School",
+        "city": "Habarakada",
+        "address": "No 424, Kandy Road, Habarakada",
+        "phone": "112174070",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Y.J. Chamari Karunaratne",
+        "city": "Habarakada",
+        "address": "No 168, Station Road, Habarakada",
+        "phone": "712902911",
+        "category": "Person"
+    },
+    {
+        "name": "Hanwella National School",
+        "city": "Hanwella",
+        "address": "No 154, Station Road, Hanwella",
+        "phone": "118301271",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "P.B. Nilakshi Amarasinghe",
+        "city": "Hanwella",
+        "address": "No 447, Station Road, Hanwella",
+        "phone": "729997079",
+        "category": "Person"
+    },
+    {
+        "name": "Hanwella Municipal Council",
+        "city": "Hanwella",
+        "address": "No 71, Kandy Road, Hanwella",
+        "phone": "119115395",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hanwella National School",
+        "city": "Hanwella",
+        "address": "No 68, Kandy Road, Hanwella",
+        "phone": "117543363",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Dilshan Rajapaksa",
+        "city": "Hanwella",
+        "address": "No 151, Flower Road, Hanwella",
+        "phone": "791414935",
+        "category": "Person"
+    },
+    {
+        "name": "X. Chamari Silva",
+        "city": "Hanwella",
+        "address": "No 424, Temple Road, Hanwella",
+        "phone": "790454849",
+        "category": "Person"
+    },
+    {
+        "name": "Hanwella Base Hospital",
+        "city": "Hanwella",
+        "address": "No 18, Kandy Road, Hanwella",
+        "phone": "112035719",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A.J. Sujith Amarasinghe",
+        "city": "Hanwella",
+        "address": "No 22, Galle Road, Hanwella",
+        "phone": "776908966",
+        "category": "Person"
+    },
+    {
+        "name": "Hiripitya Zonal Education Office",
+        "city": "Hiripitya",
+        "address": "No 247, Flower Road, Hiripitya",
+        "phone": "116379100",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hiripitya Railway Station",
+        "city": "Hiripitya",
+        "address": "No 186, Kandy Road, Hiripitya",
+        "phone": "112870443",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.B. Chamari",
+        "city": "Hiripitya",
+        "address": "No 403, Flower Road, Hiripitya",
+        "phone": "757666529",
+        "category": "Person"
+    },
+    {
+        "name": "Hiripitya General Hospital",
+        "city": "Hiripitya",
+        "address": "No 372, Galle Road, Hiripitya",
+        "phone": "111747940",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hiripitya Bus Stand",
+        "city": "Hiripitya",
+        "address": "No 227, Station Road, Hiripitya",
+        "phone": "113816803",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hiripitya Base Hospital",
+        "city": "Hiripitya",
+        "address": "No 223, Kandy Road, Hiripitya",
+        "phone": "115320661",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A. Sujith",
+        "city": "Hiripitya",
+        "address": "No 334, Galle Road, Hiripitya",
+        "phone": "796637730",
+        "category": "Person"
+    },
+    {
+        "name": "Hiripitya Public Library",
+        "city": "Hiripitya",
+        "address": "No 70, Station Road, Hiripitya",
+        "phone": "118873410",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "H.L. Ishara",
+        "city": "Hiripitya",
+        "address": "No 252, Temple Road, Hiripitya",
+        "phone": "728148527",
+        "category": "Person"
+    },
+    {
+        "name": "S. Tharindu Wickramasinghe",
+        "city": "Hokandara",
+        "address": "No 126, Main Street, Hokandara",
+        "phone": "772085179",
+        "category": "Person"
+    },
+    {
+        "name": "Hokandara National School",
+        "city": "Hokandara",
+        "address": "No 123, Kandy Road, Hokandara",
+        "phone": "114421344",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hokandara Bus Stand",
+        "city": "Hokandara",
+        "address": "No 250, Kandy Road, Hokandara",
+        "phone": "111795338",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.B. Pathum Perera",
+        "city": "Hokandara",
+        "address": "No 464, Kandy Road, Hokandara",
+        "phone": "767619853",
+        "category": "Person"
+    },
+    {
+        "name": "A. Madushan Wickramasinghe",
+        "city": "Hokandara",
+        "address": "No 161, Galle Road, Hokandara",
+        "phone": "752621598",
+        "category": "Person"
+    },
+    {
+        "name": "Hokandara Base Hospital",
+        "city": "Hokandara",
+        "address": "No 367, Main Street, Hokandara",
+        "phone": "113314006",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hokandara Municipal Council",
+        "city": "Hokandara",
+        "address": "No 197, Galle Road, Hokandara",
+        "phone": "118734464",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "I.Y. Chamari Wickramasinghe",
+        "city": "Hokandara",
+        "address": "No 492, Main Street, Hokandara",
+        "phone": "778032712",
+        "category": "Person"
+    },
+    {
+        "name": "T. Pathum",
+        "city": "Homagama",
+        "address": "No 403, Galle Road, Homagama",
+        "phone": "723387019",
+        "category": "Person"
+    },
+    {
+        "name": "K.G. Nilakshi Karunaratne",
+        "city": "Homagama",
+        "address": "No 259, Temple Road, Homagama",
+        "phone": "715534445",
+        "category": "Person"
+    },
+    {
+        "name": "Homagama Municipal Council",
+        "city": "Homagama",
+        "address": "No 386, Station Road, Homagama",
+        "phone": "111694719",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Homagama Railway Station",
+        "city": "Homagama",
+        "address": "No 340, Station Road, Homagama",
+        "phone": "115236530",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Y. Chamari",
+        "city": "Homagama",
+        "address": "No 183, Main Street, Homagama",
+        "phone": "721342998",
+        "category": "Person"
+    },
+    {
+        "name": "X. Anura",
+        "city": "Homagama",
+        "address": "No 415, Kandy Road, Homagama",
+        "phone": "734197342",
+        "category": "Person"
+    },
+    {
+        "name": "Homagama Base Hospital",
+        "city": "Homagama",
+        "address": "No 34, Main Street, Homagama",
+        "phone": "111552701",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J.Z. Madushan Silva",
+        "city": "Homagama",
+        "address": "No 325, Temple Road, Homagama",
+        "phone": "757277715",
+        "category": "Person"
+    },
+    {
+        "name": "Homagama Railway Station",
+        "city": "Homagama",
+        "address": "No 488, Main Street, Homagama",
+        "phone": "114992933",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Horagala National School",
+        "city": "Horagala",
+        "address": "No 316, Flower Road, Horagala",
+        "phone": "116872436",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Horagala Bus Stand",
+        "city": "Horagala",
+        "address": "No 140, Station Road, Horagala",
+        "phone": "115612352",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Horagala Police Station",
+        "city": "Horagala",
+        "address": "No 298, Temple Road, Horagala",
+        "phone": "112426235",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q. Tharindu",
+        "city": "Horagala",
+        "address": "No 16, Temple Road, Horagala",
+        "phone": "717067814",
+        "category": "Person"
+    },
+    {
+        "name": "Q. Kusal Wickramasinghe",
+        "city": "Horagala",
+        "address": "No 243, Main Street, Horagala",
+        "phone": "770374545",
+        "category": "Person"
+    },
+    {
+        "name": "Q. Ishara",
+        "city": "Horagala",
+        "address": "No 40, Flower Road, Horagala",
+        "phone": "795011134",
+        "category": "Person"
+    },
+    {
+        "name": "Horagala District Secretariat",
+        "city": "Horagala",
+        "address": "No 399, Main Street, Horagala",
+        "phone": "112046362",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J.O. Nilakshi",
+        "city": "Horagala",
+        "address": "No 359, Flower Road, Horagala",
+        "phone": "718738119",
+        "category": "Person"
+    },
+    {
+        "name": "Z.T. Pathum",
+        "city": "Horagala",
+        "address": "No 195, Temple Road, Horagala",
+        "phone": "781736433",
+        "category": "Person"
+    },
+    {
+        "name": "A.E. Nilakshi Fernando",
+        "city": "Kaduwela",
+        "address": "No 286, Temple Road, Kaduwela",
+        "phone": "746426219",
+        "category": "Person"
+    },
+    {
+        "name": "U. Kusal Wickramasinghe",
+        "city": "Kaduwela",
+        "address": "No 457, Flower Road, Kaduwela",
+        "phone": "771298292",
+        "category": "Person"
+    },
+    {
+        "name": "Kaduwela District Secretariat",
+        "city": "Kaduwela",
+        "address": "No 20, Galle Road, Kaduwela",
+        "phone": "114348363",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kaduwela National School",
+        "city": "Kaduwela",
+        "address": "No 316, Main Street, Kaduwela",
+        "phone": "117636542",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kaduwela Post Office",
+        "city": "Kaduwela",
+        "address": "No 405, Station Road, Kaduwela",
+        "phone": "118577803",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kaduwela Public Library",
+        "city": "Kaduwela",
+        "address": "No 410, Main Street, Kaduwela",
+        "phone": "116575101",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "X. Dilshan Amarasinghe",
+        "city": "Kesbewa",
+        "address": "No 87, Flower Road, Kesbewa",
+        "phone": "798755380",
+        "category": "Person"
+    },
+    {
+        "name": "Kesbewa Post Office",
+        "city": "Kesbewa",
+        "address": "No 284, Galle Road, Kesbewa",
+        "phone": "115145291",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q. Nilakshi Rajapaksa",
+        "city": "Kesbewa",
+        "address": "No 130, Flower Road, Kesbewa",
+        "phone": "722074677",
+        "category": "Person"
+    },
+    {
+        "name": "Kesbewa Zonal Education Office",
+        "city": "Kesbewa",
+        "address": "No 489, Kandy Road, Kesbewa",
+        "phone": "113605841",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kesbewa Base Hospital",
+        "city": "Kesbewa",
+        "address": "No 49, Main Street, Kesbewa",
+        "phone": "114688945",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kohuwala Railway Station",
+        "city": "Kohuwala",
+        "address": "No 67, Station Road, Kohuwala",
+        "phone": "113920140",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kohuwala General Hospital",
+        "city": "Kohuwala",
+        "address": "No 133, Station Road, Kohuwala",
+        "phone": "117274159",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kohuwala General Hospital",
+        "city": "Kohuwala",
+        "address": "No 394, Kandy Road, Kohuwala",
+        "phone": "111503667",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "L. Anura Wickramasinghe",
+        "city": "Kohuwala",
+        "address": "No 22, Galle Road, Kohuwala",
+        "phone": "766623578",
+        "category": "Person"
+    },
+    {
+        "name": "Kohuwala Post Office",
+        "city": "Kohuwala",
+        "address": "No 237, Temple Road, Kohuwala",
+        "phone": "116768589",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kohuwala Bus Stand",
+        "city": "Kohuwala",
+        "address": "No 479, Temple Road, Kohuwala",
+        "phone": "117908676",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M.N. Ishara",
+        "city": "Kohuwala",
+        "address": "No 409, Galle Road, Kohuwala",
+        "phone": "733629910",
+        "category": "Person"
+    },
+    {
+        "name": "Kohuwala General Hospital",
+        "city": "Kohuwala",
+        "address": "No 445, Main Street, Kohuwala",
+        "phone": "112315569",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Kusal",
+        "city": "Kohuwala",
+        "address": "No 207, Galle Road, Kohuwala",
+        "phone": "793193857",
+        "category": "Person"
+    },
+    {
+        "name": "B. Sujith Silva",
+        "city": "Kolonnawa",
+        "address": "No 348, Kandy Road, Kolonnawa",
+        "phone": "740962786",
+        "category": "Person"
+    },
+    {
+        "name": "C. Madushan Karunaratne",
+        "city": "Kolonnawa",
+        "address": "No 393, Temple Road, Kolonnawa",
+        "phone": "781825814",
+        "category": "Person"
+    },
+    {
+        "name": "F. Dilshan Gunawardena",
+        "city": "Kolonnawa",
+        "address": "No 130, Flower Road, Kolonnawa",
+        "phone": "742090552",
+        "category": "Person"
+    },
+    {
+        "name": "Kolonnawa Police Station",
+        "city": "Kolonnawa",
+        "address": "No 276, Temple Road, Kolonnawa",
+        "phone": "111940190",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "S.T. Anura",
+        "city": "Kolonnawa",
+        "address": "No 333, Galle Road, Kolonnawa",
+        "phone": "723389788",
+        "category": "Person"
+    },
+    {
+        "name": "Kolonnawa Municipal Council",
+        "city": "Kolonnawa",
+        "address": "No 46, Flower Road, Kolonnawa",
+        "phone": "112555472",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D. Ishara",
+        "city": "Kosgama",
+        "address": "No 86, Flower Road, Kosgama",
+        "phone": "743237851",
+        "category": "Person"
+    },
+    {
+        "name": "Kosgama Post Office",
+        "city": "Kosgama",
+        "address": "No 23, Flower Road, Kosgama",
+        "phone": "111818076",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kosgama Public Library",
+        "city": "Kosgama",
+        "address": "No 287, Main Street, Kosgama",
+        "phone": "113805134",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G. Anura Silva",
+        "city": "Kosgama",
+        "address": "No 11, Kandy Road, Kosgama",
+        "phone": "791366276",
+        "category": "Person"
+    },
+    {
+        "name": "J.V. Chamari Wickramasinghe",
+        "city": "Kosgama",
+        "address": "No 15, Galle Road, Kosgama",
+        "phone": "752639452",
+        "category": "Person"
+    },
+    {
+        "name": "H.D. Kusal",
+        "city": "Kosgama",
+        "address": "No 456, Main Street, Kosgama",
+        "phone": "782692095",
+        "category": "Person"
+    },
+    {
+        "name": "W.I. Chamari Amarasinghe",
+        "city": "Kosgama",
+        "address": "No 105, Temple Road, Kosgama",
+        "phone": "723305782",
+        "category": "Person"
+    },
+    {
+        "name": "Kosgama Post Office",
+        "city": "Kosgama",
+        "address": "No 278, Temple Road, Kosgama",
+        "phone": "111668185",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kosgama Municipal Council",
+        "city": "Kosgama",
+        "address": "No 411, Main Street, Kosgama",
+        "phone": "111874549",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kottawa Bus Stand",
+        "city": "Kottawa",
+        "address": "No 456, Galle Road, Kottawa",
+        "phone": "117293433",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kottawa Public Library",
+        "city": "Kottawa",
+        "address": "No 431, Main Street, Kottawa",
+        "phone": "112845682",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A. Kusal",
+        "city": "Kottawa",
+        "address": "No 404, Kandy Road, Kottawa",
+        "phone": "718468620",
+        "category": "Person"
+    },
+    {
+        "name": "Kottawa Police Station",
+        "city": "Kottawa",
+        "address": "No 135, Galle Road, Kottawa",
+        "phone": "112285001",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T. Chamari Perera",
+        "city": "Kottawa",
+        "address": "No 372, Station Road, Kottawa",
+        "phone": "718450342",
+        "category": "Person"
+    },
+    {
+        "name": "Kottawa Railway Station",
+        "city": "Kottawa",
+        "address": "No 414, Main Street, Kottawa",
+        "phone": "119659403",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kottawa Zonal Education Office",
+        "city": "Kottawa",
+        "address": "No 5, Flower Road, Kottawa",
+        "phone": "111025153",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q.T. Dilshan",
+        "city": "Kottawa",
+        "address": "No 299, Main Street, Kottawa",
+        "phone": "786355357",
+        "category": "Person"
+    },
+    {
+        "name": "U.X. Nilakshi Perera",
+        "city": "Kottawa",
+        "address": "No 52, Temple Road, Kottawa",
+        "phone": "734213064",
+        "category": "Person"
+    },
+    {
+        "name": "Kottawa District Secretariat",
+        "city": "Kottawa",
+        "address": "No 267, Station Road, Kottawa",
+        "phone": "118355191",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Maharagama Post Office",
+        "city": "Maharagama",
+        "address": "No 321, Station Road, Maharagama",
+        "phone": "116345439",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B. Sujith",
+        "city": "Maharagama",
+        "address": "No 388, Flower Road, Maharagama",
+        "phone": "759394656",
+        "category": "Person"
+    },
+    {
+        "name": "Maharagama Base Hospital",
+        "city": "Maharagama",
+        "address": "No 59, Temple Road, Maharagama",
+        "phone": "119774496",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Maharagama National School",
+        "city": "Maharagama",
+        "address": "No 278, Flower Road, Maharagama",
+        "phone": "117662758",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T.U. Nilakshi Fernando",
+        "city": "Maharagama",
+        "address": "No 7, Galle Road, Maharagama",
+        "phone": "784381704",
+        "category": "Person"
+    },
+    {
+        "name": "Malabe Base Hospital",
+        "city": "Malabe",
+        "address": "No 362, Temple Road, Malabe",
+        "phone": "116476505",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Malabe District Secretariat",
+        "city": "Malabe",
+        "address": "No 95, Main Street, Malabe",
+        "phone": "114671396",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Malabe General Hospital",
+        "city": "Malabe",
+        "address": "No 79, Main Street, Malabe",
+        "phone": "117797331",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F. Pathum",
+        "city": "Malabe",
+        "address": "No 254, Kandy Road, Malabe",
+        "phone": "728652608",
+        "category": "Person"
+    },
+    {
+        "name": "Malabe General Hospital",
+        "city": "Malabe",
+        "address": "No 190, Flower Road, Malabe",
+        "phone": "117565620",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W.T. Pathum",
+        "city": "Malabe",
+        "address": "No 462, Flower Road, Malabe",
+        "phone": "778564555",
+        "category": "Person"
+    },
+    {
+        "name": "Malabe Bus Stand",
+        "city": "Malabe",
+        "address": "No 166, Main Street, Malabe",
+        "phone": "112118863",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Malabe Base Hospital",
+        "city": "Malabe",
+        "address": "No 464, Galle Road, Malabe",
+        "phone": "118552304",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V. Ishara",
+        "city": "Malabe",
+        "address": "No 479, Station Road, Malabe",
+        "phone": "783615536",
+        "category": "Person"
+    },
+    {
+        "name": "C. Tharindu",
+        "city": "Malabe",
+        "address": "No 138, Temple Road, Malabe",
+        "phone": "760217551",
+        "category": "Person"
+    },
+    {
+        "name": "A.W. Kusal",
+        "city": "Meegoda",
+        "address": "No 495, Station Road, Meegoda",
+        "phone": "748834492",
+        "category": "Person"
+    },
+    {
+        "name": "Z. Chamari Wickramasinghe",
+        "city": "Meegoda",
+        "address": "No 456, Main Street, Meegoda",
+        "phone": "787083587",
+        "category": "Person"
+    },
+    {
+        "name": "U. Tharindu",
+        "city": "Meegoda",
+        "address": "No 13, Temple Road, Meegoda",
+        "phone": "761404885",
+        "category": "Person"
+    },
+    {
+        "name": "V.N. Pathum Perera",
+        "city": "Meegoda",
+        "address": "No 104, Station Road, Meegoda",
+        "phone": "798970098",
+        "category": "Person"
+    },
+    {
+        "name": "I. Chamari Karunaratne",
+        "city": "Meegoda",
+        "address": "No 457, Kandy Road, Meegoda",
+        "phone": "742236554",
+        "category": "Person"
+    },
+    {
+        "name": "Meegoda Police Station",
+        "city": "Meegoda",
+        "address": "No 327, Temple Road, Meegoda",
+        "phone": "111819362",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A.I. Chamari",
+        "city": "Meegoda",
+        "address": "No 461, Kandy Road, Meegoda",
+        "phone": "779336831",
+        "category": "Person"
+    },
+    {
+        "name": "Meegoda District Secretariat",
+        "city": "Meegoda",
+        "address": "No 197, Temple Road, Meegoda",
+        "phone": "114150331",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Meegoda District Secretariat",
+        "city": "Meegoda",
+        "address": "No 437, Station Road, Meegoda",
+        "phone": "111570535",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Moratuwa Police Station",
+        "city": "Moratuwa",
+        "address": "No 215, Kandy Road, Moratuwa",
+        "phone": "112297377",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Moratuwa Railway Station",
+        "city": "Moratuwa",
+        "address": "No 305, Main Street, Moratuwa",
+        "phone": "116768723",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N.M. Tharindu Wickramasinghe",
+        "city": "Moratuwa",
+        "address": "No 132, Kandy Road, Moratuwa",
+        "phone": "782130323",
+        "category": "Person"
+    },
+    {
+        "name": "Moratuwa Base Hospital",
+        "city": "Moratuwa",
+        "address": "No 75, Galle Road, Moratuwa",
+        "phone": "119435822",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Moratuwa Public Library",
+        "city": "Moratuwa",
+        "address": "No 384, Flower Road, Moratuwa",
+        "phone": "114645279",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Moratuwa Base Hospital",
+        "city": "Moratuwa",
+        "address": "No 414, Station Road, Moratuwa",
+        "phone": "113039875",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Moratuwa National School",
+        "city": "Moratuwa",
+        "address": "No 448, Galle Road, Moratuwa",
+        "phone": "116810650",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Mulleriyawa Bus Stand",
+        "city": "Mulleriyawa",
+        "address": "No 263, Kandy Road, Mulleriyawa",
+        "phone": "117480436",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G.T. Chamari",
+        "city": "Mulleriyawa",
+        "address": "No 303, Flower Road, Mulleriyawa",
+        "phone": "750035224",
+        "category": "Person"
+    },
+    {
+        "name": "O.J. Kusal Amarasinghe",
+        "city": "Mulleriyawa",
+        "address": "No 63, Station Road, Mulleriyawa",
+        "phone": "729354337",
+        "category": "Person"
+    },
+    {
+        "name": "B.Y. Tharindu Karunaratne",
+        "city": "Mulleriyawa",
+        "address": "No 386, Kandy Road, Mulleriyawa",
+        "phone": "713841510",
+        "category": "Person"
+    },
+    {
+        "name": "Mulleriyawa Police Station",
+        "city": "Mulleriyawa",
+        "address": "No 467, Kandy Road, Mulleriyawa",
+        "phone": "113100351",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "H.Y. Kusal",
+        "city": "Mulleriyawa",
+        "address": "No 284, Temple Road, Mulleriyawa",
+        "phone": "762279758",
+        "category": "Person"
+    },
+    {
+        "name": "Mulleriyawa Bus Stand",
+        "city": "Mulleriyawa",
+        "address": "No 185, Flower Road, Mulleriyawa",
+        "phone": "117049550",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "P.Q. Dilshan Wickramasinghe",
+        "city": "Mulleriyawa",
+        "address": "No 340, Flower Road, Mulleriyawa",
+        "phone": "723019398",
+        "category": "Person"
+    },
+    {
+        "name": "Mulleriyawa Municipal Council",
+        "city": "Mulleriyawa",
+        "address": "No 391, Temple Road, Mulleriyawa",
+        "phone": "112768398",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G.H. Nilakshi",
+        "city": "Mulleriyawa",
+        "address": "No 33, Main Street, Mulleriyawa",
+        "phone": "726120702",
+        "category": "Person"
+    },
+    {
+        "name": "W. Nilakshi Rajapaksa",
+        "city": "Mount Lavinia",
+        "address": "No 124, Station Road, Mount Lavinia",
+        "phone": "791852339",
+        "category": "Person"
+    },
+    {
+        "name": "Mount Lavinia Bus Stand",
+        "city": "Mount Lavinia",
+        "address": "No 479, Galle Road, Mount Lavinia",
+        "phone": "115918096",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Mount Lavinia Zonal Education Office",
+        "city": "Mount Lavinia",
+        "address": "No 247, Galle Road, Mount Lavinia",
+        "phone": "118146675",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Mount Lavinia National School",
+        "city": "Mount Lavinia",
+        "address": "No 9, Kandy Road, Mount Lavinia",
+        "phone": "114244206",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T.O. Anura Gunawardena",
+        "city": "Mount Lavinia",
+        "address": "No 85, Temple Road, Mount Lavinia",
+        "phone": "789382989",
+        "category": "Person"
+    },
+    {
+        "name": "Mount Lavinia District Secretariat",
+        "city": "Mount Lavinia",
+        "address": "No 238, Flower Road, Mount Lavinia",
+        "phone": "119447782",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Mount Lavinia Police Station",
+        "city": "Mount Lavinia",
+        "address": "No 153, Temple Road, Mount Lavinia",
+        "phone": "118347152",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Nilakshi Wickramasinghe",
+        "city": "Mount Lavinia",
+        "address": "No 363, Kandy Road, Mount Lavinia",
+        "phone": "770899931",
+        "category": "Person"
+    },
+    {
+        "name": "Mount Lavinia Bus Stand",
+        "city": "Mount Lavinia",
+        "address": "No 458, Galle Road, Mount Lavinia",
+        "phone": "119373437",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nawala Municipal Council",
+        "city": "Nawala",
+        "address": "No 333, Kandy Road, Nawala",
+        "phone": "118174273",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V.A. Chamari",
+        "city": "Nawala",
+        "address": "No 469, Station Road, Nawala",
+        "phone": "743724702",
+        "category": "Person"
+    },
+    {
+        "name": "L. Kusal Gunawardena",
+        "city": "Nawala",
+        "address": "No 274, Station Road, Nawala",
+        "phone": "764474938",
+        "category": "Person"
+    },
+    {
+        "name": "Nawala Municipal Council",
+        "city": "Nawala",
+        "address": "No 64, Kandy Road, Nawala",
+        "phone": "118581924",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nawala District Secretariat",
+        "city": "Nawala",
+        "address": "No 30, Station Road, Nawala",
+        "phone": "118568142",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nawala District Secretariat",
+        "city": "Nawala",
+        "address": "No 472, Galle Road, Nawala",
+        "phone": "117557582",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G.L. Madushan",
+        "city": "Nawala",
+        "address": "No 160, Flower Road, Nawala",
+        "phone": "768792084",
+        "category": "Person"
+    },
+    {
+        "name": "J.A. Pathum",
+        "city": "Nugegoda",
+        "address": "No 313, Galle Road, Nugegoda",
+        "phone": "735199108",
+        "category": "Person"
+    },
+    {
+        "name": "Nugegoda District Secretariat",
+        "city": "Nugegoda",
+        "address": "No 115, Main Street, Nugegoda",
+        "phone": "118642543",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nugegoda Municipal Council",
+        "city": "Nugegoda",
+        "address": "No 408, Station Road, Nugegoda",
+        "phone": "119123817",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nugegoda District Secretariat",
+        "city": "Nugegoda",
+        "address": "No 184, Temple Road, Nugegoda",
+        "phone": "114632040",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nugegoda Public Library",
+        "city": "Nugegoda",
+        "address": "No 474, Kandy Road, Nugegoda",
+        "phone": "117133565",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nugegoda Railway Station",
+        "city": "Nugegoda",
+        "address": "No 16, Main Street, Nugegoda",
+        "phone": "119806383",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T. Madushan",
+        "city": "Nugegoda",
+        "address": "No 211, Temple Road, Nugegoda",
+        "phone": "766839863",
+        "category": "Person"
+    },
+    {
+        "name": "Nugegoda Railway Station",
+        "city": "Nugegoda",
+        "address": "No 453, Galle Road, Nugegoda",
+        "phone": "119337262",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "K. Chamari",
+        "city": "Padukka",
+        "address": "No 406, Station Road, Padukka",
+        "phone": "781749537",
+        "category": "Person"
+    },
+    {
+        "name": "Padukka District Secretariat",
+        "city": "Padukka",
+        "address": "No 473, Station Road, Padukka",
+        "phone": "112037516",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q. Tharindu",
+        "city": "Padukka",
+        "address": "No 239, Galle Road, Padukka",
+        "phone": "717869742",
+        "category": "Person"
+    },
+    {
+        "name": "A.L. Anura",
+        "city": "Padukka",
+        "address": "No 57, Station Road, Padukka",
+        "phone": "721548288",
+        "category": "Person"
+    },
+    {
+        "name": "Padukka National School",
+        "city": "Padukka",
+        "address": "No 7, Flower Road, Padukka",
+        "phone": "116779171",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Madushan",
+        "city": "Padukka",
+        "address": "No 25, Temple Road, Padukka",
+        "phone": "764434006",
+        "category": "Person"
+    },
+    {
+        "name": "M. Kusal Gunawardena",
+        "city": "Padukka",
+        "address": "No 380, Temple Road, Padukka",
+        "phone": "741853955",
+        "category": "Person"
+    },
+    {
+        "name": "Padukka Post Office",
+        "city": "Padukka",
+        "address": "No 326, Kandy Road, Padukka",
+        "phone": "111900609",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Ishara Wickramasinghe",
+        "city": "Padukka",
+        "address": "No 108, Galle Road, Padukka",
+        "phone": "711782815",
+        "category": "Person"
+    },
+    {
+        "name": "O. Nilakshi",
+        "city": "Pannipitiya",
+        "address": "No 447, Flower Road, Pannipitiya",
+        "phone": "769097376",
+        "category": "Person"
+    },
+    {
+        "name": "U. Anura",
+        "city": "Pannipitiya",
+        "address": "No 63, Temple Road, Pannipitiya",
+        "phone": "774925451",
+        "category": "Person"
+    },
+    {
+        "name": "I.R. Tharindu Wickramasinghe",
+        "city": "Pannipitiya",
+        "address": "No 400, Temple Road, Pannipitiya",
+        "phone": "748140624",
+        "category": "Person"
+    },
+    {
+        "name": "Pannipitiya Base Hospital",
+        "city": "Pannipitiya",
+        "address": "No 143, Temple Road, Pannipitiya",
+        "phone": "118218069",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D.C. Dilshan Amarasinghe",
+        "city": "Pannipitiya",
+        "address": "No 158, Galle Road, Pannipitiya",
+        "phone": "737128795",
+        "category": "Person"
+    },
+    {
+        "name": "Pannipitiya General Hospital",
+        "city": "Pannipitiya",
+        "address": "No 141, Main Street, Pannipitiya",
+        "phone": "117446127",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Piliyandala Bus Stand",
+        "city": "Piliyandala",
+        "address": "No 86, Main Street, Piliyandala",
+        "phone": "115779183",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "P. Tharindu",
+        "city": "Piliyandala",
+        "address": "No 293, Main Street, Piliyandala",
+        "phone": "724188236",
+        "category": "Person"
+    },
+    {
+        "name": "J. Nilakshi",
+        "city": "Piliyandala",
+        "address": "No 48, Flower Road, Piliyandala",
+        "phone": "752871444",
+        "category": "Person"
+    },
+    {
+        "name": "Piliyandala District Secretariat",
+        "city": "Piliyandala",
+        "address": "No 221, Temple Road, Piliyandala",
+        "phone": "117439248",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Piliyandala National School",
+        "city": "Piliyandala",
+        "address": "No 374, Kandy Road, Piliyandala",
+        "phone": "113156340",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V. Pathum Gunawardena",
+        "city": "Piliyandala",
+        "address": "No 488, Galle Road, Piliyandala",
+        "phone": "753172646",
+        "category": "Person"
+    },
+    {
+        "name": "Piliyandala Bus Stand",
+        "city": "Piliyandala",
+        "address": "No 336, Kandy Road, Piliyandala",
+        "phone": "117542333",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Piliyandala National School",
+        "city": "Piliyandala",
+        "address": "No 223, Main Street, Piliyandala",
+        "phone": "118006874",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Piliyandala National School",
+        "city": "Piliyandala",
+        "address": "No 396, Kandy Road, Piliyandala",
+        "phone": "112068486",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Piliyandala Base Hospital",
+        "city": "Piliyandala",
+        "address": "No 411, Kandy Road, Piliyandala",
+        "phone": "118913241",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Polgasowita Municipal Council",
+        "city": "Polgasowita",
+        "address": "No 42, Galle Road, Polgasowita",
+        "phone": "116391248",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "I. Ishara Rajapaksa",
+        "city": "Polgasowita",
+        "address": "No 382, Station Road, Polgasowita",
+        "phone": "769895789",
+        "category": "Person"
+    },
+    {
+        "name": "Polgasowita Municipal Council",
+        "city": "Polgasowita",
+        "address": "No 363, Flower Road, Polgasowita",
+        "phone": "116920913",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Polgasowita Base Hospital",
+        "city": "Polgasowita",
+        "address": "No 335, Temple Road, Polgasowita",
+        "phone": "117240133",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N. Ishara",
+        "city": "Polgasowita",
+        "address": "No 46, Kandy Road, Polgasowita",
+        "phone": "733373700",
+        "category": "Person"
+    },
+    {
+        "name": "Polgasowita Police Station",
+        "city": "Polgasowita",
+        "address": "No 19, Main Street, Polgasowita",
+        "phone": "112358902",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Polgasowita District Secretariat",
+        "city": "Polgasowita",
+        "address": "No 344, Station Road, Polgasowita",
+        "phone": "116756594",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "H.B. Nilakshi Fernando",
+        "city": "Polgasowita",
+        "address": "No 81, Station Road, Polgasowita",
+        "phone": "766930560",
+        "category": "Person"
+    },
+    {
+        "name": "M. Sujith Rajapaksa",
+        "city": "Polgasowita",
+        "address": "No 244, Temple Road, Polgasowita",
+        "phone": "780416880",
+        "category": "Person"
+    },
+    {
+        "name": "Polgasowita Post Office",
+        "city": "Polgasowita",
+        "address": "No 110, Main Street, Polgasowita",
+        "phone": "119579768",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Puwakpitiya District Secretariat",
+        "city": "Puwakpitiya",
+        "address": "No 191, Main Street, Puwakpitiya",
+        "phone": "116216515",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Puwakpitiya Railway Station",
+        "city": "Puwakpitiya",
+        "address": "No 305, Main Street, Puwakpitiya",
+        "phone": "112359799",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "S. Dilshan Silva",
+        "city": "Puwakpitiya",
+        "address": "No 491, Galle Road, Puwakpitiya",
+        "phone": "768356515",
+        "category": "Person"
+    },
+    {
+        "name": "D.J. Pathum Amarasinghe",
+        "city": "Puwakpitiya",
+        "address": "No 35, Kandy Road, Puwakpitiya",
+        "phone": "795643717",
+        "category": "Person"
+    },
+    {
+        "name": "A.I. Tharindu Karunaratne",
+        "city": "Puwakpitiya",
+        "address": "No 154, Temple Road, Puwakpitiya",
+        "phone": "749456619",
+        "category": "Person"
+    },
+    {
+        "name": "R. Dilshan",
+        "city": "Ratmalana",
+        "address": "No 275, Galle Road, Ratmalana",
+        "phone": "715601310",
+        "category": "Person"
+    },
+    {
+        "name": "Ratmalana Police Station",
+        "city": "Ratmalana",
+        "address": "No 68, Flower Road, Ratmalana",
+        "phone": "114507474",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Ratmalana National School",
+        "city": "Ratmalana",
+        "address": "No 192, Main Street, Ratmalana",
+        "phone": "115527309",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N. Pathum Gunawardena",
+        "city": "Ratmalana",
+        "address": "No 212, Temple Road, Ratmalana",
+        "phone": "789952229",
+        "category": "Person"
+    },
+    {
+        "name": "U.P. Dilshan",
+        "city": "Ratmalana",
+        "address": "No 52, Temple Road, Ratmalana",
+        "phone": "751072673",
+        "category": "Person"
+    },
+    {
+        "name": "G. Madushan Karunaratne",
+        "city": "Ratmalana",
+        "address": "No 326, Galle Road, Ratmalana",
+        "phone": "718707796",
+        "category": "Person"
+    },
+    {
+        "name": "K. Pathum Silva",
+        "city": "Ratmalana",
+        "address": "No 447, Main Street, Ratmalana",
+        "phone": "761105372",
+        "category": "Person"
+    },
+    {
+        "name": "Ratmalana Public Library",
+        "city": "Ratmalana",
+        "address": "No 393, Station Road, Ratmalana",
+        "phone": "114370429",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Talawatugoda Police Station",
+        "city": "Talawatugoda",
+        "address": "No 375, Flower Road, Talawatugoda",
+        "phone": "119379512",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E. Tharindu",
+        "city": "Talawatugoda",
+        "address": "No 269, Galle Road, Talawatugoda",
+        "phone": "789387489",
+        "category": "Person"
+    },
+    {
+        "name": "L. Chamari",
+        "city": "Talawatugoda",
+        "address": "No 323, Flower Road, Talawatugoda",
+        "phone": "777273241",
+        "category": "Person"
+    },
+    {
+        "name": "Talawatugoda Railway Station",
+        "city": "Talawatugoda",
+        "address": "No 18, Kandy Road, Talawatugoda",
+        "phone": "112464343",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.C. Anura Amarasinghe",
+        "city": "Talawatugoda",
+        "address": "No 145, Station Road, Talawatugoda",
+        "phone": "758364710",
+        "category": "Person"
+    },
+    {
+        "name": "C. Nilakshi",
+        "city": "Talawatugoda",
+        "address": "No 439, Station Road, Talawatugoda",
+        "phone": "755894479",
+        "category": "Person"
+    },
+    {
+        "name": "M.H. Pathum Karunaratne",
+        "city": "Talawatugoda",
+        "address": "No 56, Galle Road, Talawatugoda",
+        "phone": "724408686",
+        "category": "Person"
+    },
+    {
+        "name": "Talawatugoda Zonal Education Office",
+        "city": "Talawatugoda",
+        "address": "No 381, Galle Road, Talawatugoda",
+        "phone": "112873196",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Talawatugoda Public Library",
+        "city": "Talawatugoda",
+        "address": "No 45, Main Street, Talawatugoda",
+        "phone": "119628322",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q. Nilakshi",
+        "city": "Wellampitiya",
+        "address": "No 122, Galle Road, Wellampitiya",
+        "phone": "784568787",
+        "category": "Person"
+    },
+    {
+        "name": "Y.Z. Pathum",
+        "city": "Wellampitiya",
+        "address": "No 320, Main Street, Wellampitiya",
+        "phone": "780570681",
+        "category": "Person"
+    },
+    {
+        "name": "L. Tharindu Wickramasinghe",
+        "city": "Wellampitiya",
+        "address": "No 175, Temple Road, Wellampitiya",
+        "phone": "774280086",
+        "category": "Person"
+    },
+    {
+        "name": "X.K. Anura Silva",
+        "city": "Wellampitiya",
+        "address": "No 407, Kandy Road, Wellampitiya",
+        "phone": "756497354",
+        "category": "Person"
+    },
+    {
+        "name": "Wellampitiya District Secretariat",
+        "city": "Wellampitiya",
+        "address": "No 200, Kandy Road, Wellampitiya",
+        "phone": "111521137",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W.G. Anura Fernando",
+        "city": "Wellampitiya",
+        "address": "No 306, Temple Road, Wellampitiya",
+        "phone": "774004179",
+        "category": "Person"
+    },
+    {
+        "name": "Wellampitiya General Hospital",
+        "city": "Wellampitiya",
+        "address": "No 292, Main Street, Wellampitiya",
+        "phone": "111458478",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Wellampitiya Police Station",
+        "city": "Wellampitiya",
+        "address": "No 175, Flower Road, Wellampitiya",
+        "phone": "114882821",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Wellampitiya Zonal Education Office",
+        "city": "Wellampitiya",
+        "address": "No 408, Kandy Road, Wellampitiya",
+        "phone": "119653241",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Tharindu Perera",
+        "city": "Wennawatta",
+        "address": "No 281, Main Street, Wennawatta",
+        "phone": "735786567",
+        "category": "Person"
+    },
+    {
+        "name": "P. Kusal",
+        "city": "Wennawatta",
+        "address": "No 229, Flower Road, Wennawatta",
+        "phone": "760182181",
+        "category": "Person"
+    },
+    {
+        "name": "Wennawatta Zonal Education Office",
+        "city": "Wennawatta",
+        "address": "No 218, Main Street, Wennawatta",
+        "phone": "111697827",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E. Chamari",
+        "city": "Wennawatta",
+        "address": "No 283, Galle Road, Wennawatta",
+        "phone": "785264656",
+        "category": "Person"
+    },
+    {
+        "name": "Wennawatta Police Station",
+        "city": "Wennawatta",
+        "address": "No 23, Station Road, Wennawatta",
+        "phone": "111193229",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Z.A. Sujith Gunawardena",
+        "city": "Wennawatta",
+        "address": "No 178, Flower Road, Wennawatta",
+        "phone": "757031079",
+        "category": "Person"
+    },
+    {
+        "name": "Y. Madushan",
+        "city": "Wennawatta",
+        "address": "No 427, Galle Road, Wennawatta",
+        "phone": "733778344",
+        "category": "Person"
+    },
+    {
+        "name": "J. Dilshan",
+        "city": "Wennawatta",
+        "address": "No 41, Station Road, Wennawatta",
+        "phone": "759120430",
+        "category": "Person"
+    },
+    {
+        "name": "H. Dilshan Amarasinghe",
+        "city": "Wennawatta",
+        "address": "No 166, Main Street, Wennawatta",
+        "phone": "733200592",
+        "category": "Person"
+    },
+    {
+        "name": "Wennawatta National School",
+        "city": "Wennawatta",
+        "address": "No 357, Flower Road, Wennawatta",
+        "phone": "116522935",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D. Chamari",
+        "city": "Ahangama",
+        "address": "No 313, Temple Road, Ahangama",
+        "phone": "791031989",
+        "category": "Person"
+    },
+    {
+        "name": "P. Sujith",
+        "city": "Ahangama",
+        "address": "No 122, Galle Road, Ahangama",
+        "phone": "719123577",
+        "category": "Person"
+    },
+    {
+        "name": "Ahangama National School",
+        "city": "Ahangama",
+        "address": "No 197, Station Road, Ahangama",
+        "phone": "114820016",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Y.X. Sujith Wickramasinghe",
+        "city": "Ahangama",
+        "address": "No 45, Temple Road, Ahangama",
+        "phone": "780864961",
+        "category": "Person"
+    },
+    {
+        "name": "V. Anura Amarasinghe",
+        "city": "Ahangama",
+        "address": "No 461, Kandy Road, Ahangama",
+        "phone": "724400367",
+        "category": "Person"
+    },
+    {
+        "name": "M. Dilshan",
+        "city": "Baddegama",
+        "address": "No 323, Galle Road, Baddegama",
+        "phone": "765530191",
+        "category": "Person"
+    },
+    {
+        "name": "Baddegama Base Hospital",
+        "city": "Baddegama",
+        "address": "No 312, Galle Road, Baddegama",
+        "phone": "116159739",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama District Secretariat",
+        "city": "Baddegama",
+        "address": "No 139, Main Street, Baddegama",
+        "phone": "114133190",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama Bus Stand",
+        "city": "Baddegama",
+        "address": "No 207, Galle Road, Baddegama",
+        "phone": "113384764",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama Base Hospital",
+        "city": "Baddegama",
+        "address": "No 289, Kandy Road, Baddegama",
+        "phone": "111638322",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama General Hospital",
+        "city": "Baddegama",
+        "address": "No 243, Station Road, Baddegama",
+        "phone": "117765098",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama Police Station",
+        "city": "Baddegama",
+        "address": "No 350, Temple Road, Baddegama",
+        "phone": "112481176",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama General Hospital",
+        "city": "Baddegama",
+        "address": "No 327, Temple Road, Baddegama",
+        "phone": "116662258",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Baddegama Base Hospital",
+        "city": "Baddegama",
+        "address": "No 6, Station Road, Baddegama",
+        "phone": "111773506",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Kusal",
+        "city": "Baddegama",
+        "address": "No 151, Galle Road, Baddegama",
+        "phone": "710849936",
+        "category": "Person"
+    },
+    {
+        "name": "P. Dilshan",
+        "city": "Batapola",
+        "address": "No 429, Main Street, Batapola",
+        "phone": "791798675",
+        "category": "Person"
+    },
+    {
+        "name": "R.U. Sujith Rajapaksa",
+        "city": "Batapola",
+        "address": "No 134, Main Street, Batapola",
+        "phone": "710535210",
+        "category": "Person"
+    },
+    {
+        "name": "Batapola Public Library",
+        "city": "Batapola",
+        "address": "No 307, Flower Road, Batapola",
+        "phone": "113080102",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batapola Bus Stand",
+        "city": "Batapola",
+        "address": "No 21, Main Street, Batapola",
+        "phone": "119156084",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batapola Zonal Education Office",
+        "city": "Batapola",
+        "address": "No 405, Kandy Road, Batapola",
+        "phone": "113305152",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E. Ishara Amarasinghe",
+        "city": "Batapola",
+        "address": "No 180, Main Street, Batapola",
+        "phone": "763012840",
+        "category": "Person"
+    },
+    {
+        "name": "M. Anura Karunaratne",
+        "city": "Batapola",
+        "address": "No 266, Station Road, Batapola",
+        "phone": "785577070",
+        "category": "Person"
+    },
+    {
+        "name": "Bentota Base Hospital",
+        "city": "Bentota",
+        "address": "No 318, Galle Road, Bentota",
+        "phone": "119545917",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Bentota Zonal Education Office",
+        "city": "Bentota",
+        "address": "No 71, Main Street, Bentota",
+        "phone": "118795841",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A. Kusal",
+        "city": "Bentota",
+        "address": "No 240, Temple Road, Bentota",
+        "phone": "733875357",
+        "category": "Person"
+    },
+    {
+        "name": "S. Anura Karunaratne",
+        "city": "Bentota",
+        "address": "No 284, Galle Road, Bentota",
+        "phone": "760739583",
+        "category": "Person"
+    },
+    {
+        "name": "D.Y. Sujith Amarasinghe",
+        "city": "Bentota",
+        "address": "No 202, Flower Road, Bentota",
+        "phone": "711021132",
+        "category": "Person"
+    },
+    {
+        "name": "Y. Pathum Amarasinghe",
+        "city": "Bentota",
+        "address": "No 111, Flower Road, Bentota",
+        "phone": "779929970",
+        "category": "Person"
+    },
+    {
+        "name": "C. Sujith Wickramasinghe",
+        "city": "Bentota",
+        "address": "No 464, Main Street, Bentota",
+        "phone": "797080289",
+        "category": "Person"
+    },
+    {
+        "name": "Y.K. Madushan",
+        "city": "Bentota",
+        "address": "No 233, Station Road, Bentota",
+        "phone": "792432219",
+        "category": "Person"
+    },
+    {
+        "name": "D. Chamari Gunawardena",
+        "city": "Bentota",
+        "address": "No 143, Main Street, Bentota",
+        "phone": "750147898",
+        "category": "Person"
+    },
+    {
+        "name": "Bentota Post Office",
+        "city": "Bentota",
+        "address": "No 150, Kandy Road, Bentota",
+        "phone": "112182422",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q.E. Pathum Wickramasinghe",
+        "city": "Dikkumbura",
+        "address": "No 192, Galle Road, Dikkumbura",
+        "phone": "785811126",
+        "category": "Person"
+    },
+    {
+        "name": "A.S. Nilakshi",
+        "city": "Dikkumbura",
+        "address": "No 238, Flower Road, Dikkumbura",
+        "phone": "795205699",
+        "category": "Person"
+    },
+    {
+        "name": "Dikkumbura National School",
+        "city": "Dikkumbura",
+        "address": "No 475, Temple Road, Dikkumbura",
+        "phone": "111069999",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Z.A. Pathum Rajapaksa",
+        "city": "Dikkumbura",
+        "address": "No 147, Kandy Road, Dikkumbura",
+        "phone": "781934771",
+        "category": "Person"
+    },
+    {
+        "name": "S.R. Anura",
+        "city": "Dikkumbura",
+        "address": "No 313, Flower Road, Dikkumbura",
+        "phone": "786471814",
+        "category": "Person"
+    },
+    {
+        "name": "Dikkumbura Municipal Council",
+        "city": "Dikkumbura",
+        "address": "No 282, Main Street, Dikkumbura",
+        "phone": "115688925",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "I. Kusal",
+        "city": "Dikkumbura",
+        "address": "No 296, Kandy Road, Dikkumbura",
+        "phone": "786532084",
+        "category": "Person"
+    },
+    {
+        "name": "Dikkumbura General Hospital",
+        "city": "Dikkumbura",
+        "address": "No 259, Flower Road, Dikkumbura",
+        "phone": "118854632",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dikkumbura Municipal Council",
+        "city": "Dikkumbura",
+        "address": "No 60, Galle Road, Dikkumbura",
+        "phone": "113270641",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dikkumbura Bus Stand",
+        "city": "Dikkumbura",
+        "address": "No 136, Station Road, Dikkumbura",
+        "phone": "119692245",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Elpitiya General Hospital",
+        "city": "Elpitiya",
+        "address": "No 360, Station Road, Elpitiya",
+        "phone": "115113948",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T. Anura",
+        "city": "Elpitiya",
+        "address": "No 188, Station Road, Elpitiya",
+        "phone": "734971058",
+        "category": "Person"
+    },
+    {
+        "name": "L.R. Pathum Silva",
+        "city": "Elpitiya",
+        "address": "No 342, Flower Road, Elpitiya",
+        "phone": "754346663",
+        "category": "Person"
+    },
+    {
+        "name": "Q. Sujith Gunawardena",
+        "city": "Elpitiya",
+        "address": "No 188, Kandy Road, Elpitiya",
+        "phone": "747108243",
+        "category": "Person"
+    },
+    {
+        "name": "K. Nilakshi",
+        "city": "Elpitiya",
+        "address": "No 402, Kandy Road, Elpitiya",
+        "phone": "711309725",
+        "category": "Person"
+    },
+    {
+        "name": "Elpitiya Post Office",
+        "city": "Elpitiya",
+        "address": "No 418, Kandy Road, Elpitiya",
+        "phone": "115224274",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Tharindu",
+        "city": "Elpitiya",
+        "address": "No 436, Main Street, Elpitiya",
+        "phone": "798967392",
+        "category": "Person"
+    },
+    {
+        "name": "E. Tharindu",
+        "city": "Elpitiya",
+        "address": "No 437, Station Road, Elpitiya",
+        "phone": "779358311",
+        "category": "Person"
+    },
+    {
+        "name": "Elpitiya Zonal Education Office",
+        "city": "Elpitiya",
+        "address": "No 158, Temple Road, Elpitiya",
+        "phone": "111408792",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Elpitiya Bus Stand",
+        "city": "Elpitiya",
+        "address": "No 291, Main Street, Elpitiya",
+        "phone": "116834468",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "H. Nilakshi",
+        "city": "Habaraduwa",
+        "address": "No 394, Temple Road, Habaraduwa",
+        "phone": "713738480",
+        "category": "Person"
+    },
+    {
+        "name": "L.U. Madushan",
+        "city": "Habaraduwa",
+        "address": "No 490, Galle Road, Habaraduwa",
+        "phone": "785278949",
+        "category": "Person"
+    },
+    {
+        "name": "B.J. Tharindu",
+        "city": "Habaraduwa",
+        "address": "No 436, Flower Road, Habaraduwa",
+        "phone": "785671791",
+        "category": "Person"
+    },
+    {
+        "name": "Habaraduwa Post Office",
+        "city": "Habaraduwa",
+        "address": "No 59, Main Street, Habaraduwa",
+        "phone": "114794318",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T. Chamari",
+        "city": "Habaraduwa",
+        "address": "No 257, Galle Road, Habaraduwa",
+        "phone": "779271711",
+        "category": "Person"
+    },
+    {
+        "name": "Habaraduwa Police Station",
+        "city": "Habaraduwa",
+        "address": "No 203, Station Road, Habaraduwa",
+        "phone": "115397734",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Habaraduwa Public Library",
+        "city": "Habaraduwa",
+        "address": "No 195, Kandy Road, Habaraduwa",
+        "phone": "112314132",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Habaraduwa Post Office",
+        "city": "Habaraduwa",
+        "address": "No 364, Flower Road, Habaraduwa",
+        "phone": "112736398",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V.E. Kusal Perera",
+        "city": "Habaraduwa",
+        "address": "No 344, Temple Road, Habaraduwa",
+        "phone": "739183238",
+        "category": "Person"
+    },
+    {
+        "name": "J.X. Chamari",
+        "city": "Habaraduwa",
+        "address": "No 124, Temple Road, Habaraduwa",
+        "phone": "726663515",
+        "category": "Person"
+    },
+    {
+        "name": "S. Tharindu",
+        "city": "Hikkaduwa",
+        "address": "No 170, Flower Road, Hikkaduwa",
+        "phone": "726139450",
+        "category": "Person"
+    },
+    {
+        "name": "Hikkaduwa Public Library",
+        "city": "Hikkaduwa",
+        "address": "No 255, Galle Road, Hikkaduwa",
+        "phone": "118775543",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G. Kusal",
+        "city": "Hikkaduwa",
+        "address": "No 381, Station Road, Hikkaduwa",
+        "phone": "759858246",
+        "category": "Person"
+    },
+    {
+        "name": "Hikkaduwa General Hospital",
+        "city": "Hikkaduwa",
+        "address": "No 384, Flower Road, Hikkaduwa",
+        "phone": "116633556",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hikkaduwa Police Station",
+        "city": "Hikkaduwa",
+        "address": "No 199, Galle Road, Hikkaduwa",
+        "phone": "119782075",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Karandeniya Base Hospital",
+        "city": "Karandeniya",
+        "address": "No 378, Kandy Road, Karandeniya",
+        "phone": "117546601",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Karandeniya General Hospital",
+        "city": "Karandeniya",
+        "address": "No 186, Station Road, Karandeniya",
+        "phone": "114738553",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M. Tharindu Rajapaksa",
+        "city": "Karandeniya",
+        "address": "No 41, Galle Road, Karandeniya",
+        "phone": "781016496",
+        "category": "Person"
+    },
+    {
+        "name": "E. Nilakshi",
+        "city": "Karandeniya",
+        "address": "No 22, Main Street, Karandeniya",
+        "phone": "782148729",
+        "category": "Person"
+    },
+    {
+        "name": "C.Q. Nilakshi",
+        "city": "Karandeniya",
+        "address": "No 83, Station Road, Karandeniya",
+        "phone": "753693649",
+        "category": "Person"
+    },
+    {
+        "name": "T.X. Tharindu",
+        "city": "Karandeniya",
+        "address": "No 201, Temple Road, Karandeniya",
+        "phone": "760951390",
+        "category": "Person"
+    },
+    {
+        "name": "I.C. Dilshan Amarasinghe",
+        "city": "Karandeniya",
+        "address": "No 485, Flower Road, Karandeniya",
+        "phone": "768420947",
+        "category": "Person"
+    },
+    {
+        "name": "Karandeniya Municipal Council",
+        "city": "Karandeniya",
+        "address": "No 467, Galle Road, Karandeniya",
+        "phone": "115395406",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B. Kusal Perera",
+        "city": "Karandeniya",
+        "address": "No 209, Main Street, Karandeniya",
+        "phone": "736476043",
+        "category": "Person"
+    },
+    {
+        "name": "C. Chamari",
+        "city": "Karandeniya",
+        "address": "No 216, Flower Road, Karandeniya",
+        "phone": "755813798",
+        "category": "Person"
+    },
+    {
+        "name": "F.O. Pathum",
+        "city": "Regional Electricity Board",
+        "address": "No 491, Galle Road, Regional Electricity Board",
+        "phone": "750248767",
+        "category": "Person"
+    },
+    {
+        "name": "Regional Electricity Board National School",
+        "city": "Regional Electricity Board",
+        "address": "No 94, Kandy Road, Regional Electricity Board",
+        "phone": "114218722",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Regional Electricity Board Zonal Education Office",
+        "city": "Regional Electricity Board",
+        "address": "No 280, Kandy Road, Regional Electricity Board",
+        "phone": "112616785",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Regional Electricity Board Municipal Council",
+        "city": "Regional Electricity Board",
+        "address": "No 81, Station Road, Regional Electricity Board",
+        "phone": "119830919",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Regional Electricity Board Zonal Education Office",
+        "city": "Regional Electricity Board",
+        "address": "No 366, Flower Road, Regional Electricity Board",
+        "phone": "113277254",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kosgoda Bus Stand",
+        "city": "Kosgoda",
+        "address": "No 419, Flower Road, Kosgoda",
+        "phone": "112771635",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D.Q. Pathum Perera",
+        "city": "Kosgoda",
+        "address": "No 34, Flower Road, Kosgoda",
+        "phone": "772678268",
+        "category": "Person"
+    },
+    {
+        "name": "Kosgoda Base Hospital",
+        "city": "Kosgoda",
+        "address": "No 228, Flower Road, Kosgoda",
+        "phone": "119852985",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Sujith Wickramasinghe",
+        "city": "Kosgoda",
+        "address": "No 443, Galle Road, Kosgoda",
+        "phone": "758851184",
+        "category": "Person"
+    },
+    {
+        "name": "Kosgoda Public Library",
+        "city": "Kosgoda",
+        "address": "No 170, Station Road, Kosgoda",
+        "phone": "118850411",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kosgoda District Secretariat",
+        "city": "Kosgoda",
+        "address": "No 108, Station Road, Kosgoda",
+        "phone": "117151869",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Pathum",
+        "city": "Miriswatta",
+        "address": "No 139, Station Road, Miriswatta",
+        "phone": "760221098",
+        "category": "Person"
+    },
+    {
+        "name": "Miriswatta District Secretariat",
+        "city": "Miriswatta",
+        "address": "No 274, Station Road, Miriswatta",
+        "phone": "119161150",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.E. Sujith Fernando",
+        "city": "Miriswatta",
+        "address": "No 293, Flower Road, Miriswatta",
+        "phone": "712480086",
+        "category": "Person"
+    },
+    {
+        "name": "V.A. Ishara",
+        "city": "Miriswatta",
+        "address": "No 96, Flower Road, Miriswatta",
+        "phone": "773175269",
+        "category": "Person"
+    },
+    {
+        "name": "Miriswatta Zonal Education Office",
+        "city": "Miriswatta",
+        "address": "No 62, Kandy Road, Miriswatta",
+        "phone": "111307678",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.P. Anura Rajapaksa",
+        "city": "Miriswatta",
+        "address": "No 280, Temple Road, Miriswatta",
+        "phone": "753563639",
+        "category": "Person"
+    },
+    {
+        "name": "Miriswatta Base Hospital",
+        "city": "Miriswatta",
+        "address": "No 253, Station Road, Miriswatta",
+        "phone": "119732502",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nakiyadeniya Railway Station",
+        "city": "Nakiyadeniya",
+        "address": "No 29, Temple Road, Nakiyadeniya",
+        "phone": "114632858",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nakiyadeniya National School",
+        "city": "Nakiyadeniya",
+        "address": "No 20, Flower Road, Nakiyadeniya",
+        "phone": "112788847",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A.V. Chamari",
+        "city": "Nakiyadeniya",
+        "address": "No 59, Station Road, Nakiyadeniya",
+        "phone": "779816863",
+        "category": "Person"
+    },
+    {
+        "name": "Z.N. Kusal",
+        "city": "Nakiyadeniya",
+        "address": "No 479, Station Road, Nakiyadeniya",
+        "phone": "778520381",
+        "category": "Person"
+    },
+    {
+        "name": "Nakiyadeniya Post Office",
+        "city": "Nakiyadeniya",
+        "address": "No 1, Station Road, Nakiyadeniya",
+        "phone": "116697060",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nakiyadeniya Public Library",
+        "city": "Nakiyadeniya",
+        "address": "No 429, Main Street, Nakiyadeniya",
+        "phone": "116675187",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Ratgama Bus Stand",
+        "city": "Ratgama",
+        "address": "No 237, Station Road, Ratgama",
+        "phone": "119239260",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M.A. Dilshan Amarasinghe",
+        "city": "Ratgama",
+        "address": "No 165, Main Street, Ratgama",
+        "phone": "732970927",
+        "category": "Person"
+    },
+    {
+        "name": "P.L. Dilshan",
+        "city": "Ratgama",
+        "address": "No 128, Station Road, Ratgama",
+        "phone": "756120137",
+        "category": "Person"
+    },
+    {
+        "name": "K.X. Kusal Silva",
+        "city": "Ratgama",
+        "address": "No 50, Main Street, Ratgama",
+        "phone": "756331094",
+        "category": "Person"
+    },
+    {
+        "name": "C. Anura",
+        "city": "Ratgama",
+        "address": "No 121, Temple Road, Ratgama",
+        "phone": "768242986",
+        "category": "Person"
+    },
+    {
+        "name": "Ratgama Post Office",
+        "city": "Ratgama",
+        "address": "No 22, Temple Road, Ratgama",
+        "phone": "119474028",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Ratgama Zonal Education Office",
+        "city": "Ratgama",
+        "address": "No 394, Kandy Road, Ratgama",
+        "phone": "111929529",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "I. Anura Karunaratne",
+        "city": "Ratgama",
+        "address": "No 95, Flower Road, Ratgama",
+        "phone": "767128557",
+        "category": "Person"
+    },
+    {
+        "name": "S. Ishara Perera",
+        "city": "Ratgama",
+        "address": "No 330, Main Street, Ratgama",
+        "phone": "727890491",
+        "category": "Person"
+    },
+    {
+        "name": "Talpe Zonal Education Office",
+        "city": "Talpe",
+        "address": "No 289, Main Street, Talpe",
+        "phone": "112274929",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A.X. Madushan Silva",
+        "city": "Talpe",
+        "address": "No 373, Main Street, Talpe",
+        "phone": "764797363",
+        "category": "Person"
+    },
+    {
+        "name": "Talpe Bus Stand",
+        "city": "Talpe",
+        "address": "No 123, Station Road, Talpe",
+        "phone": "113437073",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "O. Anura",
+        "city": "Talpe",
+        "address": "No 257, Flower Road, Talpe",
+        "phone": "730729234",
+        "category": "Person"
+    },
+    {
+        "name": "Talpe Post Office",
+        "city": "Talpe",
+        "address": "No 158, Main Street, Talpe",
+        "phone": "113409869",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Talpe Post Office",
+        "city": "Talpe",
+        "address": "No 73, Kandy Road, Talpe",
+        "phone": "117000285",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Talpe Railway Station",
+        "city": "Talpe",
+        "address": "No 145, Galle Road, Talpe",
+        "phone": "113942055",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Talpe Public Library",
+        "city": "Talpe",
+        "address": "No 256, Galle Road, Talpe",
+        "phone": "114599109",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "C.N. Chamari Fernando",
+        "city": "Talpe",
+        "address": "No 388, Temple Road, Talpe",
+        "phone": "738457491",
+        "category": "Person"
+    },
+    {
+        "name": "Talpe Zonal Education Office",
+        "city": "Talpe",
+        "address": "No 97, Temple Road, Talpe",
+        "phone": "116267123",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Watugedara Base Hospital",
+        "city": "Watugedara",
+        "address": "No 105, Temple Road, Watugedara",
+        "phone": "113905223",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "U. Chamari Gunawardena",
+        "city": "Watugedara",
+        "address": "No 281, Flower Road, Watugedara",
+        "phone": "767901028",
+        "category": "Person"
+    },
+    {
+        "name": "W.B. Ishara",
+        "city": "Watugedara",
+        "address": "No 44, Galle Road, Watugedara",
+        "phone": "783947140",
+        "category": "Person"
+    },
+    {
+        "name": "Z.O. Tharindu Rajapaksa",
+        "city": "Watugedara",
+        "address": "No 329, Station Road, Watugedara",
+        "phone": "792882154",
+        "category": "Person"
+    },
+    {
+        "name": "I. Madushan",
+        "city": "Watugedara",
+        "address": "No 69, Kandy Road, Watugedara",
+        "phone": "729019536",
+        "category": "Person"
+    },
+    {
+        "name": "Y. Kusal Silva",
+        "city": "Watugedara",
+        "address": "No 188, Galle Road, Watugedara",
+        "phone": "750733645",
+        "category": "Person"
+    },
+    {
+        "name": "Watugedara Railway Station",
+        "city": "Watugedara",
+        "address": "No 317, Flower Road, Watugedara",
+        "phone": "115643783",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Watugedara Police Station",
+        "city": "Watugedara",
+        "address": "No 455, Temple Road, Watugedara",
+        "phone": "112202032",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batuwatta Zonal Education Office",
+        "city": "Batuwatta",
+        "address": "No 296, Galle Road, Batuwatta",
+        "phone": "113391934",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batuwatta National School",
+        "city": "Batuwatta",
+        "address": "No 91, Kandy Road, Batuwatta",
+        "phone": "115928236",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Batuwatta National School",
+        "city": "Batuwatta",
+        "address": "No 256, Main Street, Batuwatta",
+        "phone": "118467514",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "R.L. Madushan Rajapaksa",
+        "city": "Batuwatta",
+        "address": "No 279, Galle Road, Batuwatta",
+        "phone": "711231239",
+        "category": "Person"
+    },
+    {
+        "name": "N.H. Anura Wickramasinghe",
+        "city": "Batuwatta",
+        "address": "No 215, Kandy Road, Batuwatta",
+        "phone": "713936579",
+        "category": "Person"
+    },
+    {
+        "name": "Dompe Police Station",
+        "city": "Dompe",
+        "address": "No 177, Station Road, Dompe",
+        "phone": "113433830",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dompe Bus Stand",
+        "city": "Dompe",
+        "address": "No 210, Station Road, Dompe",
+        "phone": "119246032",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Dompe Post Office",
+        "city": "Dompe",
+        "address": "No 492, Flower Road, Dompe",
+        "phone": "116705672",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E. Kusal Amarasinghe",
+        "city": "Dompe",
+        "address": "No 155, Kandy Road, Dompe",
+        "phone": "726423806",
+        "category": "Person"
+    },
+    {
+        "name": "Dompe Police Station",
+        "city": "Dompe",
+        "address": "No 145, Temple Road, Dompe",
+        "phone": "113304207",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N.L. Anura Fernando",
+        "city": "Dompe",
+        "address": "No 195, Flower Road, Dompe",
+        "phone": "750537138",
+        "category": "Person"
+    },
+    {
+        "name": "H.P. Chamari Perera",
+        "city": "Dompe",
+        "address": "No 24, Station Road, Dompe",
+        "phone": "792473908",
+        "category": "Person"
+    },
+    {
+        "name": "Dompe Zonal Education Office",
+        "city": "Dompe",
+        "address": "No 53, Main Street, Dompe",
+        "phone": "113481047",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q.M. Chamari Wickramasinghe",
+        "city": "Dompe",
+        "address": "No 303, Main Street, Dompe",
+        "phone": "733676517",
+        "category": "Person"
+    },
+    {
+        "name": "M.T. Tharindu Perera",
+        "city": "Dompe",
+        "address": "No 263, Temple Road, Dompe",
+        "phone": "781529291",
+        "category": "Person"
+    },
+    {
+        "name": "Y. Sujith",
+        "city": "Gampaha",
+        "address": "No 413, Main Street, Gampaha",
+        "phone": "778547765",
+        "category": "Person"
+    },
+    {
+        "name": "Gampaha Bus Stand",
+        "city": "Gampaha",
+        "address": "No 391, Kandy Road, Gampaha",
+        "phone": "119495072",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M. Tharindu Rajapaksa",
+        "city": "Gampaha",
+        "address": "No 271, Galle Road, Gampaha",
+        "phone": "762478928",
+        "category": "Person"
+    },
+    {
+        "name": "Gampaha National School",
+        "city": "Gampaha",
+        "address": "No 462, Temple Road, Gampaha",
+        "phone": "111280191",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Gampaha Police Station",
+        "city": "Gampaha",
+        "address": "No 268, Flower Road, Gampaha",
+        "phone": "113640620",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V.O. Ishara",
+        "city": "Gampaha",
+        "address": "No 102, Station Road, Gampaha",
+        "phone": "782251450",
+        "category": "Person"
+    },
+    {
+        "name": "Q. Madushan Karunaratne",
+        "city": "Gampaha",
+        "address": "No 122, Main Street, Gampaha",
+        "phone": "755438129",
+        "category": "Person"
+    },
+    {
+        "name": "Hunumulla Public Library",
+        "city": "Hunumulla",
+        "address": "No 417, Galle Road, Hunumulla",
+        "phone": "113948179",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E. Chamari Amarasinghe",
+        "city": "Hunumulla",
+        "address": "No 144, Kandy Road, Hunumulla",
+        "phone": "797214544",
+        "category": "Person"
+    },
+    {
+        "name": "Hunumulla Public Library",
+        "city": "Hunumulla",
+        "address": "No 189, Galle Road, Hunumulla",
+        "phone": "111783609",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hunumulla Post Office",
+        "city": "Hunumulla",
+        "address": "No 209, Flower Road, Hunumulla",
+        "phone": "119506793",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hunumulla Police Station",
+        "city": "Hunumulla",
+        "address": "No 191, Galle Road, Hunumulla",
+        "phone": "115471233",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hunumulla Post Office",
+        "city": "Hunumulla",
+        "address": "No 346, Kandy Road, Hunumulla",
+        "phone": "117939326",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hunumulla National School",
+        "city": "Hunumulla",
+        "address": "No 100, Station Road, Hunumulla",
+        "phone": "114339712",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hunumulla Police Station",
+        "city": "Hunumulla",
+        "address": "No 115, Galle Road, Hunumulla",
+        "phone": "112179550",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hunumulla Base Hospital",
+        "city": "Hunumulla",
+        "address": "No 376, Galle Road, Hunumulla",
+        "phone": "113282837",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q. Pathum",
+        "city": "Hunumulla",
+        "address": "No 469, Galle Road, Hunumulla",
+        "phone": "759347769",
+        "category": "Person"
+    },
+    {
+        "name": "W.T. Anura Rajapaksa",
+        "city": "Katana",
+        "address": "No 70, Temple Road, Katana",
+        "phone": "757108087",
+        "category": "Person"
+    },
+    {
+        "name": "Katana Public Library",
+        "city": "Katana",
+        "address": "No 482, Galle Road, Katana",
+        "phone": "119384258",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J.W. Sujith",
+        "city": "Katana",
+        "address": "No 479, Flower Road, Katana",
+        "phone": "799624763",
+        "category": "Person"
+    },
+    {
+        "name": "Katana Bus Stand",
+        "city": "Katana",
+        "address": "No 71, Temple Road, Katana",
+        "phone": "116373396",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Katana National School",
+        "city": "Katana",
+        "address": "No 60, Galle Road, Katana",
+        "phone": "112874248",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "L.C. Madushan Wickramasinghe",
+        "city": "Katana",
+        "address": "No 268, Kandy Road, Katana",
+        "phone": "726200452",
+        "category": "Person"
+    },
+    {
+        "name": "Katana Public Library",
+        "city": "Katana",
+        "address": "No 470, Flower Road, Katana",
+        "phone": "119219275",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Pathum",
+        "city": "Kimbulapitiya",
+        "address": "No 272, Kandy Road, Kimbulapitiya",
+        "phone": "750920027",
+        "category": "Person"
+    },
+    {
+        "name": "Kimbulapitiya Base Hospital",
+        "city": "Kimbulapitiya",
+        "address": "No 83, Station Road, Kimbulapitiya",
+        "phone": "116309600",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D. Pathum",
+        "city": "Kimbulapitiya",
+        "address": "No 368, Temple Road, Kimbulapitiya",
+        "phone": "721853281",
+        "category": "Person"
+    },
+    {
+        "name": "Kimbulapitiya Public Library",
+        "city": "Kimbulapitiya",
+        "address": "No 440, Main Street, Kimbulapitiya",
+        "phone": "111556931",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "H. Tharindu",
+        "city": "Kimbulapitiya",
+        "address": "No 499, Temple Road, Kimbulapitiya",
+        "phone": "780114667",
+        "category": "Person"
+    },
+    {
+        "name": "Kimbulapitiya General Hospital",
+        "city": "Kimbulapitiya",
+        "address": "No 408, Galle Road, Kimbulapitiya",
+        "phone": "117714382",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "U. Pathum Perera",
+        "city": "Kimbulapitiya",
+        "address": "No 58, Kandy Road, Kimbulapitiya",
+        "phone": "711853558",
+        "category": "Person"
+    },
+    {
+        "name": "Kimbulapitiya Municipal Council",
+        "city": "Kimbulapitiya",
+        "address": "No 351, Flower Road, Kimbulapitiya",
+        "phone": "116441354",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "L. Nilakshi Karunaratne",
+        "city": "Kimbulapitiya",
+        "address": "No 111, Kandy Road, Kimbulapitiya",
+        "phone": "711800306",
+        "category": "Person"
+    },
+    {
+        "name": "Kiribathgoda Base Hospital",
+        "city": "Kiribathgoda",
+        "address": "No 247, Flower Road, Kiribathgoda",
+        "phone": "117281434",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Kusal",
+        "city": "Kiribathgoda",
+        "address": "No 439, Kandy Road, Kiribathgoda",
+        "phone": "793755429",
+        "category": "Person"
+    },
+    {
+        "name": "Kiribathgoda Zonal Education Office",
+        "city": "Kiribathgoda",
+        "address": "No 307, Galle Road, Kiribathgoda",
+        "phone": "111186939",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kiribathgoda Base Hospital",
+        "city": "Kiribathgoda",
+        "address": "No 102, Kandy Road, Kiribathgoda",
+        "phone": "118271075",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B.Q. Sujith Karunaratne",
+        "city": "Kiribathgoda",
+        "address": "No 206, Flower Road, Kiribathgoda",
+        "phone": "778732988",
+        "category": "Person"
+    },
+    {
+        "name": "Kiribathgoda National School",
+        "city": "Kiribathgoda",
+        "address": "No 37, Galle Road, Kiribathgoda",
+        "phone": "115606700",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kiribathgoda Zonal Education Office",
+        "city": "Kiribathgoda",
+        "address": "No 242, Temple Road, Kiribathgoda",
+        "phone": "112166318",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.P. Madushan",
+        "city": "Kochchikade",
+        "address": "No 390, Main Street, Kochchikade",
+        "phone": "779794862",
+        "category": "Person"
+    },
+    {
+        "name": "M. Nilakshi",
+        "city": "Kochchikade",
+        "address": "No 156, Galle Road, Kochchikade",
+        "phone": "753187194",
+        "category": "Person"
+    },
+    {
+        "name": "Kochchikade General Hospital",
+        "city": "Kochchikade",
+        "address": "No 270, Temple Road, Kochchikade",
+        "phone": "119235737",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "O. Kusal Gunawardena",
+        "city": "Kochchikade",
+        "address": "No 30, Kandy Road, Kochchikade",
+        "phone": "758189934",
+        "category": "Person"
+    },
+    {
+        "name": "Kochchikade General Hospital",
+        "city": "Kochchikade",
+        "address": "No 161, Galle Road, Kochchikade",
+        "phone": "113263497",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Kochchikade General Hospital",
+        "city": "Kochchikade",
+        "address": "No 328, Flower Road, Kochchikade",
+        "phone": "115789547",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N. Chamari Wickramasinghe",
+        "city": "Kochchikade",
+        "address": "No 483, Main Street, Kochchikade",
+        "phone": "756125919",
+        "category": "Person"
+    },
+    {
+        "name": "Kochchikade National School",
+        "city": "Kochchikade",
+        "address": "No 499, Main Street, Kochchikade",
+        "phone": "113039084",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Malwana General Hospital",
+        "city": "Malwana",
+        "address": "No 402, Station Road, Malwana",
+        "phone": "119099620",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Malwana Railway Station",
+        "city": "Malwana",
+        "address": "No 220, Temple Road, Malwana",
+        "phone": "117419983",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q. Pathum",
+        "city": "Malwana",
+        "address": "No 216, Main Street, Malwana",
+        "phone": "763681055",
+        "category": "Person"
+    },
+    {
+        "name": "O.F. Ishara",
+        "city": "Malwana",
+        "address": "No 254, Galle Road, Malwana",
+        "phone": "798951918",
+        "category": "Person"
+    },
+    {
+        "name": "Malwana Post Office",
+        "city": "Malwana",
+        "address": "No 273, Main Street, Malwana",
+        "phone": "118159910",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Malwana Base Hospital",
+        "city": "Malwana",
+        "address": "No 452, Main Street, Malwana",
+        "phone": "116130176",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E.K. Sujith",
+        "city": "Minuwangoda",
+        "address": "No 198, Flower Road, Minuwangoda",
+        "phone": "738376707",
+        "category": "Person"
+    },
+    {
+        "name": "Minuwangoda Base Hospital",
+        "city": "Minuwangoda",
+        "address": "No 29, Galle Road, Minuwangoda",
+        "phone": "112322805",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Minuwangoda Bus Stand",
+        "city": "Minuwangoda",
+        "address": "No 26, Temple Road, Minuwangoda",
+        "phone": "119482497",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Minuwangoda Public Library",
+        "city": "Minuwangoda",
+        "address": "No 69, Kandy Road, Minuwangoda",
+        "phone": "111854241",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Minuwangoda National School",
+        "city": "Minuwangoda",
+        "address": "No 292, Temple Road, Minuwangoda",
+        "phone": "117767275",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "A. Nilakshi",
+        "city": "Minuwangoda",
+        "address": "No 377, Main Street, Minuwangoda",
+        "phone": "776306097",
+        "category": "Person"
+    },
+    {
+        "name": "Minuwangoda Public Library",
+        "city": "Minuwangoda",
+        "address": "No 410, Main Street, Minuwangoda",
+        "phone": "119473033",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T. Kusal",
+        "city": "Nedungamuwa",
+        "address": "No 289, Temple Road, Nedungamuwa",
+        "phone": "722787542",
+        "category": "Person"
+    },
+    {
+        "name": "Nedungamuwa District Secretariat",
+        "city": "Nedungamuwa",
+        "address": "No 26, Kandy Road, Nedungamuwa",
+        "phone": "111745393",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nedungamuwa Base Hospital",
+        "city": "Nedungamuwa",
+        "address": "No 85, Main Street, Nedungamuwa",
+        "phone": "115002656",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nedungamuwa Base Hospital",
+        "city": "Nedungamuwa",
+        "address": "No 222, Flower Road, Nedungamuwa",
+        "phone": "115356485",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F. Anura Karunaratne",
+        "city": "Nedungamuwa",
+        "address": "No 152, Main Street, Nedungamuwa",
+        "phone": "782572109",
+        "category": "Person"
+    },
+    {
+        "name": "Nedungamuwa District Secretariat",
+        "city": "Nedungamuwa",
+        "address": "No 272, Flower Road, Nedungamuwa",
+        "phone": "114885827",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G. Kusal",
+        "city": "Nedungamuwa",
+        "address": "No 337, Flower Road, Nedungamuwa",
+        "phone": "747043938",
+        "category": "Person"
+    },
+    {
+        "name": "Nedungamuwa Zonal Education Office",
+        "city": "Nedungamuwa",
+        "address": "No 213, Station Road, Nedungamuwa",
+        "phone": "111054856",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nedungamuwa General Hospital",
+        "city": "Nedungamuwa",
+        "address": "No 70, Main Street, Nedungamuwa",
+        "phone": "119264535",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Nedungamuwa Base Hospital",
+        "city": "Nedungamuwa",
+        "address": "No 415, Temple Road, Nedungamuwa",
+        "phone": "117666502",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Negombo District Secretariat",
+        "city": "Negombo",
+        "address": "No 437, Temple Road, Negombo",
+        "phone": "112658984",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W.A. Sujith Rajapaksa",
+        "city": "Negombo",
+        "address": "No 33, Temple Road, Negombo",
+        "phone": "717372601",
+        "category": "Person"
+    },
+    {
+        "name": "E.K. Kusal Wickramasinghe",
+        "city": "Negombo",
+        "address": "No 367, Galle Road, Negombo",
+        "phone": "752200345",
+        "category": "Person"
+    },
+    {
+        "name": "Negombo Post Office",
+        "city": "Negombo",
+        "address": "No 188, Galle Road, Negombo",
+        "phone": "114555678",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Negombo Base Hospital",
+        "city": "Negombo",
+        "address": "No 476, Main Street, Negombo",
+        "phone": "116613795",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F. Nilakshi Karunaratne",
+        "city": "Pasyala",
+        "address": "No 311, Temple Road, Pasyala",
+        "phone": "752320491",
+        "category": "Person"
+    },
+    {
+        "name": "Pasyala Railway Station",
+        "city": "Pasyala",
+        "address": "No 500, Flower Road, Pasyala",
+        "phone": "116798866",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Pasyala Police Station",
+        "city": "Pasyala",
+        "address": "No 111, Temple Road, Pasyala",
+        "phone": "112615851",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W.S. Nilakshi",
+        "city": "Pasyala",
+        "address": "No 81, Main Street, Pasyala",
+        "phone": "789589506",
+        "category": "Person"
+    },
+    {
+        "name": "Pasyala Post Office",
+        "city": "Pasyala",
+        "address": "No 282, Temple Road, Pasyala",
+        "phone": "119462167",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Pasyala Municipal Council",
+        "city": "Pasyala",
+        "address": "No 39, Main Street, Pasyala",
+        "phone": "111642422",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "T.W. Chamari Rajapaksa",
+        "city": "Pasyala",
+        "address": "No 367, Galle Road, Pasyala",
+        "phone": "754113069",
+        "category": "Person"
+    },
+    {
+        "name": "M.S. Sujith",
+        "city": "Pasyala",
+        "address": "No 385, Station Road, Pasyala",
+        "phone": "738645884",
+        "category": "Person"
+    },
+    {
+        "name": "Pasyala Zonal Education Office",
+        "city": "Pasyala",
+        "address": "No 361, Temple Road, Pasyala",
+        "phone": "114143150",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Pasyala Base Hospital",
+        "city": "Pasyala",
+        "address": "No 209, Main Street, Pasyala",
+        "phone": "116305393",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Peliyagoda Police Station",
+        "city": "Peliyagoda",
+        "address": "No 303, Temple Road, Peliyagoda",
+        "phone": "119719914",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D. Madushan",
+        "city": "Peliyagoda",
+        "address": "No 354, Station Road, Peliyagoda",
+        "phone": "798769861",
+        "category": "Person"
+    },
+    {
+        "name": "A.I. Anura",
+        "city": "Peliyagoda",
+        "address": "No 64, Kandy Road, Peliyagoda",
+        "phone": "721206305",
+        "category": "Person"
+    },
+    {
+        "name": "Z.R. Nilakshi",
+        "city": "Peliyagoda",
+        "address": "No 455, Main Street, Peliyagoda",
+        "phone": "715780306",
+        "category": "Person"
+    },
+    {
+        "name": "J.S. Chamari Fernando",
+        "city": "Peliyagoda",
+        "address": "No 402, Temple Road, Peliyagoda",
+        "phone": "743064699",
+        "category": "Person"
+    },
+    {
+        "name": "Peliyagoda Public Library",
+        "city": "Peliyagoda",
+        "address": "No 313, Temple Road, Peliyagoda",
+        "phone": "113247150",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "L.T. Tharindu Gunawardena",
+        "city": "Peliyagoda",
+        "address": "No 462, Galle Road, Peliyagoda",
+        "phone": "742773862",
+        "category": "Person"
+    },
+    {
+        "name": "Peliyagoda Post Office",
+        "city": "Peliyagoda",
+        "address": "No 442, Kandy Road, Peliyagoda",
+        "phone": "111398852",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Peliyagoda Post Office",
+        "city": "Peliyagoda",
+        "address": "No 135, Flower Road, Peliyagoda",
+        "phone": "118588167",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Peliyagoda General Hospital",
+        "city": "Peliyagoda",
+        "address": "No 232, Kandy Road, Peliyagoda",
+        "phone": "117282040",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Ragama Bus Stand",
+        "city": "Ragama",
+        "address": "No 376, Galle Road, Ragama",
+        "phone": "114951290",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Q.U. Ishara",
+        "city": "Ragama",
+        "address": "No 406, Galle Road, Ragama",
+        "phone": "759620177",
+        "category": "Person"
+    },
+    {
+        "name": "Ragama Municipal Council",
+        "city": "Ragama",
+        "address": "No 481, Flower Road, Ragama",
+        "phone": "119115456",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D.S. Madushan Karunaratne",
+        "city": "Ragama",
+        "address": "No 222, Kandy Road, Ragama",
+        "phone": "737748927",
+        "category": "Person"
+    },
+    {
+        "name": "Ragama National School",
+        "city": "Ragama",
+        "address": "No 237, Flower Road, Ragama",
+        "phone": "111256051",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "L.Z. Anura",
+        "city": "Ragama",
+        "address": "No 77, Kandy Road, Ragama",
+        "phone": "767700587",
+        "category": "Person"
+    },
+    {
+        "name": "V.H. Chamari Wickramasinghe",
+        "city": "Talahena",
+        "address": "No 300, Station Road, Talahena",
+        "phone": "765099758",
+        "category": "Person"
+    },
+    {
+        "name": "H.L. Pathum Wickramasinghe",
+        "city": "Talahena",
+        "address": "No 205, Flower Road, Talahena",
+        "phone": "792553833",
+        "category": "Person"
+    },
+    {
+        "name": "Q.P. Ishara",
+        "city": "Talahena",
+        "address": "No 404, Station Road, Talahena",
+        "phone": "776349029",
+        "category": "Person"
+    },
+    {
+        "name": "G. Madushan",
+        "city": "Talahena",
+        "address": "No 338, Main Street, Talahena",
+        "phone": "772721528",
+        "category": "Person"
+    },
+    {
+        "name": "Talahena Railway Station",
+        "city": "Talahena",
+        "address": "No 320, Station Road, Talahena",
+        "phone": "114565194",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Talahena Base Hospital",
+        "city": "Talahena",
+        "address": "No 231, Main Street, Talahena",
+        "phone": "113813066",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Angunakolapelessa District Secretariat",
+        "city": "Angunakolapelessa",
+        "address": "No 257, Station Road, Angunakolapelessa",
+        "phone": "113347262",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J.Q. Nilakshi Silva",
+        "city": "Angunakolapelessa",
+        "address": "No 382, Galle Road, Angunakolapelessa",
+        "phone": "747441213",
+        "category": "Person"
+    },
+    {
+        "name": "I. Pathum",
+        "city": "Angunakolapelessa",
+        "address": "No 21, Temple Road, Angunakolapelessa",
+        "phone": "710221954",
+        "category": "Person"
+    },
+    {
+        "name": "Angunakolapelessa Bus Stand",
+        "city": "Angunakolapelessa",
+        "address": "No 166, Kandy Road, Angunakolapelessa",
+        "phone": "117745803",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.A. Chamari",
+        "city": "Angunakolapelessa",
+        "address": "No 311, Kandy Road, Angunakolapelessa",
+        "phone": "766670741",
+        "category": "Person"
+    },
+    {
+        "name": "Angunakolapelessa Public Library",
+        "city": "Angunakolapelessa",
+        "address": "No 52, Station Road, Angunakolapelessa",
+        "phone": "116564205",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "L. Chamari Silva",
+        "city": "Angunakolapelessa",
+        "address": "No 98, Main Street, Angunakolapelessa",
+        "phone": "786232086",
+        "category": "Person"
+    },
+    {
+        "name": "L.D. Kusal Rajapaksa",
+        "city": "Angunakolapelessa",
+        "address": "No 234, Station Road, Angunakolapelessa",
+        "phone": "722531447",
+        "category": "Person"
+    },
+    {
+        "name": "I. Chamari",
+        "city": "Angunakolapelessa",
+        "address": "No 43, Main Street, Angunakolapelessa",
+        "phone": "793954090",
+        "category": "Person"
+    },
+    {
+        "name": "P.D. Pathum",
+        "city": "Beliatta",
+        "address": "No 326, Temple Road, Beliatta",
+        "phone": "774542345",
+        "category": "Person"
+    },
+    {
+        "name": "M. Madushan Perera",
+        "city": "Beliatta",
+        "address": "No 201, Kandy Road, Beliatta",
+        "phone": "798487523",
+        "category": "Person"
+    },
+    {
+        "name": "Beliatta Base Hospital",
+        "city": "Beliatta",
+        "address": "No 124, Flower Road, Beliatta",
+        "phone": "114133815",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "O.K. Anura Karunaratne",
+        "city": "Beliatta",
+        "address": "No 282, Galle Road, Beliatta",
+        "phone": "777339351",
+        "category": "Person"
+    },
+    {
+        "name": "N. Tharindu Wickramasinghe",
+        "city": "Beliatta",
+        "address": "No 50, Main Street, Beliatta",
+        "phone": "714141728",
+        "category": "Person"
+    },
+    {
+        "name": "S. Tharindu Karunaratne",
+        "city": "Beliatta",
+        "address": "No 462, Station Road, Beliatta",
+        "phone": "715123009",
+        "category": "Person"
+    },
+    {
+        "name": "Beliatta Zonal Education Office",
+        "city": "Beliatta",
+        "address": "No 206, Station Road, Beliatta",
+        "phone": "113816030",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B.X. Tharindu",
+        "city": "Beliatta",
+        "address": "No 73, Main Street, Beliatta",
+        "phone": "752272080",
+        "category": "Person"
+    },
+    {
+        "name": "Hakuruwela Zonal Education Office",
+        "city": "Hakuruwela",
+        "address": "No 41, Temple Road, Hakuruwela",
+        "phone": "114840149",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hakuruwela Bus Stand",
+        "city": "Hakuruwela",
+        "address": "No 262, Main Street, Hakuruwela",
+        "phone": "114698324",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hakuruwela Police Station",
+        "city": "Hakuruwela",
+        "address": "No 250, Galle Road, Hakuruwela",
+        "phone": "119164299",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hakuruwela Zonal Education Office",
+        "city": "Hakuruwela",
+        "address": "No 339, Temple Road, Hakuruwela",
+        "phone": "111112780",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hakuruwela District Secretariat",
+        "city": "Hakuruwela",
+        "address": "No 223, Galle Road, Hakuruwela",
+        "phone": "111903046",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "P. Madushan",
+        "city": "Hakuruwela",
+        "address": "No 63, Kandy Road, Hakuruwela",
+        "phone": "765929685",
+        "category": "Person"
+    },
+    {
+        "name": "Hakuruwela Railway Station",
+        "city": "Hakuruwela",
+        "address": "No 411, Galle Road, Hakuruwela",
+        "phone": "118174356",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Hakuruwela Public Library",
+        "city": "Hakuruwela",
+        "address": "No 236, Station Road, Hakuruwela",
+        "phone": "117099804",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D.N. Ishara Rajapaksa",
+        "city": "Hakuruwela",
+        "address": "No 363, Kandy Road, Hakuruwela",
+        "phone": "715181782",
+        "category": "Person"
+    },
+    {
+        "name": "Hungama General Hospital",
+        "city": "Hungama",
+        "address": "No 38, Galle Road, Hungama",
+        "phone": "119197425",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "J. Dilshan",
+        "city": "Hungama",
+        "address": "No 152, Main Street, Hungama",
+        "phone": "796768514",
+        "category": "Person"
+    },
+    {
+        "name": "Hungama General Hospital",
+        "city": "Hungama",
+        "address": "No 410, Galle Road, Hungama",
+        "phone": "115760345",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Z. Nilakshi Perera",
+        "city": "Hungama",
+        "address": "No 169, Kandy Road, Hungama",
+        "phone": "778582769",
+        "category": "Person"
+    },
+    {
+        "name": "W. Anura",
+        "city": "Hungama",
+        "address": "No 219, Galle Road, Hungama",
+        "phone": "723818818",
+        "category": "Person"
+    },
+    {
+        "name": "Hungama Post Office",
+        "city": "Hungama",
+        "address": "No 498, Galle Road, Hungama",
+        "phone": "115216566",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Julampitiya Municipal Council",
+        "city": "Julampitiya",
+        "address": "No 2, Station Road, Julampitiya",
+        "phone": "111574101",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Julampitiya Zonal Education Office",
+        "city": "Julampitiya",
+        "address": "No 257, Galle Road, Julampitiya",
+        "phone": "116026927",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "E. Madushan Amarasinghe",
+        "city": "Julampitiya",
+        "address": "No 436, Main Street, Julampitiya",
+        "phone": "710652860",
+        "category": "Person"
+    },
+    {
+        "name": "Julampitiya Bus Stand",
+        "city": "Julampitiya",
+        "address": "No 175, Station Road, Julampitiya",
+        "phone": "115204787",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F. Dilshan",
+        "city": "Julampitiya",
+        "address": "No 193, Station Road, Julampitiya",
+        "phone": "750261490",
+        "category": "Person"
+    },
+    {
+        "name": "Julampitiya National School",
+        "city": "Julampitiya",
+        "address": "No 264, Galle Road, Julampitiya",
+        "phone": "112383496",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V.Z. Sujith",
+        "city": "Julampitiya",
+        "address": "No 410, Temple Road, Julampitiya",
+        "phone": "755348385",
+        "category": "Person"
+    },
+    {
+        "name": "R.V. Anura Rajapaksa",
+        "city": "Julampitiya",
+        "address": "No 124, Flower Road, Julampitiya",
+        "phone": "750865041",
+        "category": "Person"
+    },
+    {
+        "name": "Lunama Base Hospital",
+        "city": "Lunama",
+        "address": "No 46, Temple Road, Lunama",
+        "phone": "114254809",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "G.Q. Dilshan",
+        "city": "Lunama",
+        "address": "No 354, Kandy Road, Lunama",
+        "phone": "752811193",
+        "category": "Person"
+    },
+    {
+        "name": "Z. Madushan",
+        "city": "Lunama",
+        "address": "No 492, Station Road, Lunama",
+        "phone": "743481483",
+        "category": "Person"
+    },
+    {
+        "name": "W. Tharindu Silva",
+        "city": "Lunama",
+        "address": "No 431, Temple Road, Lunama",
+        "phone": "720287049",
+        "category": "Person"
+    },
+    {
+        "name": "B. Dilshan",
+        "city": "Lunama",
+        "address": "No 160, Main Street, Lunama",
+        "phone": "782336643",
+        "category": "Person"
+    },
+    {
+        "name": "X.D. Nilakshi Rajapaksa",
+        "city": "Lunama",
+        "address": "No 40, Flower Road, Lunama",
+        "phone": "713672759",
+        "category": "Person"
+    },
+    {
+        "name": "Lunugamwehera Police Station",
+        "city": "Lunugamwehera",
+        "address": "No 128, Station Road, Lunugamwehera",
+        "phone": "111427067",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Lunugamwehera General Hospital",
+        "city": "Lunugamwehera",
+        "address": "No 7, Kandy Road, Lunugamwehera",
+        "phone": "118153434",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Lunugamwehera Zonal Education Office",
+        "city": "Lunugamwehera",
+        "address": "No 37, Station Road, Lunugamwehera",
+        "phone": "116415263",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N. Anura",
+        "city": "Lunugamwehera",
+        "address": "No 85, Temple Road, Lunugamwehera",
+        "phone": "787847943",
+        "category": "Person"
+    },
+    {
+        "name": "J. Nilakshi",
+        "city": "Lunugamwehera",
+        "address": "No 348, Main Street, Lunugamwehera",
+        "phone": "790463496",
+        "category": "Person"
+    },
+    {
+        "name": "Lunugamwehera Municipal Council",
+        "city": "Lunugamwehera",
+        "address": "No 223, Kandy Road, Lunugamwehera",
+        "phone": "113442870",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "V. Madushan Gunawardena",
+        "city": "Lunugamwehera",
+        "address": "No 317, Temple Road, Lunugamwehera",
+        "phone": "742082165",
+        "category": "Person"
+    },
+    {
+        "name": "Lunugamwehera Base Hospital",
+        "city": "Lunugamwehera",
+        "address": "No 430, Galle Road, Lunugamwehera",
+        "phone": "112616248",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Lunugamwehera District Secretariat",
+        "city": "Lunugamwehera",
+        "address": "No 366, Galle Road, Lunugamwehera",
+        "phone": "111789272",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "D.N. Nilakshi Fernando",
+        "city": "Mamadala",
+        "address": "No 358, Main Street, Mamadala",
+        "phone": "769187685",
+        "category": "Person"
+    },
+    {
+        "name": "N. Ishara Amarasinghe",
+        "city": "Mamadala",
+        "address": "No 481, Main Street, Mamadala",
+        "phone": "719612968",
+        "category": "Person"
+    },
+    {
+        "name": "Mamadala District Secretariat",
+        "city": "Mamadala",
+        "address": "No 495, Main Street, Mamadala",
+        "phone": "112907911",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.X. Ishara",
+        "city": "Mamadala",
+        "address": "No 98, Galle Road, Mamadala",
+        "phone": "780883552",
+        "category": "Person"
+    },
+    {
+        "name": "Mamadala Zonal Education Office",
+        "city": "Mamadala",
+        "address": "No 68, Temple Road, Mamadala",
+        "phone": "119440365",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Mamadala Bus Stand",
+        "city": "Mamadala",
+        "address": "No 412, Temple Road, Mamadala",
+        "phone": "113856429",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "O. Pathum Wickramasinghe",
+        "city": "Mamadala",
+        "address": "No 186, Temple Road, Mamadala",
+        "phone": "781922706",
+        "category": "Person"
+    },
+    {
+        "name": "K.A. Madushan Gunawardena",
+        "city": "Mamadala",
+        "address": "No 374, Station Road, Mamadala",
+        "phone": "750148297",
+        "category": "Person"
+    },
+    {
+        "name": "G.P. Nilakshi",
+        "city": "Medamulana",
+        "address": "No 341, Station Road, Medamulana",
+        "phone": "792754865",
+        "category": "Person"
+    },
+    {
+        "name": "L. Chamari Rajapaksa",
+        "city": "Medamulana",
+        "address": "No 434, Station Road, Medamulana",
+        "phone": "743108471",
+        "category": "Person"
+    },
+    {
+        "name": "Medamulana Public Library",
+        "city": "Medamulana",
+        "address": "No 449, Galle Road, Medamulana",
+        "phone": "117490513",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "C. Pathum Fernando",
+        "city": "Medamulana",
+        "address": "No 452, Temple Road, Medamulana",
+        "phone": "798686074",
+        "category": "Person"
+    },
+    {
+        "name": "Medamulana Zonal Education Office",
+        "city": "Medamulana",
+        "address": "No 475, Galle Road, Medamulana",
+        "phone": "115387129",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Medamulana Post Office",
+        "city": "Medamulana",
+        "address": "No 301, Main Street, Medamulana",
+        "phone": "117708506",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F. Anura Fernando",
+        "city": "Medamulana",
+        "address": "No 135, Galle Road, Medamulana",
+        "phone": "730107511",
+        "category": "Person"
+    },
+    {
+        "name": "Medamulana Police Station",
+        "city": "Medamulana",
+        "address": "No 486, Main Street, Medamulana",
+        "phone": "114118853",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Medamulana National School",
+        "city": "Medamulana",
+        "address": "No 351, Station Road, Medamulana",
+        "phone": "119477045",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "N. Anura Rajapaksa",
+        "city": "Medamulana",
+        "address": "No 441, Kandy Road, Medamulana",
+        "phone": "772848571",
+        "category": "Person"
+    },
+    {
+        "name": "Mulkirigala Post Office",
+        "city": "Mulkirigala",
+        "address": "No 451, Galle Road, Mulkirigala",
+        "phone": "116839601",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "B.F. Sujith Rajapaksa",
+        "city": "Mulkirigala",
+        "address": "No 122, Temple Road, Mulkirigala",
+        "phone": "777921156",
+        "category": "Person"
+    },
+    {
+        "name": "U.R. Chamari",
+        "city": "Mulkirigala",
+        "address": "No 277, Temple Road, Mulkirigala",
+        "phone": "752055566",
+        "category": "Person"
+    },
+    {
+        "name": "O. Dilshan Gunawardena",
+        "city": "Mulkirigala",
+        "address": "No 394, Kandy Road, Mulkirigala",
+        "phone": "779882311",
+        "category": "Person"
+    },
+    {
+        "name": "N.Z. Ishara Wickramasinghe",
+        "city": "Mulkirigala",
+        "address": "No 456, Station Road, Mulkirigala",
+        "phone": "750405073",
+        "category": "Person"
+    },
+    {
+        "name": "Mulkirigala Public Library",
+        "city": "Mulkirigala",
+        "address": "No 21, Galle Road, Mulkirigala",
+        "phone": "118845764",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Mulkirigala Zonal Education Office",
+        "city": "Mulkirigala",
+        "address": "No 410, Main Street, Mulkirigala",
+        "phone": "112540806",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "M. Kusal Rajapaksa",
+        "city": "Mulkirigala",
+        "address": "No 19, Temple Road, Mulkirigala",
+        "phone": "761527213",
+        "category": "Person"
+    },
+    {
+        "name": "K. Kusal Perera",
+        "city": "Mulkirigala",
+        "address": "No 324, Galle Road, Mulkirigala",
+        "phone": "710180713",
+        "category": "Person"
+    },
+    {
+        "name": "Mulkirigala Zonal Education Office",
+        "city": "Mulkirigala",
+        "address": "No 357, Kandy Road, Mulkirigala",
+        "phone": "115815407",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Netolpitiya Police Station",
+        "city": "Netolpitiya",
+        "address": "No 37, Galle Road, Netolpitiya",
+        "phone": "118109351",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "W. Dilshan",
+        "city": "Netolpitiya",
+        "address": "No 326, Flower Road, Netolpitiya",
+        "phone": "719923642",
+        "category": "Person"
+    },
+    {
+        "name": "Netolpitiya National School",
+        "city": "Netolpitiya",
+        "address": "No 449, Kandy Road, Netolpitiya",
+        "phone": "111348414",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "F.R. Tharindu",
+        "city": "Netolpitiya",
+        "address": "No 14, Galle Road, Netolpitiya",
+        "phone": "719685848",
+        "category": "Person"
+    },
+    {
+        "name": "Netolpitiya Base Hospital",
+        "city": "Netolpitiya",
+        "address": "No 233, Flower Road, Netolpitiya",
+        "phone": "119908020",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "C. Anura Amarasinghe",
+        "city": "Weeraketiya",
+        "address": "No 1, Temple Road, Weeraketiya",
+        "phone": "728641681",
+        "category": "Person"
+    },
+    {
+        "name": "U.H. Anura",
+        "city": "Weeraketiya",
+        "address": "No 359, Kandy Road, Weeraketiya",
+        "phone": "748891916",
+        "category": "Person"
+    },
+    {
+        "name": "R.F. Sujith",
+        "city": "Weeraketiya",
+        "address": "No 484, Flower Road, Weeraketiya",
+        "phone": "775683833",
+        "category": "Person"
+    },
+    {
+        "name": "Weeraketiya Bus Stand",
+        "city": "Weeraketiya",
+        "address": "No 56, Kandy Road, Weeraketiya",
+        "phone": "112015998",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Weeraketiya Railway Station",
+        "city": "Weeraketiya",
+        "address": "No 26, Temple Road, Weeraketiya",
+        "phone": "112312927",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Weeraketiya Railway Station",
+        "city": "Weeraketiya",
+        "address": "No 276, Station Road, Weeraketiya",
+        "phone": "119890690",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Weeraketiya Police Station",
+        "city": "Weeraketiya",
+        "address": "No 302, Temple Road, Weeraketiya",
+        "phone": "113218139",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "O. Madushan",
+        "city": "Weeraketiya",
+        "address": "No 282, Station Road, Weeraketiya",
+        "phone": "736901971",
+        "category": "Person"
+    },
+    {
+        "name": "Weeraketiya Municipal Council",
+        "city": "Weeraketiya",
+        "address": "No 497, Temple Road, Weeraketiya",
+        "phone": "114072068",
+        "category": "Infrastructure"
+    },
+    {
+        "name": "Weeraketiya Municipal Council",
+        "city": "Weeraketiya",
+        "address": "No 52, Flower Road, Weeraketiya",
+        "phone": "111173128",
+        "category": "Infrastructure"
+    }
+]

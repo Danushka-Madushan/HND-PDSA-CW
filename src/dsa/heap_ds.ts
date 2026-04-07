@@ -1,19 +1,21 @@
-import type { OutageRecord } from 'outage-tracker';
+interface HasPriority {
+  priority: number;
+}
 
 /**
   * Performs a Heap Sort on an array of records.
-  * This is what we use inside setOutages.
+  * This is what we use inside setOutages and for sorting routes.
   */
-export class OutageMaxHeap {
-  private heap: OutageRecord[];
+export class OutageMaxHeap<T extends HasPriority> {
+  private heap: T[];
 
   constructor() {
     this.heap = [];
   }
 
   /* sort method */
-  public static sort(records: OutageRecord[]): OutageRecord[] {
-    const h = new OutageMaxHeap();
+  public static sort<U extends HasPriority>(records: U[]): U[] {
+    const h = new OutageMaxHeap<U>();
     h.heap = [...records];
     
     /* Build the heap (O(n)) using heapify-down from the last non-leaf node */
@@ -22,7 +24,7 @@ export class OutageMaxHeap {
     }
 
     /* Extract elements in descending order (O(n log n)) */
-    const sorted: OutageRecord[] = [];
+    const sorted: U[] = [];
     while (h.size() > 0) {
       const max = h.extractMax();
       if (max) sorted.push(max);
@@ -34,7 +36,7 @@ export class OutageMaxHeap {
     return this.heap.length;
   }
 
-  private extractMax(): OutageRecord | null {
+  private extractMax(): T | null {
     if (this.size() === 0) return null;
     if (this.size() === 1) return this.heap.pop() || null;
 
