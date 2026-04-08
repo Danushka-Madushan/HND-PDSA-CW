@@ -16,12 +16,12 @@
 
 ---
 
-## 1. Executive Summary
+## Executive Summary
 The **Electricity Outage Tracker** is a management system designed to coordinate emergency responses to power failures across a simulated regional grid. Developed to modernize power grid breakdown response (modeled after the Sri Lankan context), it transitions from manual workflows to an automated system grounded in **Graph Theory**, **Hierarchical Sorting (Heaps)**, and **Prefix-Based Retrieval (Tries)**. The system achieves significant reductions in response latency and operational overhead by making the breakdown restoration process "algorithmic."
 
 ---
 
-## 2. Problem Statement: The Sri Lankan Context
+## Problem Statement: The Sri Lankan Context
 Manual utility management often faces three critical bottlenecks:
 1.  **Subjective Prioritization:** Outage reports are often handled first-come-first-served, ignoring the "Criticality Index" (e.g., hospitals vs. residential areas).
 2.  **The "Known Route" Fallacy:** Breakdown crews typically follow familiar routes rather than the mathematically shortest path, leading to fuel waste and delayed restoration.
@@ -29,7 +29,7 @@ Manual utility management often faces three critical bottlenecks:
 
 ---
 
-## 3. Core Pillars & Implementation
+## Core Pillars & Implementation
 
 The system is built around three fundamental Data Structures:
 
@@ -41,14 +41,14 @@ The system is built around three fundamental Data Structures:
 
 ---
 
-## 4. Technical Deep Dive
+## Technical Deep Dive
 
-### 4.1 · Customer Lookup — Trie (Prefix Tree) with Linked Lists
+### Customer Lookup — Trie (Prefix Tree) with Linked Lists
 > `src/dsa/trie_ds.ts`
 
 To handle a large database of customer records, the system employs a **Trie**, enabling near-instantaneous search by phone number as an operator types.
 
-- **The Problem:** Simple list searches are too slow ($O(n)$) as the database grows.
+- **The Problem:** Simple list searches are too slow $O(n)$ as the database grows.
 - **The Solution:** A specialized tree where search time is proportional only to the length of the phone number ($m$), regardless of total records.
 - **Linked List Integration:** Terminal nodes contain a **Singly Linked List** (`RecordLink`) to handle multiple records sharing a prefix, ensuring memory efficiency.
 
@@ -66,7 +66,7 @@ private collectAll(node: TrieNode, results: CityRecord[]): void {
 }
 ```
 
-### 4.2 · Outage Prioritization — Max-Heap & HeapSort
+### Outage Prioritization — Max-Heap & HeapSort
 > `src/dsa/heap_ds.ts`
 
 Outages are addressed by severity using a **Max-Heap** to ensure high-priority infrastructure (hospitals, schools) is serviced first.
@@ -74,12 +74,12 @@ Outages are addressed by severity using a **Max-Heap** to ensure high-priority i
 - **Multi-Level Comparison:** Prioritization uses `priority` (1-10) as the primary key and `timestamp` (earlier reports first) as a secondary tie-breaker.
 - **Heap Sort:** The "Active Outages" list uses Heap Sort to guarantee $O(n \log n)$ performance, providing stability even during high-pressure scenarios with thousands of reports.
 
-### 4.3 · Route Optimization — Graph Theory & Dijkstra's Algorithm
+### Route Optimization — Graph Theory & Dijkstra's Algorithm
 > `src/dsa/graph_ds.ts`
 
 The regional power grid is modeled as a **Weighted Undirected Graph** — cities as nodes, power lines as edges weighted by distance.
 
-- **Adjacency List:** Chosen over a matrix for space efficiency ($O(V+E)$) given the grid's sparse connections.
+- **Adjacency List:** Chosen over a matrix for space efficiency $O(V+E)$ given the grid's sparse connections.
 - **Dijkstra's Algorithm:** Computes the shortest path from the central hub to affected cities. Optimized with a **Min-Heap Priority Queue**, reducing complexity from $O(V^2)$ to $O(E \log V)$.
 
 ```typescript
@@ -101,18 +101,18 @@ while (!pq.isEmpty()) {
 
 ---
 
-## 5. Algorithmic Efficiency & Scalability
+## Algorithmic Efficiency & Scalability
 
 | Operation | Manual System (Estimated) | Enhanced System (DSA) | Complexity |
 | :--- | :--- | :--- | :--- |
 | **Search User** | $O(N)$ (Scan) | **Trie Search** | $O(m)$ |
 | **Prioritize** | $O(N^2)$ (Human Sort) | **Heap Sort** | $O(N \log N)$ |
-| **Route Path** | $O(\text{Trial \& Error})$ | **Dijkstra + Min-Heap** | $O((E+V) \log V)$ |
+| **Route Path** | Known Path | **Dijkstra + Min-Heap** | $O((E+V) \log V)$ |
 | **Update Grid** | High Overhead | **Adjacency List Mod** | $O(1)$ |
 
 ---
 
-## 6. System Functionalities & Visual Analysis
+## System Functionalities & Visual Analysis
 
 1.  **Consumer Identification:** Instant database filtering via **Trie** as phone numbers are entered.
 2.  **Severity Assessment:** Reports include priority levels (e.g., Level 9 for hospitals).
@@ -127,7 +127,7 @@ while (!pq.isEmpty()) {
 
 ---
 
-## 7. Technologies & Selling Points
+## Technologies & Selling Points
 
 - **Core Logic:** TypeScript (Strong typing for memory-safe DSA implementation).
 - **Visualization:** React 18 with SVG-based Map Rendering.
@@ -140,5 +140,5 @@ while (!pq.isEmpty()) {
 
 ---
 
-## 8. Conclusion
+## Conclusion
 The **Enhanced Outage Management System** proves that sophisticated data structures are essential tools for infrastructure management. By modeling the grid as a graph and the outage queue as a heap, we have created a blueprint for efficient, data-driven public service delivery.
